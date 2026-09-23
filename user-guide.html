@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quality Assessment Report — User Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Mono:wght@400;500&display=swap" />
+  <style>
+    :root { --navy:#0A1E46; --ink:#0D1224; --muted:#6B7385; --line:#E0E4EE; --cyan:#E50D7F; --canvas:#F7F8FB; }
+    * { box-sizing: border-box; }
+    body { margin:0; color:var(--ink); background:var(--canvas); font:14px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
+    header { min-height:82px; padding:14px 32px; display:flex; align-items:center; gap:18px; color:#fff; background:linear-gradient(100deg,#0A1E46,#132B5E); border-bottom:3px solid var(--cyan); }
+    header img { width:108px; height:auto; }
+    header h1 { margin:0; font-size:25px; letter-spacing:-.025em; }
+    main { max-width:900px; margin:28px auto; padding:0 24px 44px; }
+    .back { color:#B00C63; font-weight:700; text-decoration:none; }
+    article { margin-top:18px; padding:28px 30px; border:1px solid #ccd8e0; border-radius:14px; background:#fff; box-shadow:0 10px 28px rgba(10,30,70,.08); }
+    h2 { margin:0 0 8px; color:var(--navy); font-size:22px; }
+    h3 { margin:24px 0 6px; color:var(--navy); font-size:16px; }
+    p { margin:0 0 10px; color:var(--muted); }
+    ul { margin:8px 0 0; padding-left:20px; }
+    li { margin:6px 0; }
+    a { color:#B00C63; }
+    .intro { font-size:15px; }
+    .status-list { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:14px 0 2px; }
+    .status { padding:12px; border-radius:9px; font-size:12px; }
+    .status strong { display:block; margin-bottom:2px; }
+    .pass { color:#2E7D32; background:#E7F3E8; }
+    .warn { color:#B8690B; background:#FBF0DC; }
+    .fail { color:#C2362D; background:#FBE6E4; }
+    .note { margin-top:14px; padding:12px 14px; border-left:3px solid var(--cyan); border-radius:0 8px 8px 0; background:#FDEBF3; color:var(--ink); font-size:12px; }
+    kbd { padding:1px 5px; border:1px solid #c9d5dc; border-bottom-width:2px; border-radius:4px; background:#fff; font:11px 'Noto Sans Mono',Menlo,Consolas,monospace; }
+    @media (max-width:600px) { header { padding:14px 18px; gap:12px; } header img { width:82px; } header h1 { font-size:18px; } article { padding:22px 20px; } .status-list { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header><img src="skao-logo.svg" alt="SKAO" width="108" height="30" /><h1>Quality Assessment Report User Guide</h1></header>
+  <main>
+    <a class="back" href="skao_qa_dashboard_mockup.html">← Back to Quality Assessment Report</a>
+    <article>
+      <h2>Using the Quality Assessment Report</h2>
+      <p class="intro">The report brings observation metadata, data-product checks, pipeline results, warnings, and supporting diagnostics into one page. Start with the overall assessment, review any warnings, and then use the product and pipeline sections to investigate the result.</p>
+
+      <h3>Help and navigation</h3>
+      <ul>
+        <li>Select the <strong>?</strong> button in the report banner to open this guide.</li>
+        <li>Select <strong>Back to Quality Assessment Report</strong> at the top of this page or the warnings page to return to the report.</li>
+      </ul>
+
+      <h3>Observation Summary</h3>
+      <p>Use this section to confirm that you are reviewing the intended observation. It shows the project and scheduling block identifiers, observation times, observing mode, time on source, baseline range, array configuration, station count, and observing band.</p>
+      <ul>
+        <li>Select the <strong>Project ID</strong> to open the related project information.</li>
+        <li>Select the <strong>Scheduling Block ID</strong> to open the related scheduling-block information.</li>
+        <li>Select <strong>Overview</strong> in the section header to review sources and scan intents, station health, telescope and hardware issues, spectral setups, weather and ionospheric conditions, and a target elevation plot.</li>
+      </ul>
+
+      <h3>Overall Assessment</h3>
+      <p>The QA score and assessment summarise the observation-level result. The supporting text distinguishes critical failures from non-blocking issues, and the generated timestamp shows when the assessment was produced.</p>
+
+      <h3>QA Summary and status indicators</h3>
+      <p>The summary separates outcomes for data products and the pipeline. Counts are grouped by status:</p>
+      <div class="status-list" aria-label="QA status meanings">
+        <div class="status pass"><strong>Passed</strong>The check met its acceptance criteria.</div>
+        <div class="status warn"><strong>Warning</strong>A non-blocking result requires review.</div>
+        <div class="status fail"><strong>Failed</strong>The check did not meet its acceptance criteria.</div>
+      </div>
+      <p class="note">Select <strong>Review</strong> to open the complete warnings page. Each warning includes its pipeline stage, affected product or scan, threshold, and measured result.</p>
+
+      <h3>Observatory data products</h3>
+      <p>Products are organised into expandable categories for calibrated visibilities, continuum images, spectral cubes, and ancillary data. Calibration-table files, the pipeline log, and the RFI flag command log are included under Ancillary data.</p>
+      <ul>
+        <li>Select a category row to expand or collapse its product table.</li>
+        <li>Use <strong>Expand All</strong> or <strong>Collapse All</strong> in the section header to change every category at once.</li>
+        <li>Review each product’s file size, and its QA outcome and QA score, in the table.</li>
+        <li>Hover over or focus a linked product name for more detail: image and cube products show channel count, frequency range, image dimensions, and pixel size; the calibrated visibilities product shows frequency range, channel count, frequency resolution, and time resolution. Keyboard users can move focus with <kbd>Tab</kbd>.</li>
+        <li><strong>View QA</strong> opens a detailed QA page for a product where one exists. The calibrated visibilities, the continuum image, and each spectral cube each have their own QA page. The image and cube pages show a QA score, RMS noise, photometric and astrometric QA scores, image metadata, and a preview. The calibrated visibilities QA page shows Measurement Set metadata, a spectral window breakdown, and diagnostic plots — baseline distribution, flagging statistics, phase and amplitude vs time, amplitude vs uv-distance, amplitude vs frequency, and continuum uv-coverage; the phase/amplitude-vs-time and amplitude-vs-uv-distance plots link through to a page showing that diagnostic for every source in the observation. For products without a dedicated page, <strong>View QA</strong> is a placeholder control.</li>
+        <li><strong>View</strong> on the pipeline log and flag command log rows under Ancillary data opens that file directly in a new browser tab for reading, rather than a QA page.</li>
+      </ul>
+
+      <h3>Pipeline QA</h3>
+      <p>This section shows the processing workflow in execution order. Each stage displays its status, a short result summary, and elapsed time. Warning stages are highlighted in amber to help locate the source of a QA warning. Every stage name is a link to a dedicated page with stage-specific detail.</p>
+      <ul>
+        <li>Compare the stage results with the overall completion status and total runtime.</li>
+        <li>Select the <strong>Raw data validation</strong> stage name to open its validation checklist, covering schema, metadata, antenna and station tables, frequency and time axes, checksums, and flag table initialisation.</li>
+        <li>Select the <strong>RFI flagging</strong> stage name to open the RFI Summary, including the flagging strategy, percentage of samples flagged, and an RFI occupancy plot.</li>
+        <li>Select the <strong>Calibration</strong> stage name to open the Calibration Report, with sections for flux, delay, bandpass, gain, polarisation, and applied calibration.</li>
+        <li>Select the <strong>Imaging &amp; deconvolution</strong> stage name to open the Imaging &amp; Deconvolution page, covering UV-coverage plots and per-image diagnostics for the continuum image and each spectral cube.</li>
+        <li>Use the key pipeline metrics to review visibility retention, gain solution quality, image fidelity, and catalogue reliability.</li>
+        <li>Select <strong>View pipeline log</strong> in this section to open the full pipeline log in a new browser tab, and <strong>View flag commands</strong> below it to open the RFI flagging command log. The RFI Summary, Calibration Report, and Imaging &amp; Deconvolution pages each include their own <strong>View pipeline log</strong> link for that stage.</li>
+      </ul>
+
+      <h3>Stage detail pages</h3>
+      <p>The RFI Summary, Calibration Report, and Imaging &amp; Deconvolution pages share a common layout: a persistent contents sidebar on the left links to each section, colour-coded amber or green to flag a warning or a pass. Sections with a result show their QA score alongside the heading.</p>
+      <ul>
+        <li>Select <strong>View config parameters</strong>, or a section's own link, to jump to an expandable <strong>Configuration parameters</strong> section listing the settings used to produce that result. On the Imaging &amp; Deconvolution page, each image has its own configuration parameters rather than one shared list.</li>
+        <li>On the Imaging &amp; Deconvolution page, the UV coverage section at the top shows the continuum band's coverage plus a sparser, representative-channel UV plot for each spectral cube. Below that, each image — the continuum image and each spectral cube — has its own section with a thumbnail, image details, and photometric, astrometric, and sensitivity checks. Select <strong>View other imaging products</strong> below a thumbnail to see that run's residual map, clean component mask, point spread function, and model image.</li>
+        <li>The Raw Data Validation page does not have a pipeline log link or a configuration parameters section.</li>
+      </ul>
+
+      <h3>Recommended review sequence</h3>
+      <ol>
+        <li>Confirm the observation identifiers and metadata.</li>
+        <li>Read the overall assessment and QA score.</li>
+        <li>Check the QA Summary for warnings or failures.</li>
+        <li>Open <strong>Review</strong> for warning details.</li>
+        <li>Inspect the affected product category and pipeline stage.</li>
+        <li>Open a product's <strong>View QA</strong> page, or the relevant stage page — Raw Data Validation, RFI Summary, Calibration Report, or Imaging &amp; Deconvolution — for stage-specific detail.</li>
+        <li>Open a stage's configuration parameters to check the settings used, if the result is unexpected.</li>
+        <li>Open the pipeline log, from the Pipeline QA section or a stage page, or the flag command log from the Pipeline QA section, when deeper troubleshooting is required.</li>
+      </ol>
+
+      <p class="note">This interface is a static mock-up with representative data. The warnings page, user guide, pipeline log, flag command log, Raw Data Validation, RFI Summary, Calibration Report, Imaging &amp; Deconvolution, the other imaging products page, and the <strong>View QA</strong> pages for the calibrated visibilities, the continuum image, and both spectral cubes are all available; <strong>View QA</strong> controls on the ancillary calibration-table products are placeholders and do not yet navigate to another page.</p>
+    </article>
+  </main>
+</body>
+</html>

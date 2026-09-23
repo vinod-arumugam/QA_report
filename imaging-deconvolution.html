@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Imaging &amp; Deconvolution — SKAO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Mono:wght@400;500&display=swap" />
+  <style>
+    :root { --ink:#0D1224; --muted:#6B7385; --line:#E0E4EE; --paper:#fff; --canvas:#F7F8FB; --navy:#0A1E46; --navy-2:#132B5E; --cyan:#E50D7F; --magenta:#B00C63; --green:#2E7D32; --green-bg:#E7F3E8; --amber:#B8690B; --amber-bg:#FBF0DC; --red:#C2362D; --red-bg:#FBE6E4; --shadow:0 10px 28px rgba(10,30,70,.08); }
+    * { box-sizing:border-box; }
+    body { margin:0; min-width:320px; color:var(--ink); background:radial-gradient(circle at 85% -15%,rgba(229,13,127,.11),transparent 30rem),var(--canvas); font:14px/1.45 'Noto Sans',Verdana,'Segoe UI',system-ui,sans-serif; }
+    .topbar { min-height:88px; padding:14px 32px; display:flex; align-items:center; justify-content:space-between; gap:28px; color:#fff; background:linear-gradient(100deg,var(--navy),var(--navy-2)); border-bottom:3px solid transparent; border-image:linear-gradient(90deg,var(--cyan),var(--navy)) 1; }
+    .brand { display:flex; align-items:center; gap:18px; min-width:0; }
+    .brand-mark { width:108px; height:auto; display:block; flex:none; }
+    .brand-title { font-size:clamp(20px,2.4vw,28px); font-weight:700; line-height:1.15; letter-spacing:-.025em; }
+    .guide-link { width:40px; height:40px; display:grid; place-items:center; flex:none; border:1px solid rgba(255,255,255,.45); border-radius:50%; color:#fff; background:rgba(255,255,255,.08); font-size:19px; font-weight:750; text-decoration:none; }
+    .guide-link:hover, .guide-link:focus-visible { border-color:var(--cyan); background:rgba(229,13,127,.18); outline:none; }
+    main { max-width:1160px; margin:0 auto; padding:28px 32px 48px; }
+    .back { display:inline-block; margin-bottom:18px; color:#B00C63; font-weight:700; text-decoration:none; }
+    .back:hover { text-decoration:underline; }
+    .page-head { margin-bottom:22px; }
+    h1 { margin:0 0 4px; color:var(--navy); font-size:clamp(24px,3vw,34px); line-height:1.15; letter-spacing:-.035em; }
+    .lede { margin:0; color:var(--muted); }
+    .card { overflow:hidden; background:var(--paper); border:1px solid #E0E4EE; border-radius:14px; box-shadow:var(--shadow); }
+    .card + .card { margin-top:20px; }
+    .card-head { min-height:63px; padding:15px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; border-bottom:1px solid var(--line); }
+    .card-head h2 { margin:0; color:var(--navy); font-size:17px; letter-spacing:-.015em; }
+    .card-head p { margin:2px 0 0; color:var(--muted); font-size:11px; }
+
+    .toc-links { padding:16px 20px 20px; display:flex; flex-wrap:wrap; gap:10px; }
+    .toc-links a { display:inline-flex; align-items:center; gap:6px; padding:7px 12px; border:1px solid #C7D2EA; border-radius:999px; color:var(--navy); background:#EAEEF8; font-size:12px; font-weight:700; text-decoration:none; white-space:nowrap; }
+    .toc-links a:hover, .toc-links a:focus-visible { border-color:var(--navy); background:#D9E1F5; outline:none; }
+    .toc-links a.pass { color:var(--green); background:var(--green-bg); border-color:#B7D8B9; }
+    .toc-links a.pass:hover, .toc-links a.pass:focus-visible { background:#d7f0e5; border-color:var(--green); }
+    .toc-links a.warn { color:var(--amber); background:var(--amber-bg); border-color:#E2C58D; }
+    .toc-links a.warn:hover, .toc-links a.warn:focus-visible { background:#ffe9b8; border-color:var(--amber); }
+    .toc-links a.fail { color:var(--red); background:var(--red-bg); border-color:#E8B5B0; }
+    .toc-links a.fail:hover, .toc-links a.fail:focus-visible { background:#fbd9dd; border-color:var(--red); }
+    .toc-links a span { font-weight:800; opacity:.85; }
+
+    .report-layout { display:grid; grid-template-columns:216px 1fr; gap:24px; align-items:start; }
+    .report-sidebar { position:sticky; top:20px; }
+    .report-sidebar .toc-links { flex-direction:column; flex-wrap:nowrap; align-items:stretch; gap:6px; padding:14px; }
+    .report-sidebar .toc-links a { justify-content:space-between; align-items:flex-start; gap:8px; padding:8px 10px; border-radius:10px; font-size:11px; line-height:1.3; white-space:normal; }
+    .report-sidebar .toc-links a span { flex:none; }
+    .report-content { min-width:0; }
+    @media (max-width:900px) { .report-layout { grid-template-columns:1fr; } .report-sidebar { position:static; } }
+
+    .section-score { padding:6px 10px; border-radius:999px; font-size:12px; font-weight:800; white-space:nowrap; }
+    .section-score.pass { color:var(--green); background:var(--green-bg); }
+    .section-score.warn { color:var(--amber); background:var(--amber-bg); }
+    .section-score.fail { color:var(--red); background:var(--red-bg); }
+
+    .detail-list { padding:6px 20px 16px; }
+    .detail-row { min-height:40px; padding:10px 0; display:grid; grid-template-columns:minmax(150px,.85fr) 1fr; gap:14px; align-items:center; border-bottom:1px solid var(--line); }
+    .detail-row:last-child { border-bottom:0; }
+    .detail-label { color:var(--muted); font-size:12px; font-weight:650; }
+    .detail-value { color:var(--navy); font-size:13px; font-weight:700; text-align:right; }
+
+    .plot-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; padding:20px 20px 24px; }
+    .plot-grid.plot-grid-1 { grid-template-columns:1fr; max-width:460px; margin:0 auto; }
+    .plot-grid.plot-grid-3 { grid-template-columns:repeat(3, 1fr); }
+    .plot { display:flex; flex-direction:column; }
+    .plot-box { aspect-ratio:4/3; border:1px dashed #b7c6d0; border-radius:8px; background:repeating-linear-gradient(45deg,#F7F8FB,#F7F8FB 10px,#e9eef1 10px,#e9eef1 20px); display:grid; place-items:center; }
+    .plot-box span { color:#8a9aa8; font-size:10px; font-weight:750; letter-spacing:.09em; text-transform:uppercase; }
+    .plot-caption { margin:10px 2px 0; color:var(--navy); font-size:12px; font-weight:650; text-align:center; }
+
+    .thumb-frame { width:100%; display:block; border-radius:8px; overflow:hidden; box-shadow:0 6px 18px rgba(7,29,45,.25); cursor:zoom-in; transition:box-shadow .15s ease; }
+    .thumb-frame:hover, .thumb-frame:focus-visible { box-shadow:0 8px 22px rgba(7,29,45,.35); outline:none; }
+    .thumb-frame img { display:block; width:100%; height:auto; }
+
+    .check-block { padding:18px 20px; border-top:1px solid var(--line); }
+    .check-block h3 { margin:0 0 3px; color:var(--navy); font-size:14px; }
+    .check-block .check-desc { margin:0; color:var(--muted); font-size:11px; }
+    .check-block .plot-grid { padding:14px 0 4px; }
+    .check-block .detail-list { padding:4px 0 0; }
+
+    .image-summary { display:grid; grid-template-columns:220px 1fr; gap:24px; padding:20px; align-items:start; }
+    .image-summary .thumb-frame { width:100%; }
+    .image-preview { display:flex; flex-direction:column; align-items:center; }
+    .image-preview .pipeline-log-link { margin-top:10px; }
+    .image-summary .detail-list { padding:0; }
+    @media (max-width:820px) { .image-summary { grid-template-columns:1fr; } }
+
+    .config-details.check-block summary.config-summary { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; }
+
+    .pipeline-log-link { display:inline-block; margin-top:8px; color:#B00C63; font-size:12px; font-weight:700; text-decoration:none; border-bottom:1px solid rgba(176,12,99,.35); }
+    .pipeline-log-link:hover, .pipeline-log-link:focus-visible { color:#0A1E46; border-bottom-color:currentColor; outline:none; }
+    .config-details summary { list-style:none; cursor:pointer; user-select:none; }
+    .config-details summary::-webkit-details-marker { display:none; }
+    .disclosure { width:24px; height:24px; display:grid; place-items:center; color:#B00C63; transition:transform .16s ease; flex:none; }
+    .disclosure::before { content:"\203a"; font-size:24px; line-height:1; }
+    .config-details[open] .disclosure { transform:rotate(90deg); }
+
+    .note { margin:16px 0 0; color:var(--muted); font-size:10px; }
+
+    @media (max-width:820px) { .plot-grid, .plot-grid.plot-grid-3 { grid-template-columns:1fr; } }
+    @media (max-width:640px) { .topbar{min-height:0;padding:14px 18px;gap:14px} .brand{gap:12px} .brand-mark{width:82px} .brand-title{font-size:18px} main{padding:21px 15px 35px} .detail-row{grid-template-columns:1fr;gap:2px} .detail-value{text-align:left} }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><img class="brand-mark" src="skao-logo.svg" alt="SKAO" width="108" height="30" /><div class="brand-title">Imaging &amp; Deconvolution</div></div>
+    <a class="guide-link" href="user-guide.html" aria-label="Open the Quality Assessment Report user guide" title="User guide">?</a>
+  </header>
+  <main>
+    <a class="back" href="skao_qa_dashboard_mockup.html">← Back to Quality Assessment Report</a>
+    <div class="page-head">
+      <h1>Imaging &amp; Deconvolution</h1><p class="lede">W-stacking, multi-scale CLEAN · scheduling block SB-2028-0412-0017</p>
+      <a class="pipeline-log-link" href="pipeline.log" target="_blank" rel="noopener">View pipeline log</a>
+    </div>
+
+    <div class="report-layout">
+      <nav class="report-sidebar card" aria-label="Report sections">
+        <div class="toc-links">
+          <a href="#summary">Summary</a>
+          <a href="#band-overview">UV coverage</a>
+          <a class="pass" href="#continuum-stokes-i">Continuum Stokes I<span>96%</span></a>
+          <a href="#config-continuum">Continuum: configuration parameters</a>
+          <a class="pass" href="#cube-1">Spectral cube 1<span>95%</span></a>
+          <a href="#config-cube-1">Cube 1: configuration parameters</a>
+          <a class="pass" href="#cube-2">Spectral cube 2<span>95%</span></a>
+          <a href="#config-cube-2">Cube 2: configuration parameters</a>
+        </div>
+      </nav>
+
+      <div class="report-content">
+
+    <section class="card" id="summary" aria-labelledby="summary-title">
+      <div class="card-head"><div><h2 id="summary-title">Summary</h2><p>Imaging run overview</p></div><span class="section-score pass">96%</span></div>
+      <div class="detail-list">
+        <div class="detail-row"><span class="detail-label">Pipeline stage</span><span class="detail-value">Imaging &amp; deconvolution</span></div>
+        <div class="detail-row"><span class="detail-label">Images produced</span><span class="detail-value">3 / 3</span></div>
+        <div class="detail-row"><span class="detail-label">Image fidelity</span><span class="detail-value">96.2%</span></div>
+        <div class="detail-row"><span class="detail-label">Elapsed time</span><span class="detail-value">01:21:33</span></div>
+        <div class="detail-row"><span class="detail-label">Report generated</span><span class="detail-value">2028-04-12 23:19:31 UTC</span></div>
+      </div>
+    </section>
+
+    <section class="card" id="band-overview" aria-labelledby="band-overview-title">
+      <div class="card-head"><div><h2 id="band-overview-title">UV coverage</h2><p>Continuum band and spectral line windows, before per-image diagnostics</p></div></div>
+      <div class="plot-grid plot-grid-3">
+        <div class="plot">
+          <a class="thumb-frame" href="Plots_and_images/uv_coverage.png" target="_blank" rel="noopener" title="Open full-size image"><img src="Plots_and_images/uv_coverage.png" alt="UV-coverage — continuum band, 110–350 MHz" /></a>
+          <p class="plot-caption">UV-coverage — continuum band, 110–350 MHz</p>
+        </div>
+        <div class="plot">
+          <a class="thumb-frame" href="Plots_and_images/uv_coverage_cube1.png" target="_blank" rel="noopener" title="Open full-size image"><img src="Plots_and_images/uv_coverage_cube1.png" alt="UV-coverage — cube_1.fits, representative channel" /></a>
+          <p class="plot-caption">UV-coverage — cube_1.fits, representative channel (ch. 512, 170.0 MHz)</p>
+        </div>
+        <div class="plot">
+          <a class="thumb-frame" href="Plots_and_images/uv_coverage_cube2.png" target="_blank" rel="noopener" title="Open full-size image"><img src="Plots_and_images/uv_coverage_cube2.png" alt="UV-coverage — cube_2.fits, representative channel" /></a>
+          <p class="plot-caption">UV-coverage — cube_2.fits, representative channel (ch. 512, 290.0 MHz)</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="continuum-stokes-i" aria-labelledby="continuum-stokes-i-title">
+      <div class="card-head"><div><h2 id="continuum-stokes-i-title">Continuum Stokes I</h2><p>continuum_stokes_i.fits</p></div><span class="section-score pass">96%</span></div>
+      <div class="image-summary">
+        <div class="image-preview">
+          <a class="thumb-frame" href="Plots_and_images/contimage.png" target="_blank" rel="noopener" title="Open full-size image"><img src="Plots_and_images/contimage.png" alt="continuum_stokes_i.fits thumbnail" /></a>
+          <a class="pipeline-log-link" href="imaging-products.html">View other imaging products</a>
+        </div>
+        <div class="detail-list">
+          <div class="detail-row"><span class="detail-label">Frequency range</span><span class="detail-value">110–350 MHz</span></div>
+          <div class="detail-row"><span class="detail-label">Number of channels</span><span class="detail-value">1</span></div>
+          <div class="detail-row"><span class="detail-label">Image size</span><span class="detail-value">16,384 × 16,384 px</span></div>
+          <div class="detail-row"><span class="detail-label">Pixel size</span><span class="detail-value">1.05 arcsec</span></div>
+          <div class="detail-row"><span class="detail-label">File size</span><span class="detail-value">820 GB</span></div>
+        </div>
+      </div>
+      <div class="check-block">
+        <h3>Photometric check</h3>
+        <p class="check-desc">Measured vs reference catalogue flux density</p>
+        <div class="plot-grid plot-grid-1">
+          <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">Measured vs RACS-low catalogue flux density</p></div>
+        </div>
+        <div class="detail-list">
+          <div class="detail-row"><span class="detail-label">Photometric QA score</span><span class="detail-value">97.4%</span></div>
+          <div class="detail-row"><span class="detail-label">Reference catalogue</span><span class="detail-value">RACS-low</span></div>
+        </div>
+      </div>
+      <div class="check-block">
+        <h3>Astrometric check</h3>
+        <p class="check-desc">Positional offset vs reference catalogue</p>
+        <div class="plot-grid plot-grid-1">
+          <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">Positional offset vs RACS-low catalogue</p></div>
+        </div>
+        <div class="detail-list">
+          <div class="detail-row"><span class="detail-label">Astrometric QA score</span><span class="detail-value">98.6%</span></div>
+          <div class="detail-row"><span class="detail-label">Reference catalogue</span><span class="detail-value">RACS-low</span></div>
+        </div>
+      </div>
+      <div class="check-block">
+        <h3>Sensitivity check</h3>
+        <p class="check-desc">Measured noise vs theoretical sensitivity</p>
+        <div class="detail-list">
+          <div class="detail-row"><span class="detail-label">Measured RMS noise</span><span class="detail-value">38.6 μJy/beam</span></div>
+          <div class="detail-row"><span class="detail-label">Theoretical RMS noise</span><span class="detail-value">36.9 μJy/beam</span></div>
+          <div class="detail-row"><span class="detail-label">Measured / theoretical ratio</span><span class="detail-value">1.05×</span></div>
+        </div>
+      </div>
+      <details class="config-details check-block" id="config-continuum">
+        <summary class="config-summary"><div><h3>Configuration parameters</h3><p class="check-desc">Parameters used to produce this image</p></div><span class="disclosure" aria-hidden="true"></span></summary>
+        <div class="detail-list">
+          <div class="detail-row"><span class="detail-label">Imaging algorithm</span><span class="detail-value">W-stacking + multi-scale CLEAN (wsclean)</span></div>
+          <div class="detail-row"><span class="detail-label">Image size</span><span class="detail-value">16,384 × 16,384 px</span></div>
+          <div class="detail-row"><span class="detail-label">Pixel size</span><span class="detail-value">1.05 arcsec</span></div>
+          <div class="detail-row"><span class="detail-label">CLEAN scales (px)</span><span class="detail-value">0, 5, 15, 45</span></div>
+          <div class="detail-row"><span class="detail-label">CLEAN threshold</span><span class="detail-value">3σ</span></div>
+          <div class="detail-row"><span class="detail-label">Weighting</span><span class="detail-value">Briggs, robust 0.0</span></div>
+          <div class="detail-row"><span class="detail-label">Max major cycles</span><span class="detail-value">8</span></div>
+          <div class="detail-row"><span class="detail-label">Gain (loop gain)</span><span class="detail-value">0.1</span></div>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="cube-1" aria-labelledby="cube-1-title">
+      <div class="card-head"><div><h2 id="cube-1-title">Spectral cube 1</h2><p>cube_1.fits</p></div><span class="section-score pass">95%</span></div>
+      <div class="image-summary">
+        <div class="image-preview">
+          <a class="thumb-frame" href="Plots_and_images/contimage.png" target="_blank" rel="noopener" title="Open full-size image"><img src="Plots_and_images/contimage.png" alt="cube_1.fits thumbnail" /></a>
+          <a class="pipeline-log-link" href="imaging-products.html">View other imaging products</a>
+        </div>
+        <div class="detail-list">
+          <div class="detail-row"><span class="detail-label">Frequency range</span><span class="detail-value">110–230 MHz</span></div>
+          <div class="detail-row"><span class="detail-label">Number of channels</span><span class="detail-value">1,024</span></div>
+          <div class="detail-row"><span class="detail-label">Image size</span><span class="detail-value">8,192 × 8,192 px</span></div>
+          <div class="detail-row"><span class="detail-label">Pixel size</span><span class="detail-value">1.50 arcsec</span></div>
+          <div class="detail-row"><span class="detail-label">File size</span><span class="detail-value">700 GB</span></div>
+        </div>
+      </div>
+      <div class="check-block">
+        <h3>Photometric check</h3>
+        <p class="check-desc">Measured vs reference catalogue flux density</p>
+        <div class="plot-grid plot-grid-1">
+          <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">Measured vs RACS-low catalogue flux density</p></div>
+        </div>
+        <div class="detail-list">
+          <div class="detail-row"><span class="detail-label">Photometric QA score</span><span class="detail-value">95.8%</span></div>
+          <div class="detail-row"><span class="detail-label">Reference catalogue</span><span class="detail-value">RACS-low</span></div>
+        </div>
+      </div>
+      <div class="check-block">
+        <h3>Astrometric check</h3>
+        <p class="check-desc">Positional offset vs reference catalogue</p>
+        <div class="plot-grid plot-grid-1">
+          <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">Positional offset vs RACS-low catalogue</p></div>
+        </div>
+        <div class="detail-list">
+          <div class="detail-row"><span class="detail-label">Astrometric QA score</span><span class="detail-value">97.9%</span></div>
+          <div class="detail-row"><span class="detail-label">Reference catalogue</span><span class="detail-value">RACS-low</span></div>
+        </div>
+      </div>
+      <div class="check-block">
+        <h3>Sensitivity check</h3>
+        <p class="check-desc">Measured noise vs theoretical sensitivity</p>
+        <div class="detail-list">
+          <div class="detail-row"><span class="detail-label">Measured RMS noise</span><span class="detail-value">210 μJy/beam/channel</span></div>
+          <div class="detail-row"><span class="detail-label">Theoretical RMS noise</span><span class="detail-value">198 μJy/beam/channel</span></div>
+          <div class="detail-row"><span class="detail-label">Measured / theoretical ratio</span><span class="detail-value">1.06×</span></div>
+        </div>
+      </div>
+      <details class="config-details check-block" id="config-cube-1">
+        <summary class="config-summary"><div><h3>Configuration parameters</h3><p class="check-desc">Parameters used to produce this image</p></div><span class="disclosure" aria-hidden="true"></span></summary>
+        <div class="detail-list">
+          <div class="detail-row"><span class="detail-label">Imaging algorithm</span><span class="detail-value">W-stacking + multi-scale CLEAN (wsclean), per-channel</span></div>
+          <div class="detail-row"><span class="detail-label">Image size</span><span class="detail-value">8,192 × 8,192 px</span></div>
+          <div class="detail-row"><span class="detail-label">Pixel size</span><span class="detail-value">1.50 arcsec</span></div>
+          <div class="detail-row"><span class="detail-label">Channel width</span><span class="detail-value">117.2 kHz</span></div>
+          <div class="detail-row"><span class="detail-label">CLEAN scales (px)</span><span class="detail-value">0, 4, 12, 36</span></div>
+          <div class="detail-row"><span class="detail-label">CLEAN threshold</span><span class="detail-value">3σ</span></div>
+          <div class="detail-row"><span class="detail-label">Weighting</span><span class="detail-value">Briggs, robust 0.0</span></div>
+          <div class="detail-row"><span class="detail-label">Max major cycles</span><span class="detail-value">6</span></div>
+          <div class="detail-row"><span class="detail-label">Gain (loop gain)</span><span class="detail-value">0.1</span></div>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="cube-2" aria-labelledby="cube-2-title">
+      <div class="card-head"><div><h2 id="cube-2-title">Spectral cube 2</h2><p>cube_2.fits</p></div><span class="section-score pass">95%</span></div>
+      <div class="image-summary">
+        <div class="image-preview">
+          <a class="thumb-frame" href="Plots_and_images/contimage.png" target="_blank" rel="noopener" title="Open full-size image"><img src="Plots_and_images/contimage.png" alt="cube_2.fits thumbnail" /></a>
+          <a class="pipeline-log-link" href="imaging-products.html">View other imaging products</a>
+        </div>
+        <div class="detail-list">
+          <div class="detail-row"><span class="detail-label">Frequency range</span><span class="detail-value">230–350 MHz</span></div>
+          <div class="detail-row"><span class="detail-label">Number of channels</span><span class="detail-value">1,024</span></div>
+          <div class="detail-row"><span class="detail-label">Image size</span><span class="detail-value">8,192 × 8,192 px</span></div>
+          <div class="detail-row"><span class="detail-label">Pixel size</span><span class="detail-value">1.50 arcsec</span></div>
+          <div class="detail-row"><span class="detail-label">File size</span><span class="detail-value">700 GB</span></div>
+        </div>
+      </div>
+      <div class="check-block">
+        <h3>Photometric check</h3>
+        <p class="check-desc">Measured vs reference catalogue flux density</p>
+        <div class="plot-grid plot-grid-1">
+          <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">Measured vs RACS-low catalogue flux density</p></div>
+        </div>
+        <div class="detail-list">
+          <div class="detail-row"><span class="detail-label">Photometric QA score</span><span class="detail-value">96.1%</span></div>
+          <div class="detail-row"><span class="detail-label">Reference catalogue</span><span class="detail-value">RACS-low</span></div>
+        </div>
+      </div>
+      <div class="check-block">
+        <h3>Astrometric check</h3>
+        <p class="check-desc">Positional offset vs reference catalogue</p>
+        <div class="plot-grid plot-grid-1">
+          <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">Positional offset vs RACS-low catalogue</p></div>
+        </div>
+        <div class="detail-list">
+          <div class="detail-row"><span class="detail-label">Astrometric QA score</span><span class="detail-value">97.5%</span></div>
+          <div class="detail-row"><span class="detail-label">Reference catalogue</span><span class="detail-value">RACS-low</span></div>
+        </div>
+      </div>
+      <div class="check-block">
+        <h3>Sensitivity check</h3>
+        <p class="check-desc">Measured noise vs theoretical sensitivity</p>
+        <div class="detail-list">
+          <div class="detail-row"><span class="detail-label">Measured RMS noise</span><span class="detail-value">195 μJy/beam/channel</span></div>
+          <div class="detail-row"><span class="detail-label">Theoretical RMS noise</span><span class="detail-value">185 μJy/beam/channel</span></div>
+          <div class="detail-row"><span class="detail-label">Measured / theoretical ratio</span><span class="detail-value">1.05×</span></div>
+        </div>
+      </div>
+      <details class="config-details check-block" id="config-cube-2">
+        <summary class="config-summary"><div><h3>Configuration parameters</h3><p class="check-desc">Parameters used to produce this image</p></div><span class="disclosure" aria-hidden="true"></span></summary>
+        <div class="detail-list">
+          <div class="detail-row"><span class="detail-label">Imaging algorithm</span><span class="detail-value">W-stacking + multi-scale CLEAN (wsclean), per-channel</span></div>
+          <div class="detail-row"><span class="detail-label">Image size</span><span class="detail-value">8,192 × 8,192 px</span></div>
+          <div class="detail-row"><span class="detail-label">Pixel size</span><span class="detail-value">1.50 arcsec</span></div>
+          <div class="detail-row"><span class="detail-label">Channel width</span><span class="detail-value">117.2 kHz</span></div>
+          <div class="detail-row"><span class="detail-label">CLEAN scales (px)</span><span class="detail-value">0, 4, 12, 36</span></div>
+          <div class="detail-row"><span class="detail-label">CLEAN threshold</span><span class="detail-value">3σ</span></div>
+          <div class="detail-row"><span class="detail-label">Weighting</span><span class="detail-value">Briggs, robust 0.0</span></div>
+          <div class="detail-row"><span class="detail-label">Max major cycles</span><span class="detail-value">6</span></div>
+          <div class="detail-row"><span class="detail-label">Gain (loop gain)</span><span class="detail-value">0.1</span></div>
+        </div>
+      </details>
+    </section>
+
+    <p class="note">Static interface mock-up · representative data only</p>
+
+      </div>
+    </div>
+  </main>
+</body>
+</html>

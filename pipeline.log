@@ -1,0 +1,1298 @@
+2026-03-08 09:19:39.603Z __main__                 INFO     [MainProcess] Parameter file for L-band wide: /home/kat/ve3/lib/python3.8/site-packages/katsdpcal/conf/pipeline_params/pipeline_parameters_meerkat_L_wide.txt
+2026-03-08 09:19:39.603Z __main__                 INFO     [MainProcess] Loading parameters from parameter file.
+2026-03-08 09:19:39.604Z __main__                 INFO     [MainProcess] Finalising parameters
+2026-03-08 09:19:39.722Z __main__                 INFO     [MainProcess] Pipeline system input parameters
+2026-03-08 09:19:39.722Z __main__                 INFO     [MainProcess]    - antennas: 56
+2026-03-08 09:19:39.723Z __main__                 INFO     [MainProcess]    - number of channels: 4096 (of 4096)
+2026-03-08 09:19:39.723Z __main__                 INFO     [MainProcess]    - number of polarisation products: 4
+2026-03-08 09:19:39.723Z __main__                 INFO     [MainProcess] Buffer size : 64.522322 GB
+2026-03-08 09:19:39.723Z __main__                 INFO     [MainProcess] Total slots in buffer : 188
+2026-03-08 09:19:39.723Z __main__                 INFO     [MainProcess] Receiving L0 data from 239.192.55.165+3:7148 via ens3f0np0
+2026-03-08 09:19:39.723Z __main__                 INFO     [MainProcess] L1 flags not being sent
+2026-03-08 09:19:39.724Z katsdpcal.control        INFO     [MainProcess] Using multiprocessing
+2026-03-08 09:19:39.909Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/distributed/deploy/local.py:121: UserWarning: diagnostics_port has been deprecated. Please use `dashboard_address=` instead
+  warnings.warn(
+
+2026-03-08 09:19:40.168Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 09:19:40.256Z aiomonitor.monitor       INFO     [MainProcess] Starting aiomonitor at telnet://127.0.0.1:31235 and http://127.0.0.1:31362
+2026-03-08 09:19:40.259Z prompt_toolkit.contrib.telnet INFO     [MainProcess] Listening for telnet connections on 127.0.0.1 port 31235
+2026-03-08 09:19:40.260Z __main__                 INFO     [MainProcess] katsdpcal started
+2026-03-08 09:27:47.516Z katsdpcal.control        INFO     [MainProcess] ===========================
+2026-03-08 09:27:47.516Z katsdpcal.control        INFO     [MainProcess]    Starting new observation
+2026-03-08 09:27:47.517Z katsdpcal.control        INFO     [MainProcess] Initializing SPEAD receiver
+2026-03-08 09:27:47.517Z katsdpcal.control        INFO     [MainProcess] reader added
+2026-03-08 09:27:47.518Z katsdpcal.control        INFO     [MainProcess] waiting to start accumulating data
+2026-03-08 09:27:47.519Z katsdpcal.control        INFO     [Pipeline] Resetting solution stores
+2026-03-08 09:27:47.519Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 09:27:47.911Z katsdpcal.control        INFO     [MainProcess] ==== empty heap received ====
+2026-03-08 09:27:47.912Z katsdpcal.control        INFO     [MainProcess] ==== empty heap received ====
+2026-03-08 09:27:47.912Z katsdpcal.control        INFO     [MainProcess] ==== empty heap received ====
+2026-03-08 09:27:47.912Z katsdpcal.control        INFO     [MainProcess] ==== empty heap received ====
+2026-03-08 09:28:05.432Z katsdpcal.control        INFO     [MainProcess] accumulating data from targets:
+2026-03-08 09:28:05.432Z katsdpcal.control        INFO     [MainProcess]  - J1939-6342 | PKS1934-638 | PKS 1934-63 (slew)
+2026-03-08 09:28:45.417Z katsdpcal.control        INFO     [MainProcess] Accumulation break - single scan accumulation
+2026-03-08 09:28:45.417Z katsdpcal.control        INFO     [MainProcess] Accumulated 5 timestamps
+2026-03-08 09:28:45.417Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 09:28:45.418Z katsdpcal.control        INFO     [MainProcess]  - J1939-6342 | PKS1934-638 | PKS 1934-63 (track)
+2026-03-08 09:28:45.418Z katsdpcal.control        INFO     [Pipeline] buffer with 5 slots acquired by Pipeline
+2026-03-08 09:28:45.422Z katsdpcal.control        INFO     [Pipeline] buffer with 5 slots released by Pipeline for transmission
+2026-03-08 09:28:45.422Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 09:28:45.422Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 09:28:45.422Z katsdpcal.control        INFO     [Sender] starting transmission of 5 slots
+2026-03-08 09:28:52.722Z katsdpcal.control        INFO     [Sender] finished transmission of 5 slots
+2026-03-08 09:30:53.363Z katsdpcal.control        INFO     [MainProcess] Accumulation break - transition track -> stop
+2026-03-08 09:30:53.363Z katsdpcal.control        INFO     [MainProcess] Accumulated 16 timestamps
+2026-03-08 09:30:53.363Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 09:30:53.364Z katsdpcal.control        INFO     [MainProcess]  - J1939-6342 | PKS1934-638 | PKS 1934-63 (stop)
+2026-03-08 09:30:53.364Z katsdpcal.control        INFO     [Pipeline] buffer with 16 slots acquired by Pipeline
+2026-03-08 09:30:53.366Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 09:30:53.366Z katsdpcal.reduction      INFO     [Pipeline] Target: J1939-6342
+2026-03-08 09:30:53.367Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 15
+2026-03-08 09:30:53.367Z katsdpcal.reduction      INFO     [Pipeline]   Time:       09:28:39 - 09:30:31
+2026-03-08 09:30:53.367Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['bfcal', 'single_accumulation']
+2026-03-08 09:30:53.390Z katsdpcal.reduction      INFO     [Pipeline]    Model file: /home/kat/ve3/lib/python3.8/site-packages/katsdpcal/conf/sky_models/J1939-6342_L.txt
+2026-03-08 09:30:53.391Z katsdpcal.reduction      INFO     [Pipeline] Calibrator flagging
+2026-03-08 09:31:14.529Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 09:31:14.529Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 29.802%
+2026-03-08 09:31:14.530Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 42.362%
+2026-03-08 09:31:14.604Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 09:31:14.605Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.378%
+2026-03-08 09:31:14.605Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 42.416%
+2026-03-08 09:31:14.605Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 21.214528560638428 s
+2026-03-08 09:31:14.609Z katsdpcal.reduction      INFO     [Pipeline]      Model: 51 point sources
+2026-03-08 09:31:18.508Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (_create_model): 3.902785539627075 s
+2026-03-08 09:31:18.802Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (refant_find): 4.196004152297974 s
+2026-03-08 09:31:18.802Z katsdpcal.reduction      INFO     [Pipeline] Reference antenna set to m062
+2026-03-08 09:31:18.803Z katsdpcal.reduction      INFO     [Pipeline] Calibrator flagging, auto-correlations
+2026-03-08 09:31:19.304Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols, auto-corrs
+2026-03-08 09:31:19.304Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 15.385%
+2026-03-08 09:31:19.304Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 50.349%
+2026-03-08 09:31:19.354Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols, auto-corrs
+2026-03-08 09:31:19.355Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 14.768%
+2026-03-08 09:31:19.355Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 50.282%
+2026-03-08 09:31:19.355Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 0.5521385669708252 s
+2026-03-08 09:31:19.355Z katsdpcal.reduction      INFO     [Pipeline] Solving for K on beamformer calibrator J1939-6342
+2026-03-08 09:31:19.689Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (k_sol): 0.33355021476745605 s
+2026-03-08 09:31:19.689Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'K J1939-6342 (2, 56) 09:29:35' to Telescope State
+2026-03-08 09:31:19.691Z katsdpcal.reduction      INFO     [Pipeline] Solving for B on beamformer calibrator J1939-6342
+2026-03-08 09:31:19.691Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J1939-6342
+2026-03-08 09:31:28.756Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/dask/core.py:121: RuntimeWarning: invalid value encountered in reciprocal
+  return func(*(_execute_task(a, cache) for a in args))
+
+2026-03-08 09:31:30.932Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (b_sol): 11.241052865982056 s
+2026-03-08 09:31:30.933Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/katsdpcalproc/calprocs.py:638: RuntimeWarning: invalid value encountered in fmod
+  rel_angle = np.fmod(angle - base_angle, 2 * np.pi)
+
+2026-03-08 09:31:30.933Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (b_norm): 0.0011761188507080078 s
+2026-03-08 09:31:30.935Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'B J1939-6342 (4096, 2, 56) 09:29:35' to Telescope State
+2026-03-08 09:31:30.977Z katsdpcal.reduction      INFO     [Pipeline] Solving for G on beamformer calibrator J1939-6342
+2026-03-08 09:31:30.977Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J1939-6342
+2026-03-08 09:31:30.986Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply B solution to J1939-6342
+2026-03-08 09:31:30.994Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 119.94925457943924 s (15 dumps)
+2026-03-08 09:31:31.050Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/dask/core.py:121: RuntimeWarning: invalid value encountered in reciprocal
+  return func(*(_execute_task(a, cache) for a in args))
+
+2026-03-08 09:31:39.058Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/dask/core.py:121: RuntimeWarning: invalid value encountered in reciprocal
+  return func(*(_execute_task(a, cache) for a in args))
+
+2026-03-08 09:31:47.171Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 16.193755388259888 s
+2026-03-08 09:31:47.171Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'G J1939-6342 (1, 2, 56) 09:29:35' to Telescope State
+2026-03-08 09:31:47.173Z katsdpcal.reduction      INFO     [Pipeline] Checking if the noise diode was fired
+2026-03-08 09:31:47.196Z katsdpcal.reduction      INFO     [Pipeline] Noise diode was fired, solving for KCROSS_DIODE on beamformer calibrator J1939-6342
+2026-03-08 09:31:47.197Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J1939-6342
+2026-03-08 09:31:47.203Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply B solution to J1939-6342
+2026-03-08 09:31:47.209Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply G solution to J1939-6342
+2026-03-08 09:31:47.254Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/dask/core.py:121: RuntimeWarning: invalid value encountered in reciprocal
+  return func(*(_execute_task(a, cache) for a in args))
+
+2026-03-08 09:31:47.466Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (kcross_sol): 0.2691802978515625 s
+2026-03-08 09:31:47.466Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'KCROSS_DIODE J1939-6342 (2, 56) 09:29:35' to Telescope State
+2026-03-08 09:31:47.467Z katsdpcal.reduction      INFO     [Pipeline] Solving for BCROSS_DIODE on beamformer calibrator J1939-6342
+2026-03-08 09:31:47.467Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J1939-6342
+2026-03-08 09:31:47.474Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply B solution to J1939-6342
+2026-03-08 09:31:47.481Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply G solution to J1939-6342
+2026-03-08 09:31:47.486Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply KCROSS_DIODE solution to J1939-6342
+2026-03-08 09:31:47.535Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/dask/core.py:121: RuntimeWarning: invalid value encountered in reciprocal
+  return func(*(_execute_task(a, cache) for a in args))
+
+2026-03-08 09:31:47.870Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (bcross_sol): 0.4026618003845215 s
+2026-03-08 09:31:47.870Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'BCROSS_DIODE J1939-6342 (4096, 2, 56) 09:29:35' to Telescope State
+2026-03-08 09:31:47.884Z katsdpcal.reduction      INFO     [Pipeline] Upgrading BCROSS_DIODE to BCROSS_DIODE_SKY
+2026-03-08 09:31:47.896Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/numpy/lib/nanfunctions.py:1113: RuntimeWarning: All-NaN slice encountered
+  r, k = function_base._ureduce(a, func=_nanmedian, axis=axis, out=out,
+
+2026-03-08 09:31:47.897Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'BCROSS_DIODE_SKY J1939-6342 (4096, 2, 56) 09:29:35' to Telescope State
+2026-03-08 09:31:47.934Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/numpy/lib/nanfunctions.py:1113: RuntimeWarning: All-NaN slice encountered
+  r, k = function_base._ureduce(a, func=_nanmedian, axis=axis, out=out,
+
+2026-03-08 09:31:47.937Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/dask/array/ufunc.py:135: RuntimeWarning: invalid value encountered in reciprocal
+  return self._ufunc(*args, **kwargs)
+
+2026-03-08 09:31:47.940Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected auto-corr data for J1939-6342:
+2026-03-08 09:31:47.969Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/dask/core.py:121: RuntimeWarning: invalid value encountered in reciprocal
+  return func(*(_execute_task(a, cache) for a in args))
+
+2026-03-08 09:31:48.186Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to J1939-6342:
+2026-03-08 09:31:48.187Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J1939-6342 (2, 56) 09:29:35' from solution store
+2026-03-08 09:31:48.188Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J1939-6342 (4096, 2, 56) 09:29:35' from solution store
+2026-03-08 09:31:48.188Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G (1, 2, 56) 09:29:35' from solution store
+2026-03-08 09:31:48.188Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to J1939-6342 (inplace)
+2026-03-08 09:31:48.203Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to J1939-6342 (inplace)
+2026-03-08 09:31:48.215Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to J1939-6342 (inplace)
+2026-03-08 09:32:00.093Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 11.905441045761108 s
+2026-03-08 09:32:00.141Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for J1939-6342:
+2026-03-08 09:32:05.331Z katsdpcal.control        INFO     [MainProcess] Accumulation break - single scan accumulation
+2026-03-08 09:32:05.332Z katsdpcal.control        INFO     [MainProcess] Accumulated 9 timestamps
+2026-03-08 09:32:05.332Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 09:32:05.333Z katsdpcal.control        INFO     [MainProcess]  - J1939-6342 | PKS1934-638 | PKS 1934-63 (slew)
+2026-03-08 09:32:07.512Z katsdpcal.control        INFO     [Sender] starting transmission of 16 slots
+2026-03-08 09:32:07.512Z katsdpcal.control        INFO     [Pipeline] buffer with 16 slots released by Pipeline for transmission
+2026-03-08 09:32:07.530Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 09:32:07.532Z katsdpcal.control        INFO     [Pipeline] buffer with 9 slots acquired by Pipeline
+2026-03-08 09:32:07.534Z katsdpcal.control        INFO     [Pipeline] buffer with 9 slots released by Pipeline for transmission
+2026-03-08 09:32:07.534Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 09:32:07.545Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 09:32:07.546Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 09:32:13.332Z katsdpcal.control        INFO     [MainProcess] Accumulation break - single scan accumulation
+2026-03-08 09:32:13.332Z katsdpcal.control        INFO     [MainProcess] Accumulated 1 timestamps
+2026-03-08 09:32:13.332Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 09:32:13.333Z katsdpcal.control        INFO     [MainProcess]  - J1939-6342 | PKS1934-638 | PKS 1934-63 (track)
+2026-03-08 09:32:13.332Z katsdpcal.control        INFO     [Pipeline] buffer with 1 slots acquired by Pipeline
+2026-03-08 09:32:13.335Z katsdpcal.control        INFO     [Pipeline] buffer with 1 slots released by Pipeline for transmission
+2026-03-08 09:32:13.335Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 09:32:13.335Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 09:32:29.784Z katsdpcal.control        INFO     [Sender] finished transmission of 16 slots
+2026-03-08 09:32:29.785Z katsdpcal.control        INFO     [Sender] starting transmission of 9 slots
+2026-03-08 09:32:42.297Z katsdpcal.control        INFO     [Sender] finished transmission of 9 slots
+2026-03-08 09:32:42.297Z katsdpcal.control        INFO     [Sender] starting transmission of 1 slots
+2026-03-08 09:32:43.691Z katsdpcal.control        INFO     [Sender] finished transmission of 1 slots
+2026-03-08 09:33:22.605Z spead2                   WARNING  [MainProcess] worker thread blocked by full ringbuffer on heap 167936
+2026-03-08 09:33:22.713Z spead2                   WARNING  [MainProcess] worker thread blocked by full ringbuffer on heap 164864
+2026-03-08 09:33:22.714Z spead2                   WARNING  [MainProcess] worker thread blocked by full ringbuffer on heap 168960
+2026-03-08 09:33:22.820Z katsdpcal.control        INFO     [MainProcess] Waiting for capture to finish (5s timeout)...
+2026-03-08 09:33:23.036Z katsdpcal.control        INFO     [MainProcess] Accumulated 9 timestamps
+2026-03-08 09:33:23.036Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 09:33:23.037Z katsdpcal.control        INFO     [MainProcess] Accumulation ended
+2026-03-08 09:33:23.037Z katsdpcal.control        INFO     [Pipeline] buffer with 9 slots acquired by Pipeline
+2026-03-08 09:33:23.038Z katsdpcal.control        INFO     [MainProcess] Observation ended
+2026-03-08 09:33:23.038Z katsdpcal.control        INFO     [MainProcess] Capture stopped
+2026-03-08 09:33:23.039Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 09:33:23.040Z katsdpcal.reduction      INFO     [Pipeline] Target: J1939-6342
+2026-03-08 09:33:23.040Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 7
+2026-03-08 09:33:23.040Z katsdpcal.reduction      INFO     [Pipeline]   Time:       09:32:07 - 09:32:55
+2026-03-08 09:33:23.040Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['bfcal', 'single_accumulation']
+2026-03-08 09:33:23.062Z katsdpcal.reduction      INFO     [Pipeline] Calibrator flagging
+2026-03-08 09:33:28.578Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 09:33:28.578Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.247%
+2026-03-08 09:33:28.579Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 45.279%
+2026-03-08 09:33:28.649Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 09:33:28.649Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.728%
+2026-03-08 09:33:28.649Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 45.319%
+2026-03-08 09:33:28.650Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 5.587916851043701 s
+2026-03-08 09:33:28.651Z katsdpcal.reduction      INFO     [Pipeline] Calibrator flagging, auto-correlations
+2026-03-08 09:33:29.044Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols, auto-corrs
+2026-03-08 09:33:29.044Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 14.816%
+2026-03-08 09:33:29.044Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 44.230%
+2026-03-08 09:33:29.089Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols, auto-corrs
+2026-03-08 09:33:29.089Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 14.654%
+2026-03-08 09:33:29.089Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 44.184%
+2026-03-08 09:33:29.089Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 0.4386577606201172 s
+2026-03-08 09:33:29.089Z katsdpcal.reduction      INFO     [Pipeline] Solving for K on beamformer calibrator J1939-6342
+2026-03-08 09:33:29.093Z katsdpcal.reduction      INFO     [Pipeline]      Model: 51 point sources
+2026-03-08 09:33:30.437Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (_create_model): 1.347440481185913 s
+2026-03-08 09:33:30.942Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (k_sol): 1.8520927429199219 s
+2026-03-08 09:33:30.942Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'K J1939-6342 (2, 56) 09:32:31' to Telescope State
+2026-03-08 09:33:30.943Z katsdpcal.reduction      INFO     [Pipeline] Solving for B on beamformer calibrator J1939-6342
+2026-03-08 09:33:30.943Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J1939-6342
+2026-03-08 09:33:38.170Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/dask/core.py:121: RuntimeWarning: invalid value encountered in reciprocal
+  return func(*(_execute_task(a, cache) for a in args))
+
+2026-03-08 09:33:40.371Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (b_sol): 9.427169561386108 s
+2026-03-08 09:33:40.372Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/katsdpcalproc/calprocs.py:638: RuntimeWarning: invalid value encountered in fmod
+  rel_angle = np.fmod(angle - base_angle, 2 * np.pi)
+
+2026-03-08 09:33:40.372Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (b_norm): 0.0011317729949951172 s
+2026-03-08 09:33:40.373Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'B J1939-6342 (4096, 2, 56) 09:32:31' to Telescope State
+2026-03-08 09:33:40.415Z katsdpcal.reduction      INFO     [Pipeline] Solving for G on beamformer calibrator J1939-6342
+2026-03-08 09:33:40.415Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J1939-6342
+2026-03-08 09:33:40.423Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply B solution to J1939-6342
+2026-03-08 09:33:40.429Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 55.976318803738316 s (7 dumps)
+2026-03-08 09:33:40.475Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/dask/core.py:121: RuntimeWarning: invalid value encountered in reciprocal
+  return func(*(_execute_task(a, cache) for a in args))
+
+2026-03-08 09:33:46.156Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/dask/core.py:121: RuntimeWarning: invalid value encountered in reciprocal
+  return func(*(_execute_task(a, cache) for a in args))
+
+2026-03-08 09:33:51.884Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 11.468889236450195 s
+2026-03-08 09:33:51.884Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'G J1939-6342 (1, 2, 56) 09:32:31' to Telescope State
+2026-03-08 09:33:51.885Z katsdpcal.reduction      INFO     [Pipeline] Checking if the noise diode was fired
+2026-03-08 09:33:51.906Z katsdpcal.reduction      INFO     [Pipeline] Noise diode was fired, solving for KCROSS_DIODE on beamformer calibrator J1939-6342
+2026-03-08 09:33:51.907Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J1939-6342
+2026-03-08 09:33:51.913Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply B solution to J1939-6342
+2026-03-08 09:33:51.919Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply G solution to J1939-6342
+2026-03-08 09:33:51.962Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/dask/core.py:121: RuntimeWarning: invalid value encountered in reciprocal
+  return func(*(_execute_task(a, cache) for a in args))
+
+2026-03-08 09:33:52.157Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (kcross_sol): 0.2499556541442871 s
+2026-03-08 09:33:52.157Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'KCROSS_DIODE J1939-6342 (2, 56) 09:32:31' to Telescope State
+2026-03-08 09:33:52.157Z katsdpcal.reduction      INFO     [Pipeline] Solving for BCROSS_DIODE on beamformer calibrator J1939-6342
+2026-03-08 09:33:52.158Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J1939-6342
+2026-03-08 09:33:52.164Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply B solution to J1939-6342
+2026-03-08 09:33:52.171Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply G solution to J1939-6342
+2026-03-08 09:33:52.177Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply KCROSS_DIODE solution to J1939-6342
+2026-03-08 09:33:52.224Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/dask/core.py:121: RuntimeWarning: invalid value encountered in reciprocal
+  return func(*(_execute_task(a, cache) for a in args))
+
+2026-03-08 09:33:52.468Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (bcross_sol): 0.31076598167419434 s
+2026-03-08 09:33:52.469Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'BCROSS_DIODE J1939-6342 (4096, 2, 56) 09:32:31' to Telescope State
+2026-03-08 09:33:52.481Z katsdpcal.reduction      INFO     [Pipeline] Upgrading BCROSS_DIODE to BCROSS_DIODE_SKY
+2026-03-08 09:33:52.494Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/numpy/lib/nanfunctions.py:1113: RuntimeWarning: All-NaN slice encountered
+  r, k = function_base._ureduce(a, func=_nanmedian, axis=axis, out=out,
+
+2026-03-08 09:33:52.494Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'BCROSS_DIODE_SKY J1939-6342 (4096, 2, 56) 09:32:31' to Telescope State
+2026-03-08 09:33:52.531Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/numpy/lib/nanfunctions.py:1113: RuntimeWarning: All-NaN slice encountered
+  r, k = function_base._ureduce(a, func=_nanmedian, axis=axis, out=out,
+
+2026-03-08 09:33:52.533Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/dask/array/ufunc.py:135: RuntimeWarning: invalid value encountered in reciprocal
+  return self._ufunc(*args, **kwargs)
+
+2026-03-08 09:33:52.537Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected auto-corr data for J1939-6342:
+2026-03-08 09:33:52.564Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/dask/core.py:121: RuntimeWarning: invalid value encountered in reciprocal
+  return func(*(_execute_task(a, cache) for a in args))
+
+2026-03-08 09:33:52.886Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to J1939-6342:
+2026-03-08 09:33:52.887Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J1939-6342 (2, 56) 09:32:31' from solution store
+2026-03-08 09:33:52.887Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J1939-6342 (4096, 2, 56) 09:32:31' from solution store
+2026-03-08 09:33:52.893Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G (2, 2, 56) 09:31:03' from solution store
+2026-03-08 09:33:52.893Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to J1939-6342 (inplace)
+2026-03-08 09:33:52.907Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to J1939-6342 (inplace)
+2026-03-08 09:33:52.920Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to J1939-6342 (inplace)
+2026-03-08 09:34:04.721Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 11.828121900558472 s
+2026-03-08 09:34:04.744Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for J1939-6342:
+2026-03-08 09:34:11.585Z katsdpcal.control        INFO     [Sender] starting transmission of 9 slots
+2026-03-08 09:34:11.584Z katsdpcal.control        INFO     [Pipeline] buffer with 9 slots released by Pipeline for transmission
+2026-03-08 09:34:11.598Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 09:34:11.599Z katsdpcal.control        INFO     [Pipeline] Saved flux densities of gain calibrators to telstate.
+2026-03-08 09:34:11.599Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 09:34:11.611Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 09:34:11.629Z katsdpcal.control        INFO     [ReportWriter] Starting report on 1772962064
+2026-03-08 09:34:11.631Z katsdpcal.report         INFO     [ReportWriter] Report compiling in directory /var/kat/data/1772962064_sdp_l0_calreport_cal.1-current
+2026-03-08 09:34:12.855Z katsdpcal.report         INFO     [ReportWriter] Calibration solution SNR summary
+2026-03-08 09:34:12.857Z katsdpcal.report         INFO     [ReportWriter] Calibration product: SNR_K
+2026-03-08 09:34:12.857Z katsdpcal.report         INFO     [ReportWriter]   shape: (2, 2, 56)
+2026-03-08 09:34:12.858Z katsdpcal.report         INFO     [ReportWriter] Calibration product: SNR_B
+2026-03-08 09:34:12.858Z katsdpcal.report         INFO     [ReportWriter]   shape: (2, 2, 56)
+2026-03-08 09:34:12.858Z katsdpcal.report         INFO     [ReportWriter] Calibration product: SNR_G
+2026-03-08 09:34:12.858Z katsdpcal.report         INFO     [ReportWriter]   shape: (2, 2, 56)
+2026-03-08 09:34:13.028Z katsdpcal.report         INFO     [ReportWriter] Calibration solution summary
+2026-03-08 09:34:13.029Z katsdpcal.report         INFO     [ReportWriter] Calibration product: K
+2026-03-08 09:34:13.029Z katsdpcal.report         INFO     [ReportWriter]   shape: (2, 2, 56)
+2026-03-08 09:34:13.029Z katsdpcal.report         INFO     [ReportWriter]   pol V shape: (2, 56)
+2026-03-08 09:34:13.030Z katsdpcal.report         INFO     [ReportWriter]   pol H shape: (2, 56)
+2026-03-08 09:34:14.491Z katsdpcal.report         INFO     [ReportWriter] Calibration product: KCROSS_DIODE
+2026-03-08 09:34:14.491Z katsdpcal.report         INFO     [ReportWriter]   shape: (2, 2, 56)
+2026-03-08 09:34:15.542Z katsdpcal.report         INFO     [ReportWriter] Calibration product: BCROSS_DIODE
+2026-03-08 09:34:15.543Z katsdpcal.report         INFO     [ReportWriter]   shape: (2, 4096, 2, 56)
+2026-03-08 09:34:18.021Z katsdpcal.report         INFO     [ReportWriter] Calibration product: B
+2026-03-08 09:34:18.022Z katsdpcal.report         INFO     [ReportWriter]   shape: (2, 4096, 2, 56)
+2026-03-08 09:34:24.015Z katsdpcal.report         INFO     [ReportWriter] Calibration product: G
+2026-03-08 09:34:24.015Z katsdpcal.report         INFO     [ReportWriter]   shape: (2, 2, 56)
+2026-03-08 09:34:24.111Z katsdpcal.control        INFO     [Sender] finished transmission of 9 slots
+2026-03-08 09:34:29.475Z katsdpcal.report         INFO     [ReportWriter]  Corrected data for J1939-6342 shape: (1024, 2, 56)
+2026-03-08 09:34:34.918Z katsdpcal.report         INFO     [ReportWriter]  Corrected data for J1939-6342 shape: (2, 8, 2, 1540)
+2026-03-08 09:34:35.544Z katsdpcal.control        INFO     [ReportWriter]    Observation ended
+2026-03-08 09:34:35.544Z katsdpcal.control        INFO     [ReportWriter] ===========================
+2026-03-08 09:34:35.544Z katsdpcal.control        INFO     [ReportWriter] Moved observation report to /var/kat/data/1772962064_sdp_l0_calreport_cal.1
+2026-03-08 10:16:17.442Z katsdpcal.control        INFO     [MainProcess] ===========================
+2026-03-08 10:16:17.442Z katsdpcal.control        INFO     [MainProcess]    Starting new observation
+2026-03-08 10:16:17.442Z katsdpcal.control        INFO     [MainProcess] Initializing SPEAD receiver
+2026-03-08 10:16:17.442Z katsdpcal.control        INFO     [MainProcess] reader added
+2026-03-08 10:16:17.443Z katsdpcal.control        INFO     [MainProcess] waiting for 1772962064 to finish
+2026-03-08 10:16:17.443Z katsdpcal.control        INFO     [MainProcess] waiting to start accumulating data
+2026-03-08 10:16:17.443Z katsdpcal.control        INFO     [Pipeline] Resetting solution stores
+2026-03-08 10:16:17.443Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 10:16:17.806Z katsdpcal.control        INFO     [MainProcess] ==== empty heap received ====
+2026-03-08 10:16:17.806Z katsdpcal.control        INFO     [MainProcess] ==== empty heap received ====
+2026-03-08 10:16:17.806Z katsdpcal.control        INFO     [MainProcess] ==== empty heap received ====
+2026-03-08 10:16:17.807Z katsdpcal.control        INFO     [MainProcess] ==== empty heap received ====
+2026-03-08 10:19:20.137Z katsdpcal.control        INFO     [MainProcess] accumulating data from targets:
+2026-03-08 10:19:20.137Z katsdpcal.control        INFO     [MainProcess]  - J0408-6545 | 0408-658 (track)
+2026-03-08 10:19:36.125Z katsdpcal.control        INFO     [MainProcess] Accumulation break - transition track -> track
+2026-03-08 10:19:36.126Z katsdpcal.control        INFO     [MainProcess] Accumulated 2 timestamps
+2026-03-08 10:19:36.126Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 10:19:36.126Z katsdpcal.control        INFO     [MainProcess]  - J0408-6545 | 0408-658 (track)
+2026-03-08 10:19:36.126Z katsdpcal.control        INFO     [Pipeline] buffer with 2 slots acquired by Pipeline
+2026-03-08 10:19:36.129Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 10:19:36.129Z katsdpcal.reduction      INFO     [Pipeline] Target: J0408-6545
+2026-03-08 10:19:36.129Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 1
+2026-03-08 10:19:36.129Z katsdpcal.reduction      INFO     [Pipeline]   Time:       10:19:14 - 10:19:14
+2026-03-08 10:19:36.129Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['fluxcal', 'bpcal', 'delaycal']
+2026-03-08 10:19:36.151Z katsdpcal.reduction      INFO     [Pipeline]    Model file: /home/kat/ve3/lib/python3.8/site-packages/katsdpcal/conf/sky_models/J0408-6545_L.txt
+2026-03-08 10:19:36.152Z katsdpcal.reduction      INFO     [Pipeline] Calibrator flagging
+2026-03-08 10:19:39.903Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 10:19:39.904Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 29.446%
+2026-03-08 10:19:39.904Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 33.916%
+2026-03-08 10:19:39.938Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 10:19:39.938Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 29.622%
+2026-03-08 10:19:39.938Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 33.975%
+2026-03-08 10:19:39.939Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 3.787101984024048 s
+2026-03-08 10:19:40.018Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (refant_find): 0.0786895751953125 s
+2026-03-08 10:19:40.019Z katsdpcal.reduction      INFO     [Pipeline] Solving for preliminary G on delay calibrator J0408-6545
+2026-03-08 10:19:40.019Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 7.996616971962617 s (1 dumps)
+2026-03-08 10:19:40.022Z katsdpcal.reduction      INFO     [Pipeline]      Model: 50 point sources
+2026-03-08 10:19:40.249Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (_create_model): 0.2297968864440918 s
+2026-03-08 10:19:40.368Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 0.34833526611328125 s
+2026-03-08 10:19:40.370Z katsdpcal.reduction      INFO     [Pipeline] Solving for K on delay calibrator J0408-6545
+2026-03-08 10:19:40.370Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply G solution to J0408-6545
+2026-03-08 10:19:40.710Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (k_sol): 0.3397819995880127 s
+2026-03-08 10:19:40.710Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'K J0408-6545 (2, 56) 10:19:14' to Telescope State
+2026-03-08 10:19:40.711Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:19:14' from solution store
+2026-03-08 10:19:40.712Z katsdpcal.reduction      INFO     [Pipeline] Solving for preliminary G on bandpass calibrator J0408-6545
+2026-03-08 10:19:40.712Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J0408-6545
+2026-03-08 10:19:40.719Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 7.996616971962617 s (1 dumps)
+2026-03-08 10:19:41.578Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 0.8662419319152832 s
+2026-03-08 10:19:41.580Z katsdpcal.reduction      INFO     [Pipeline] Solving for B on bandpass calibrator J0408-6545
+2026-03-08 10:19:41.580Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J0408-6545
+2026-03-08 10:19:41.587Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply G solution to J0408-6545
+2026-03-08 10:19:44.708Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/dask/core.py:121: RuntimeWarning: invalid value encountered in reciprocal
+  return func(*(_execute_task(a, cache) for a in args))
+
+2026-03-08 10:19:46.908Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (b_sol): 5.3280134201049805 s
+2026-03-08 10:19:46.909Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/katsdpcalproc/calprocs.py:638: RuntimeWarning: invalid value encountered in fmod
+  rel_angle = np.fmod(angle - base_angle, 2 * np.pi)
+
+2026-03-08 10:19:46.910Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (b_norm): 0.0011191368103027344 s
+2026-03-08 10:19:46.911Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'B J0408-6545 (4096, 2, 56) 10:19:14' to Telescope State
+2026-03-08 10:19:46.955Z katsdpcal.reduction      INFO     [Pipeline] Solving for G on bandpass calibrator J0408-6545
+2026-03-08 10:19:46.956Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:19:14' from solution store
+2026-03-08 10:19:46.956Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:19:14' from solution store
+2026-03-08 10:19:46.956Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J0408-6545
+2026-03-08 10:19:46.963Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply B solution to J0408-6545
+2026-03-08 10:19:46.969Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 7.996616971962617 s (1 dumps)
+2026-03-08 10:19:50.107Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 3.151550769805908 s
+2026-03-08 10:19:50.108Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to J0408-6545:
+2026-03-08 10:19:50.108Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:19:14' from solution store
+2026-03-08 10:19:50.109Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:19:14' from solution store
+2026-03-08 10:19:50.109Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G J0408-6545 (1, 2, 56) 10:19:14' from solution store
+2026-03-08 10:19:50.109Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to J0408-6545 (inplace)
+2026-03-08 10:19:50.123Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to J0408-6545 (inplace)
+2026-03-08 10:19:50.135Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to J0408-6545 (inplace)
+2026-03-08 10:19:53.791Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 3.681842565536499 s
+2026-03-08 10:19:53.795Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for J0408-6545:
+2026-03-08 10:19:57.434Z katsdpcal.control        INFO     [Sender] starting transmission of 2 slots
+2026-03-08 10:19:57.431Z katsdpcal.control        INFO     [Pipeline] buffer with 2 slots released by Pipeline for transmission
+2026-03-08 10:19:57.435Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 10:19:57.444Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 10:20:00.220Z katsdpcal.control        INFO     [Sender] finished transmission of 2 slots
+2026-03-08 10:24:40.001Z katsdpcal.control        INFO     [MainProcess] Accumulation break - transition track -> slew
+2026-03-08 10:24:40.002Z katsdpcal.control        INFO     [MainProcess] Accumulated 38 timestamps
+2026-03-08 10:24:40.002Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 10:24:40.002Z katsdpcal.control        INFO     [MainProcess]  - J0238+1636 | 0235+164 (slew)
+2026-03-08 10:24:40.002Z katsdpcal.control        INFO     [Pipeline] buffer with 38 slots acquired by Pipeline
+2026-03-08 10:24:40.005Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 10:24:40.005Z katsdpcal.reduction      INFO     [Pipeline] Target: J0408-6545
+2026-03-08 10:24:40.005Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 38
+2026-03-08 10:24:40.005Z katsdpcal.reduction      INFO     [Pipeline]   Time:       10:19:22 - 10:24:18
+2026-03-08 10:24:40.005Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['fluxcal', 'bpcal', 'delaycal']
+2026-03-08 10:24:40.029Z katsdpcal.reduction      INFO     [Pipeline] Calibrator flagging
+2026-03-08 10:24:57.431Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 10:24:57.433Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 31.432%
+2026-03-08 10:24:57.433Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 40.080%
+2026-03-08 10:24:57.550Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 10:24:57.551Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 31.584%
+2026-03-08 10:24:57.551Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 40.071%
+2026-03-08 10:24:57.552Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 17.523041486740112 s
+2026-03-08 10:24:57.553Z katsdpcal.reduction      INFO     [Pipeline] Solving for preliminary G on delay calibrator J0408-6545
+2026-03-08 10:24:57.553Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 7.996616971962617 s (1 dumps)
+2026-03-08 10:24:57.556Z katsdpcal.reduction      INFO     [Pipeline]      Model: 50 point sources
+2026-03-08 10:25:03.973Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (_create_model): 6.420271635055542 s
+2026-03-08 10:25:04.987Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 7.434335470199585 s
+2026-03-08 10:25:04.994Z katsdpcal.reduction      INFO     [Pipeline] Solving for K on delay calibrator J0408-6545
+2026-03-08 10:25:04.994Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply G solution to J0408-6545
+2026-03-08 10:25:05.865Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (k_sol): 0.8704171180725098 s
+2026-03-08 10:25:05.865Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'K J0408-6545 (2, 56) 10:21:50' to Telescope State
+2026-03-08 10:25:05.866Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 10:25:05.866Z katsdpcal.reduction      INFO     [Pipeline] Solving for preliminary G on bandpass calibrator J0408-6545
+2026-03-08 10:25:05.866Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J0408-6545
+2026-03-08 10:25:05.874Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 7.996616971962617 s (1 dumps)
+2026-03-08 10:25:14.952Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 9.085313081741333 s
+2026-03-08 10:25:14.958Z katsdpcal.reduction      INFO     [Pipeline] Solving for B on bandpass calibrator J0408-6545
+2026-03-08 10:25:14.958Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J0408-6545
+2026-03-08 10:25:14.966Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply G solution to J0408-6545
+2026-03-08 10:25:26.255Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/dask/core.py:121: RuntimeWarning: invalid value encountered in reciprocal
+  return func(*(_execute_task(a, cache) for a in args))
+
+2026-03-08 10:25:28.428Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (b_sol): 13.46969985961914 s
+2026-03-08 10:25:28.429Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/katsdpcalproc/calprocs.py:638: RuntimeWarning: invalid value encountered in fmod
+  rel_angle = np.fmod(angle - base_angle, 2 * np.pi)
+
+2026-03-08 10:25:28.429Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (b_norm): 0.0011856555938720703 s
+2026-03-08 10:25:28.431Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'B J0408-6545 (4096, 2, 56) 10:21:50' to Telescope State
+2026-03-08 10:25:28.475Z katsdpcal.reduction      INFO     [Pipeline] Solving for G on bandpass calibrator J0408-6545
+2026-03-08 10:25:28.476Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 10:25:28.476Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 10:25:28.476Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J0408-6545
+2026-03-08 10:25:28.484Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply B solution to J0408-6545
+2026-03-08 10:25:28.490Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 303.8714449345794 s (38 dumps)
+2026-03-08 10:25:35.978Z katsdpcal.control        INFO     [MainProcess]  - J0238+1636 | 0235+164 (track)
+2026-03-08 10:26:00.454Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 31.97843861579895 s
+2026-03-08 10:26:00.455Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to J0408-6545:
+2026-03-08 10:26:00.455Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 10:26:00.456Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 10:26:00.461Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G J0408-6545 (2, 2, 56) 10:20:32' from solution store
+2026-03-08 10:26:00.461Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to J0408-6545 (inplace)
+2026-03-08 10:26:00.475Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to J0408-6545 (inplace)
+2026-03-08 10:26:00.487Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to J0408-6545 (inplace)
+2026-03-08 10:26:24.175Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 23.713862657546997 s
+2026-03-08 10:26:24.290Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for J0408-6545:
+2026-03-08 10:26:29.216Z katsdpcal.control        INFO     [Sender] starting transmission of 38 slots
+2026-03-08 10:26:29.216Z katsdpcal.control        INFO     [Pipeline] buffer with 38 slots released by Pipeline for transmission
+2026-03-08 10:26:29.221Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 10:26:29.229Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 10:27:22.031Z katsdpcal.control        INFO     [Sender] finished transmission of 38 slots
+2026-03-08 10:27:35.922Z katsdpcal.control        INFO     [MainProcess] Accumulation break - transition track -> slew
+2026-03-08 10:27:35.922Z katsdpcal.control        INFO     [MainProcess] Accumulated 22 timestamps
+2026-03-08 10:27:35.922Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 10:27:35.923Z katsdpcal.control        INFO     [MainProcess]  - Peanut (slew)
+2026-03-08 10:27:35.923Z katsdpcal.control        INFO     [Pipeline] buffer with 22 slots acquired by Pipeline
+2026-03-08 10:27:35.925Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 10:27:35.925Z katsdpcal.reduction      INFO     [Pipeline] Target: J0238+1636
+2026-03-08 10:27:35.925Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 15
+2026-03-08 10:27:35.925Z katsdpcal.reduction      INFO     [Pipeline]   Time:       10:25:22 - 10:27:14
+2026-03-08 10:27:35.926Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['gaincal']
+2026-03-08 10:27:35.949Z katsdpcal.reduction      INFO     [Pipeline] Calibrator flagging
+2026-03-08 10:27:44.243Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 10:27:44.243Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 34.166%
+2026-03-08 10:27:44.244Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 45.007%
+2026-03-08 10:27:44.323Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 10:27:44.324Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 34.500%
+2026-03-08 10:27:44.324Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 45.021%
+2026-03-08 10:27:44.325Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 8.37515139579773 s
+2026-03-08 10:27:44.325Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 10:27:44.325Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 10:27:44.325Z katsdpcal.reduction      INFO     [Pipeline] Solving for G on gain calibrator J0238+1636
+2026-03-08 10:27:44.325Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J0238+1636
+2026-03-08 10:27:44.334Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply B solution to J0238+1636
+2026-03-08 10:27:44.340Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 63.97293577570093 s (8 dumps)
+2026-03-08 10:27:51.920Z katsdpcal.control        INFO     [MainProcess]  - Peanut (track)
+2026-03-08 10:27:59.081Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 14.75531816482544 s
+2026-03-08 10:27:59.081Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'G J0238+1636 (2, 2, 56) 10:26:20' to Telescope State
+2026-03-08 10:27:59.083Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to J0238+1636:
+2026-03-08 10:27:59.083Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 10:27:59.083Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 10:27:59.088Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G J0238+1636 (2, 2, 56) 10:26:20' from solution store
+2026-03-08 10:27:59.088Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to J0238+1636 (inplace)
+2026-03-08 10:27:59.102Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to J0238+1636 (inplace)
+2026-03-08 10:27:59.114Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to J0238+1636 (inplace)
+2026-03-08 10:28:11.468Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 12.379647731781006 s
+2026-03-08 10:28:11.469Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for J0238+1636:
+2026-03-08 10:28:18.736Z katsdpcal.control        INFO     [Sender] starting transmission of 22 slots
+2026-03-08 10:28:18.735Z katsdpcal.control        INFO     [Pipeline] buffer with 22 slots released by Pipeline for transmission
+2026-03-08 10:28:18.742Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 10:28:18.749Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 10:28:49.339Z katsdpcal.control        INFO     [Sender] finished transmission of 22 slots
+2026-03-08 10:40:07.608Z katsdpcal.control        WARNING  [MainProcess] Accumulate break - buffer size limit 94
+2026-03-08 10:40:07.608Z katsdpcal.control        INFO     [MainProcess] Accumulated 94 timestamps
+2026-03-08 10:40:07.609Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 10:40:07.609Z katsdpcal.control        INFO     [MainProcess]  - Peanut (track)
+2026-03-08 10:40:07.609Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots acquired by Pipeline
+2026-03-08 10:40:07.613Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 10:40:07.613Z katsdpcal.reduction      INFO     [Pipeline] Target: Peanut
+2026-03-08 10:40:07.613Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 92
+2026-03-08 10:40:07.613Z katsdpcal.reduction      INFO     [Pipeline]   Time:       10:27:38 - 10:39:45
+2026-03-08 10:40:07.613Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['target']
+2026-03-08 10:40:07.650Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to Peanut:
+2026-03-08 10:40:07.650Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 10:40:07.650Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 10:40:07.656Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G (2, 2, 56) 10:26:20' from solution store
+2026-03-08 10:40:07.656Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to Peanut (inplace)
+2026-03-08 10:40:07.672Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to Peanut (inplace)
+2026-03-08 10:40:07.686Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to Peanut (inplace)
+2026-03-08 10:40:54.992Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 47.33587169647217 s
+2026-03-08 10:40:54.993Z katsdpcal.reduction      INFO     [Pipeline] Flagging calibrated target Peanut
+2026-03-08 10:41:32.326Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 10:41:32.327Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.368%
+2026-03-08 10:41:32.327Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 37.302%
+2026-03-08 10:41:32.506Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 10:41:32.508Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.111%
+2026-03-08 10:41:32.508Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 37.228%
+2026-03-08 10:41:32.509Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 37.51636505126953 s
+2026-03-08 10:41:32.510Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for Peanut:
+2026-03-08 10:41:42.831Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots released by Pipeline for transmission
+2026-03-08 10:41:42.835Z katsdpcal.control        INFO     [Sender] starting transmission of 94 slots
+2026-03-08 10:41:42.836Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 10:41:42.844Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 10:43:53.540Z katsdpcal.control        INFO     [Sender] finished transmission of 94 slots
+2026-03-08 10:52:39.286Z katsdpcal.control        WARNING  [MainProcess] Accumulate break - buffer size limit 94
+2026-03-08 10:52:39.286Z katsdpcal.control        INFO     [MainProcess] Accumulated 94 timestamps
+2026-03-08 10:52:39.287Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 10:52:39.287Z katsdpcal.control        INFO     [MainProcess]  - Peanut (track)
+2026-03-08 10:52:39.287Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots acquired by Pipeline
+2026-03-08 10:52:39.290Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 10:52:39.290Z katsdpcal.reduction      INFO     [Pipeline] Target: Peanut
+2026-03-08 10:52:39.290Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 94
+2026-03-08 10:52:39.290Z katsdpcal.reduction      INFO     [Pipeline]   Time:       10:39:53 - 10:52:17
+2026-03-08 10:52:39.290Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['target']
+2026-03-08 10:52:39.317Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to Peanut:
+2026-03-08 10:52:39.317Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 10:52:39.317Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 10:52:39.322Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G (2, 2, 56) 10:26:20' from solution store
+2026-03-08 10:52:39.322Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to Peanut (inplace)
+2026-03-08 10:52:39.343Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to Peanut (inplace)
+2026-03-08 10:52:39.356Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to Peanut (inplace)
+2026-03-08 10:53:26.650Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 47.327303647994995 s
+2026-03-08 10:53:26.652Z katsdpcal.reduction      INFO     [Pipeline] Flagging calibrated target Peanut
+2026-03-08 10:54:03.689Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 10:54:03.691Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.637%
+2026-03-08 10:54:03.691Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 38.405%
+2026-03-08 10:54:03.876Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 10:54:03.877Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.410%
+2026-03-08 10:54:03.878Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 38.358%
+2026-03-08 10:54:03.878Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 37.22598338127136 s
+2026-03-08 10:54:03.879Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for Peanut:
+2026-03-08 10:54:14.328Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots released by Pipeline for transmission
+2026-03-08 10:54:14.337Z katsdpcal.control        INFO     [Sender] starting transmission of 94 slots
+2026-03-08 10:54:14.337Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 10:54:14.347Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 10:56:24.941Z katsdpcal.control        INFO     [Sender] finished transmission of 94 slots
+2026-03-08 10:57:51.157Z katsdpcal.control        INFO     [MainProcess]  - J0238+1636 | 0235+164 (slew)
+2026-03-08 10:57:59.151Z katsdpcal.control        INFO     [MainProcess]  - J0238+1636 | 0235+164 (track)
+2026-03-08 10:59:59.103Z katsdpcal.control        INFO     [MainProcess]  - Peanut (track)
+2026-03-08 11:00:07.098Z katsdpcal.control        INFO     [MainProcess]  - Peanut (slew)
+2026-03-08 11:00:15.098Z katsdpcal.control        INFO     [MainProcess]  - Peanut (track)
+2026-03-08 11:05:10.973Z katsdpcal.control        WARNING  [MainProcess] Accumulate break - buffer size limit 94
+2026-03-08 11:05:10.973Z katsdpcal.control        INFO     [MainProcess] Accumulated 94 timestamps
+2026-03-08 11:05:10.973Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 11:05:10.974Z katsdpcal.control        INFO     [MainProcess]  - Peanut (track)
+2026-03-08 11:05:10.974Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots acquired by Pipeline
+2026-03-08 11:05:10.978Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 11:05:10.978Z katsdpcal.reduction      INFO     [Pipeline] Target: Peanut
+2026-03-08 11:05:10.978Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 37
+2026-03-08 11:05:10.978Z katsdpcal.reduction      INFO     [Pipeline]   Time:       11:00:01 - 11:04:49
+2026-03-08 11:05:10.978Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['target']
+2026-03-08 11:05:11.014Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to Peanut:
+2026-03-08 11:05:11.014Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 11:05:11.014Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 11:05:11.019Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G (2, 2, 56) 10:26:20' from solution store
+2026-03-08 11:05:11.020Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to Peanut (inplace)
+2026-03-08 11:05:11.036Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to Peanut (inplace)
+2026-03-08 11:05:11.052Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to Peanut (inplace)
+2026-03-08 11:05:34.757Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 23.73670983314514 s
+2026-03-08 11:05:34.759Z katsdpcal.reduction      INFO     [Pipeline] Flagging calibrated target Peanut
+2026-03-08 11:05:51.590Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 11:05:51.591Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 31.055%
+2026-03-08 11:05:51.591Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 40.345%
+2026-03-08 11:05:51.704Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 11:05:51.704Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.772%
+2026-03-08 11:05:51.705Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 40.304%
+2026-03-08 11:05:51.706Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 16.946833610534668 s
+2026-03-08 11:05:51.706Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for Peanut:
+2026-03-08 11:05:59.089Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 11:05:59.090Z katsdpcal.reduction      INFO     [Pipeline] Target: J0238+1636
+2026-03-08 11:05:59.090Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 14
+2026-03-08 11:05:59.090Z katsdpcal.reduction      INFO     [Pipeline]   Time:       10:57:53 - 10:59:37
+2026-03-08 11:05:59.090Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['gaincal']
+2026-03-08 11:05:59.115Z katsdpcal.reduction      INFO     [Pipeline] Calibrator flagging
+2026-03-08 11:06:07.014Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 11:06:07.014Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.328%
+2026-03-08 11:06:07.014Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 40.491%
+2026-03-08 11:06:07.091Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 11:06:07.092Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.562%
+2026-03-08 11:06:07.092Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 40.505%
+2026-03-08 11:06:07.093Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 7.97750449180603 s
+2026-03-08 11:06:07.094Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 11:06:07.094Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 11:06:07.094Z katsdpcal.reduction      INFO     [Pipeline] Solving for G on gain calibrator J0238+1636
+2026-03-08 11:06:07.094Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J0238+1636
+2026-03-08 11:06:07.104Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply B solution to J0238+1636
+2026-03-08 11:06:07.111Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 55.976318803738316 s (7 dumps)
+2026-03-08 11:06:18.559Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 11.464792251586914 s
+2026-03-08 11:06:18.559Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'G J0238+1636 (2, 2, 56) 10:58:45' to Telescope State
+2026-03-08 11:06:18.561Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to J0238+1636:
+2026-03-08 11:06:18.561Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 11:06:18.561Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 11:06:18.566Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G J0238+1636 (4, 2, 56) 10:42:32' from solution store
+2026-03-08 11:06:18.567Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to J0238+1636 (inplace)
+2026-03-08 11:06:18.582Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to J0238+1636 (inplace)
+2026-03-08 11:06:18.594Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to J0238+1636 (inplace)
+2026-03-08 11:06:30.695Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 12.128003120422363 s
+2026-03-08 11:06:30.696Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for J0238+1636:
+2026-03-08 11:06:38.384Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 11:06:38.384Z katsdpcal.reduction      INFO     [Pipeline] Target: Peanut
+2026-03-08 11:06:38.384Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 39
+2026-03-08 11:06:38.384Z katsdpcal.reduction      INFO     [Pipeline]   Time:       10:52:25 - 10:57:29
+2026-03-08 11:06:38.385Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['target']
+2026-03-08 11:06:38.414Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to Peanut:
+2026-03-08 11:06:38.414Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 11:06:38.415Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 11:06:38.419Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G (4, 2, 56) 10:42:32' from solution store
+2026-03-08 11:06:38.420Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to Peanut (inplace)
+2026-03-08 11:06:38.435Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to Peanut (inplace)
+2026-03-08 11:06:38.447Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to Peanut (inplace)
+2026-03-08 11:07:02.061Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 23.641128301620483 s
+2026-03-08 11:07:02.063Z katsdpcal.reduction      INFO     [Pipeline] Flagging calibrated target Peanut
+2026-03-08 11:07:18.791Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 11:07:18.792Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 32.286%
+2026-03-08 11:07:18.792Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 38.763%
+2026-03-08 11:07:18.907Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 11:07:18.907Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 32.079%
+2026-03-08 11:07:18.907Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 38.717%
+2026-03-08 11:07:18.908Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 16.845357418060303 s
+2026-03-08 11:07:18.909Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for Peanut:
+2026-03-08 11:07:26.181Z katsdpcal.control        INFO     [Sender] starting transmission of 94 slots
+2026-03-08 11:07:26.179Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots released by Pipeline for transmission
+2026-03-08 11:07:26.209Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 11:07:26.240Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 11:09:36.828Z katsdpcal.control        INFO     [Sender] finished transmission of 94 slots
+2026-03-08 11:17:42.650Z katsdpcal.control        WARNING  [MainProcess] Accumulate break - buffer size limit 94
+2026-03-08 11:17:42.650Z katsdpcal.control        INFO     [MainProcess] Accumulated 94 timestamps
+2026-03-08 11:17:42.650Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 11:17:42.650Z katsdpcal.control        INFO     [MainProcess]  - Peanut (track)
+2026-03-08 11:17:42.650Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots acquired by Pipeline
+2026-03-08 11:17:42.653Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 11:17:42.653Z katsdpcal.reduction      INFO     [Pipeline] Target: Peanut
+2026-03-08 11:17:42.653Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 94
+2026-03-08 11:17:42.654Z katsdpcal.reduction      INFO     [Pipeline]   Time:       11:04:57 - 11:17:20
+2026-03-08 11:17:42.654Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['target']
+2026-03-08 11:17:42.684Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to Peanut:
+2026-03-08 11:17:42.684Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 11:17:42.684Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 11:17:42.689Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G (4, 2, 56) 10:42:32' from solution store
+2026-03-08 11:17:42.690Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to Peanut (inplace)
+2026-03-08 11:17:42.706Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to Peanut (inplace)
+2026-03-08 11:17:42.717Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to Peanut (inplace)
+2026-03-08 11:18:29.934Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 47.244633197784424 s
+2026-03-08 11:18:29.937Z katsdpcal.reduction      INFO     [Pipeline] Flagging calibrated target Peanut
+2026-03-08 11:19:06.815Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 11:19:06.817Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.967%
+2026-03-08 11:19:06.817Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 40.194%
+2026-03-08 11:19:06.996Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 11:19:06.997Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.679%
+2026-03-08 11:19:06.997Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 40.160%
+2026-03-08 11:19:06.998Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 37.06089210510254 s
+2026-03-08 11:19:06.999Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for Peanut:
+2026-03-08 11:19:17.512Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots released by Pipeline for transmission
+2026-03-08 11:19:17.527Z katsdpcal.control        INFO     [Sender] starting transmission of 94 slots
+2026-03-08 11:19:17.527Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 11:19:17.536Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 11:21:28.151Z katsdpcal.control        INFO     [Sender] finished transmission of 94 slots
+2026-03-08 11:30:14.337Z katsdpcal.control        WARNING  [MainProcess] Accumulate break - buffer size limit 94
+2026-03-08 11:30:14.337Z katsdpcal.control        INFO     [MainProcess] Accumulated 94 timestamps
+2026-03-08 11:30:14.337Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 11:30:14.337Z katsdpcal.control        INFO     [MainProcess]  - J0238+1636 | 0235+164 (track)
+2026-03-08 11:30:14.337Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots acquired by Pipeline
+2026-03-08 11:30:14.341Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 11:30:14.342Z katsdpcal.reduction      INFO     [Pipeline] Target: Peanut
+2026-03-08 11:30:14.342Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 94
+2026-03-08 11:30:14.342Z katsdpcal.reduction      INFO     [Pipeline]   Time:       11:17:28 - 11:29:52
+2026-03-08 11:30:14.342Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['target']
+2026-03-08 11:30:14.383Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to Peanut:
+2026-03-08 11:30:14.383Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 11:30:14.383Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 11:30:14.388Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G (4, 2, 56) 10:42:32' from solution store
+2026-03-08 11:30:14.389Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to Peanut (inplace)
+2026-03-08 11:30:14.408Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to Peanut (inplace)
+2026-03-08 11:30:14.419Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to Peanut (inplace)
+2026-03-08 11:30:22.331Z katsdpcal.control        INFO     [MainProcess] Accumulation break - transition track -> slew
+2026-03-08 11:30:22.331Z katsdpcal.control        INFO     [MainProcess] Accumulated 1 timestamps
+2026-03-08 11:30:22.332Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 11:30:22.332Z katsdpcal.control        INFO     [MainProcess]  - J0238+1636 | 0235+164 (slew)
+2026-03-08 11:30:30.325Z katsdpcal.control        INFO     [MainProcess]  - J0238+1636 | 0235+164 (track)
+2026-03-08 11:31:01.926Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 47.537705421447754 s
+2026-03-08 11:31:01.927Z katsdpcal.reduction      INFO     [Pipeline] Flagging calibrated target Peanut
+2026-03-08 11:31:39.414Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 11:31:39.415Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 31.359%
+2026-03-08 11:31:39.415Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 43.876%
+2026-03-08 11:31:39.603Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 11:31:39.604Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 31.006%
+2026-03-08 11:31:39.604Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 43.826%
+2026-03-08 11:31:39.606Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 37.67840838432312 s
+2026-03-08 11:31:39.606Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for Peanut:
+2026-03-08 11:31:50.538Z katsdpcal.control        INFO     [Sender] starting transmission of 94 slots
+2026-03-08 11:31:50.526Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots released by Pipeline for transmission
+2026-03-08 11:31:50.543Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 11:31:50.543Z katsdpcal.control        INFO     [Pipeline] buffer with 1 slots acquired by Pipeline
+2026-03-08 11:31:50.546Z katsdpcal.control        INFO     [Pipeline] buffer with 1 slots released by Pipeline for transmission
+2026-03-08 11:31:50.546Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 11:31:50.551Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 11:31:50.564Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 11:32:30.277Z katsdpcal.control        INFO     [MainProcess] Accumulation break - transition track -> slew
+2026-03-08 11:32:30.277Z katsdpcal.control        INFO     [MainProcess] Accumulated 16 timestamps
+2026-03-08 11:32:30.277Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 11:32:30.278Z katsdpcal.control        INFO     [MainProcess]  - Peanut (slew)
+2026-03-08 11:32:30.278Z katsdpcal.control        INFO     [Pipeline] buffer with 16 slots acquired by Pipeline
+2026-03-08 11:32:30.280Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 11:32:30.281Z katsdpcal.reduction      INFO     [Pipeline] Target: J0238+1636
+2026-03-08 11:32:30.281Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 15
+2026-03-08 11:32:30.281Z katsdpcal.reduction      INFO     [Pipeline]   Time:       11:30:16 - 11:32:08
+2026-03-08 11:32:30.281Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['gaincal']
+2026-03-08 11:32:30.306Z katsdpcal.reduction      INFO     [Pipeline] Calibrator flagging
+2026-03-08 11:32:38.383Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 11:32:38.383Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 35.070%
+2026-03-08 11:32:38.383Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 45.949%
+2026-03-08 11:32:38.464Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 11:32:38.464Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 35.161%
+2026-03-08 11:32:38.465Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 45.964%
+2026-03-08 11:32:38.466Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 8.159664154052734 s
+2026-03-08 11:32:38.466Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 11:32:38.466Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 11:32:38.466Z katsdpcal.reduction      INFO     [Pipeline] Solving for G on gain calibrator J0238+1636
+2026-03-08 11:32:38.466Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J0238+1636
+2026-03-08 11:32:38.475Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply B solution to J0238+1636
+2026-03-08 11:32:38.482Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 63.97293577570093 s (8 dumps)
+2026-03-08 11:32:46.274Z katsdpcal.control        INFO     [MainProcess]  - Peanut (track)
+2026-03-08 11:32:56.648Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 18.181239128112793 s
+2026-03-08 11:32:56.648Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'G J0238+1636 (2, 2, 56) 11:31:14' to Telescope State
+2026-03-08 11:32:56.650Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to J0238+1636:
+2026-03-08 11:32:56.651Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 11:32:56.651Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 11:32:56.656Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G J0238+1636 (6, 2, 56) 10:58:46' from solution store
+2026-03-08 11:32:56.656Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to J0238+1636 (inplace)
+2026-03-08 11:32:56.672Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to J0238+1636 (inplace)
+2026-03-08 11:32:56.685Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to J0238+1636 (inplace)
+2026-03-08 11:33:08.777Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 12.120956897735596 s
+2026-03-08 11:33:08.778Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for J0238+1636:
+2026-03-08 11:33:16.470Z katsdpcal.control        INFO     [Pipeline] buffer with 16 slots released by Pipeline for transmission
+2026-03-08 11:33:16.482Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 11:33:16.491Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 11:34:01.089Z katsdpcal.control        INFO     [Sender] finished transmission of 94 slots
+2026-03-08 11:34:01.090Z katsdpcal.control        INFO     [Sender] starting transmission of 1 slots
+2026-03-08 11:34:02.484Z katsdpcal.control        INFO     [Sender] finished transmission of 1 slots
+2026-03-08 11:34:02.485Z katsdpcal.control        INFO     [Sender] starting transmission of 16 slots
+2026-03-08 11:34:24.787Z katsdpcal.control        INFO     [Sender] finished transmission of 16 slots
+2026-03-08 11:45:01.961Z katsdpcal.control        WARNING  [MainProcess] Accumulate break - buffer size limit 94
+2026-03-08 11:45:01.961Z katsdpcal.control        INFO     [MainProcess] Accumulated 94 timestamps
+2026-03-08 11:45:01.962Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 11:45:01.962Z katsdpcal.control        INFO     [MainProcess]  - Peanut (track)
+2026-03-08 11:45:01.962Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots acquired by Pipeline
+2026-03-08 11:45:01.965Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 11:45:01.965Z katsdpcal.reduction      INFO     [Pipeline] Target: Peanut
+2026-03-08 11:45:01.965Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 92
+2026-03-08 11:45:01.965Z katsdpcal.reduction      INFO     [Pipeline]   Time:       11:32:32 - 11:44:40
+2026-03-08 11:45:01.965Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['target']
+2026-03-08 11:45:01.991Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to Peanut:
+2026-03-08 11:45:01.991Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 11:45:01.991Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 11:45:01.996Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G (6, 2, 56) 10:58:46' from solution store
+2026-03-08 11:45:01.997Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to Peanut (inplace)
+2026-03-08 11:45:02.011Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to Peanut (inplace)
+2026-03-08 11:45:02.023Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to Peanut (inplace)
+2026-03-08 11:45:49.127Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 47.13055777549744 s
+2026-03-08 11:45:49.130Z katsdpcal.reduction      INFO     [Pipeline] Flagging calibrated target Peanut
+2026-03-08 11:46:25.511Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 11:46:25.512Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 31.168%
+2026-03-08 11:46:25.512Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 38.708%
+2026-03-08 11:46:25.690Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 11:46:25.691Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.774%
+2026-03-08 11:46:25.691Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 38.644%
+2026-03-08 11:46:25.692Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 36.56148719787598 s
+2026-03-08 11:46:25.692Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for Peanut:
+2026-03-08 11:46:36.065Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots released by Pipeline for transmission
+2026-03-08 11:46:36.077Z katsdpcal.control        INFO     [Sender] starting transmission of 94 slots
+2026-03-08 11:46:36.077Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 11:46:36.086Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 11:48:46.606Z katsdpcal.control        INFO     [Sender] finished transmission of 94 slots
+2026-03-08 11:57:33.641Z katsdpcal.control        WARNING  [MainProcess] Accumulate break - buffer size limit 94
+2026-03-08 11:57:33.641Z katsdpcal.control        INFO     [MainProcess] Accumulated 94 timestamps
+2026-03-08 11:57:33.642Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 11:57:33.642Z katsdpcal.control        INFO     [MainProcess]  - Peanut (track)
+2026-03-08 11:57:33.642Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots acquired by Pipeline
+2026-03-08 11:57:33.646Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 11:57:33.646Z katsdpcal.reduction      INFO     [Pipeline] Target: Peanut
+2026-03-08 11:57:33.646Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 94
+2026-03-08 11:57:33.646Z katsdpcal.reduction      INFO     [Pipeline]   Time:       11:44:48 - 11:57:11
+2026-03-08 11:57:33.647Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['target']
+2026-03-08 11:57:33.683Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to Peanut:
+2026-03-08 11:57:33.683Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 11:57:33.683Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 11:57:33.689Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G (6, 2, 56) 10:58:46' from solution store
+2026-03-08 11:57:33.689Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to Peanut (inplace)
+2026-03-08 11:57:33.704Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to Peanut (inplace)
+2026-03-08 11:57:33.717Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to Peanut (inplace)
+2026-03-08 11:58:20.868Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 47.179532289505005 s
+2026-03-08 11:58:20.871Z katsdpcal.reduction      INFO     [Pipeline] Flagging calibrated target Peanut
+2026-03-08 11:58:58.881Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 11:58:58.882Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 31.132%
+2026-03-08 11:58:58.882Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 38.679%
+2026-03-08 11:58:59.064Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 11:58:59.065Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.773%
+2026-03-08 11:58:59.065Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 38.620%
+2026-03-08 11:58:59.067Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 38.195496559143066 s
+2026-03-08 11:58:59.068Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for Peanut:
+2026-03-08 11:59:09.803Z katsdpcal.control        INFO     [Sender] starting transmission of 94 slots
+2026-03-08 11:59:09.791Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots released by Pipeline for transmission
+2026-03-08 11:59:09.808Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 11:59:09.817Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 12:01:20.299Z katsdpcal.control        INFO     [Sender] finished transmission of 94 slots
+2026-03-08 12:02:45.511Z katsdpcal.control        INFO     [MainProcess]  - J0238+1636 | 0235+164 (slew)
+2026-03-08 12:02:53.506Z katsdpcal.control        INFO     [MainProcess]  - J0238+1636 | 0235+164 (track)
+2026-03-08 12:04:53.457Z katsdpcal.control        INFO     [MainProcess]  - Peanut (track)
+2026-03-08 12:05:01.451Z katsdpcal.control        INFO     [MainProcess]  - Peanut (slew)
+2026-03-08 12:05:09.445Z katsdpcal.control        INFO     [MainProcess]  - Peanut (track)
+2026-03-08 12:10:05.324Z katsdpcal.control        WARNING  [MainProcess] Accumulate break - buffer size limit 94
+2026-03-08 12:10:05.324Z katsdpcal.control        INFO     [MainProcess] Accumulated 94 timestamps
+2026-03-08 12:10:05.325Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 12:10:05.325Z katsdpcal.control        INFO     [MainProcess]  - Peanut (track)
+2026-03-08 12:10:05.325Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots acquired by Pipeline
+2026-03-08 12:10:05.328Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 12:10:05.328Z katsdpcal.reduction      INFO     [Pipeline] Target: Peanut
+2026-03-08 12:10:05.328Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 36
+2026-03-08 12:10:05.328Z katsdpcal.reduction      INFO     [Pipeline]   Time:       12:05:03 - 12:09:43
+2026-03-08 12:10:05.328Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['target']
+2026-03-08 12:10:05.353Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to Peanut:
+2026-03-08 12:10:05.353Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 12:10:05.353Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 12:10:05.358Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G (6, 2, 56) 10:58:46' from solution store
+2026-03-08 12:10:05.358Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to Peanut (inplace)
+2026-03-08 12:10:05.377Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to Peanut (inplace)
+2026-03-08 12:10:05.388Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to Peanut (inplace)
+2026-03-08 12:10:29.064Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 23.70521903038025 s
+2026-03-08 12:10:29.065Z katsdpcal.reduction      INFO     [Pipeline] Flagging calibrated target Peanut
+2026-03-08 12:10:45.092Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 12:10:45.093Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.018%
+2026-03-08 12:10:45.093Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 36.321%
+2026-03-08 12:10:45.210Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 12:10:45.211Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 29.825%
+2026-03-08 12:10:45.211Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 36.254%
+2026-03-08 12:10:45.212Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 16.14651894569397 s
+2026-03-08 12:10:45.212Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for Peanut:
+2026-03-08 12:10:52.177Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 12:10:52.177Z katsdpcal.reduction      INFO     [Pipeline] Target: J0238+1636
+2026-03-08 12:10:52.177Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 14
+2026-03-08 12:10:52.177Z katsdpcal.reduction      INFO     [Pipeline]   Time:       12:02:47 - 12:04:31
+2026-03-08 12:10:52.177Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['gaincal']
+2026-03-08 12:10:52.202Z katsdpcal.reduction      INFO     [Pipeline] Calibrator flagging
+2026-03-08 12:11:00.059Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 12:11:00.060Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 29.757%
+2026-03-08 12:11:00.060Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 40.556%
+2026-03-08 12:11:00.134Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 12:11:00.134Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 29.974%
+2026-03-08 12:11:00.135Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 40.562%
+2026-03-08 12:11:00.136Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 7.933208465576172 s
+2026-03-08 12:11:00.136Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 12:11:00.136Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 12:11:00.136Z katsdpcal.reduction      INFO     [Pipeline] Solving for G on gain calibrator J0238+1636
+2026-03-08 12:11:00.136Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J0238+1636
+2026-03-08 12:11:00.145Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply B solution to J0238+1636
+2026-03-08 12:11:00.151Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 55.976318803738316 s (7 dumps)
+2026-03-08 12:11:11.851Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 11.71424651145935 s
+2026-03-08 12:11:11.851Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'G J0238+1636 (2, 2, 56) 12:03:39' to Telescope State
+2026-03-08 12:11:11.853Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to J0238+1636:
+2026-03-08 12:11:11.854Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 12:11:11.854Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 12:11:11.859Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G J0238+1636 (8, 2, 56) 11:14:59' from solution store
+2026-03-08 12:11:11.859Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to J0238+1636 (inplace)
+2026-03-08 12:11:11.876Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to J0238+1636 (inplace)
+2026-03-08 12:11:11.888Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to J0238+1636 (inplace)
+2026-03-08 12:11:23.908Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 12.048871994018555 s
+2026-03-08 12:11:23.909Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for J0238+1636:
+2026-03-08 12:11:31.433Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 12:11:31.433Z katsdpcal.reduction      INFO     [Pipeline] Target: Peanut
+2026-03-08 12:11:31.433Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 39
+2026-03-08 12:11:31.434Z katsdpcal.reduction      INFO     [Pipeline]   Time:       11:57:19 - 12:02:23
+2026-03-08 12:11:31.434Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['target']
+2026-03-08 12:11:31.459Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to Peanut:
+2026-03-08 12:11:31.459Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 12:11:31.460Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 12:11:31.465Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G (8, 2, 56) 11:14:59' from solution store
+2026-03-08 12:11:31.465Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to Peanut (inplace)
+2026-03-08 12:11:31.479Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to Peanut (inplace)
+2026-03-08 12:11:31.491Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to Peanut (inplace)
+2026-03-08 12:11:55.183Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 23.718196868896484 s
+2026-03-08 12:11:55.185Z katsdpcal.reduction      INFO     [Pipeline] Flagging calibrated target Peanut
+2026-03-08 12:12:12.063Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 12:12:12.064Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 32.238%
+2026-03-08 12:12:12.064Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 38.991%
+2026-03-08 12:12:12.180Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 12:12:12.180Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 31.960%
+2026-03-08 12:12:12.181Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 38.920%
+2026-03-08 12:12:12.182Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 16.99649167060852 s
+2026-03-08 12:12:12.182Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for Peanut:
+2026-03-08 12:12:19.326Z katsdpcal.control        INFO     [Sender] starting transmission of 94 slots
+2026-03-08 12:12:19.290Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots released by Pipeline for transmission
+2026-03-08 12:12:19.327Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 12:12:19.363Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 12:14:29.897Z katsdpcal.control        INFO     [Sender] finished transmission of 94 slots
+2026-03-08 12:22:37.005Z katsdpcal.control        WARNING  [MainProcess] Accumulate break - buffer size limit 94
+2026-03-08 12:22:37.005Z katsdpcal.control        INFO     [MainProcess] Accumulated 94 timestamps
+2026-03-08 12:22:37.005Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 12:22:37.006Z katsdpcal.control        INFO     [MainProcess]  - Peanut (track)
+2026-03-08 12:22:37.006Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots acquired by Pipeline
+2026-03-08 12:22:37.009Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 12:22:37.010Z katsdpcal.reduction      INFO     [Pipeline] Target: Peanut
+2026-03-08 12:22:37.010Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 94
+2026-03-08 12:22:37.010Z katsdpcal.reduction      INFO     [Pipeline]   Time:       12:09:51 - 12:22:15
+2026-03-08 12:22:37.010Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['target']
+2026-03-08 12:22:37.046Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to Peanut:
+2026-03-08 12:22:37.046Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 12:22:37.046Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 12:22:37.052Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G (8, 2, 56) 11:14:59' from solution store
+2026-03-08 12:22:37.052Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to Peanut (inplace)
+2026-03-08 12:22:37.066Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to Peanut (inplace)
+2026-03-08 12:22:37.078Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to Peanut (inplace)
+2026-03-08 12:23:24.159Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 47.10733675956726 s
+2026-03-08 12:23:24.160Z katsdpcal.reduction      INFO     [Pipeline] Flagging calibrated target Peanut
+2026-03-08 12:24:01.773Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 12:24:01.774Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.028%
+2026-03-08 12:24:01.774Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 37.035%
+2026-03-08 12:24:01.960Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 12:24:01.961Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 29.737%
+2026-03-08 12:24:01.961Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 36.968%
+2026-03-08 12:24:01.962Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 37.802395820617676 s
+2026-03-08 12:24:01.963Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for Peanut:
+2026-03-08 12:24:12.826Z katsdpcal.control        INFO     [Sender] starting transmission of 94 slots
+2026-03-08 12:24:12.821Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots released by Pipeline for transmission
+2026-03-08 12:24:12.840Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 12:24:12.849Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 12:26:23.440Z katsdpcal.control        INFO     [Sender] finished transmission of 94 slots
+2026-03-08 12:35:08.688Z katsdpcal.control        WARNING  [MainProcess] Accumulate break - buffer size limit 94
+2026-03-08 12:35:08.688Z katsdpcal.control        INFO     [MainProcess] Accumulated 94 timestamps
+2026-03-08 12:35:08.688Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 12:35:08.688Z katsdpcal.control        INFO     [MainProcess]  - J0238+1636 | 0235+164 (track)
+2026-03-08 12:35:08.688Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots acquired by Pipeline
+2026-03-08 12:35:08.691Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 12:35:08.691Z katsdpcal.reduction      INFO     [Pipeline] Target: Peanut
+2026-03-08 12:35:08.691Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 94
+2026-03-08 12:35:08.692Z katsdpcal.reduction      INFO     [Pipeline]   Time:       12:22:23 - 12:34:46
+2026-03-08 12:35:08.692Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['target']
+2026-03-08 12:35:08.717Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to Peanut:
+2026-03-08 12:35:08.717Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 12:35:08.717Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 12:35:08.722Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G (8, 2, 56) 11:14:59' from solution store
+2026-03-08 12:35:08.722Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to Peanut (inplace)
+2026-03-08 12:35:08.744Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to Peanut (inplace)
+2026-03-08 12:35:08.756Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to Peanut (inplace)
+2026-03-08 12:35:16.684Z katsdpcal.control        INFO     [MainProcess] Accumulation break - transition track -> slew
+2026-03-08 12:35:16.685Z katsdpcal.control        INFO     [MainProcess] Accumulated 1 timestamps
+2026-03-08 12:35:16.685Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 12:35:16.685Z katsdpcal.control        INFO     [MainProcess]  - J0238+1636 | 0235+164 (slew)
+2026-03-08 12:35:24.680Z katsdpcal.control        INFO     [MainProcess]  - J0238+1636 | 0235+164 (track)
+2026-03-08 12:35:55.906Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 47.183504819869995 s
+2026-03-08 12:35:55.909Z katsdpcal.reduction      INFO     [Pipeline] Flagging calibrated target Peanut
+2026-03-08 12:36:32.651Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 12:36:32.652Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.180%
+2026-03-08 12:36:32.653Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 37.177%
+2026-03-08 12:36:32.830Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 12:36:32.832Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 29.947%
+2026-03-08 12:36:32.832Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 37.123%
+2026-03-08 12:36:32.833Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 36.923495054244995 s
+2026-03-08 12:36:32.833Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for Peanut:
+2026-03-08 12:36:43.444Z katsdpcal.control        INFO     [Sender] starting transmission of 94 slots
+2026-03-08 12:36:43.444Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots released by Pipeline for transmission
+2026-03-08 12:36:43.462Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 12:36:43.462Z katsdpcal.control        INFO     [Pipeline] buffer with 1 slots acquired by Pipeline
+2026-03-08 12:36:43.465Z katsdpcal.control        INFO     [Pipeline] buffer with 1 slots released by Pipeline for transmission
+2026-03-08 12:36:43.465Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 12:36:43.467Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 12:36:43.480Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 12:37:24.630Z katsdpcal.control        INFO     [MainProcess] Accumulation break - transition track -> slew
+2026-03-08 12:37:24.631Z katsdpcal.control        INFO     [MainProcess] Accumulated 16 timestamps
+2026-03-08 12:37:24.631Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 12:37:24.631Z katsdpcal.control        INFO     [MainProcess]  - Peanut (slew)
+2026-03-08 12:37:24.631Z katsdpcal.control        INFO     [Pipeline] buffer with 16 slots acquired by Pipeline
+2026-03-08 12:37:24.634Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 12:37:24.634Z katsdpcal.reduction      INFO     [Pipeline] Target: J0238+1636
+2026-03-08 12:37:24.634Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 15
+2026-03-08 12:37:24.634Z katsdpcal.reduction      INFO     [Pipeline]   Time:       12:35:10 - 12:37:02
+2026-03-08 12:37:24.634Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['gaincal']
+2026-03-08 12:37:24.659Z katsdpcal.reduction      INFO     [Pipeline] Calibrator flagging
+2026-03-08 12:37:33.052Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 12:37:33.053Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 33.767%
+2026-03-08 12:37:33.053Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 44.629%
+2026-03-08 12:37:33.131Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 12:37:33.132Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 34.116%
+2026-03-08 12:37:33.132Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 44.663%
+2026-03-08 12:37:33.133Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 8.4740469455719 s
+2026-03-08 12:37:33.133Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 12:37:33.134Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 12:37:33.134Z katsdpcal.reduction      INFO     [Pipeline] Solving for G on gain calibrator J0238+1636
+2026-03-08 12:37:33.134Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J0238+1636
+2026-03-08 12:37:33.142Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply B solution to J0238+1636
+2026-03-08 12:37:33.149Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 63.97293577570093 s (8 dumps)
+2026-03-08 12:37:40.621Z katsdpcal.control        INFO     [MainProcess]  - Peanut (track)
+2026-03-08 12:37:51.389Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 18.255244255065918 s
+2026-03-08 12:37:51.389Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'G J0238+1636 (2, 2, 56) 12:36:08' to Telescope State
+2026-03-08 12:37:51.391Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to J0238+1636:
+2026-03-08 12:37:51.391Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 12:37:51.391Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 12:37:51.396Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G J0238+1636 (8, 2, 56) 11:47:27' from solution store
+2026-03-08 12:37:51.397Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to J0238+1636 (inplace)
+2026-03-08 12:37:51.411Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to J0238+1636 (inplace)
+2026-03-08 12:37:51.423Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to J0238+1636 (inplace)
+2026-03-08 12:38:03.516Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 12.119573593139648 s
+2026-03-08 12:38:03.517Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for J0238+1636:
+2026-03-08 12:38:10.986Z katsdpcal.control        INFO     [Pipeline] buffer with 16 slots released by Pipeline for transmission
+2026-03-08 12:38:11.003Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 12:38:11.007Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 12:38:54.004Z katsdpcal.control        INFO     [Sender] finished transmission of 94 slots
+2026-03-08 12:38:54.004Z katsdpcal.control        INFO     [Sender] starting transmission of 1 slots
+2026-03-08 12:38:55.400Z katsdpcal.control        INFO     [Sender] finished transmission of 1 slots
+2026-03-08 12:38:55.401Z katsdpcal.control        INFO     [Sender] starting transmission of 16 slots
+2026-03-08 12:39:17.653Z katsdpcal.control        INFO     [Sender] finished transmission of 16 slots
+2026-03-08 12:49:56.310Z katsdpcal.control        WARNING  [MainProcess] Accumulate break - buffer size limit 94
+2026-03-08 12:49:56.310Z katsdpcal.control        INFO     [MainProcess] Accumulated 94 timestamps
+2026-03-08 12:49:56.310Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 12:49:56.310Z katsdpcal.control        INFO     [MainProcess]  - Peanut (track)
+2026-03-08 12:49:56.310Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots acquired by Pipeline
+2026-03-08 12:49:56.314Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 12:49:56.315Z katsdpcal.reduction      INFO     [Pipeline] Target: Peanut
+2026-03-08 12:49:56.315Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 92
+2026-03-08 12:49:56.315Z katsdpcal.reduction      INFO     [Pipeline]   Time:       12:37:26 - 12:49:34
+2026-03-08 12:49:56.315Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['target']
+2026-03-08 12:49:56.351Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to Peanut:
+2026-03-08 12:49:56.352Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 12:49:56.352Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 12:49:56.357Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G (8, 2, 56) 11:47:27' from solution store
+2026-03-08 12:49:56.357Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to Peanut (inplace)
+2026-03-08 12:49:56.376Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to Peanut (inplace)
+2026-03-08 12:49:56.388Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to Peanut (inplace)
+2026-03-08 12:50:43.530Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 47.1729474067688 s
+2026-03-08 12:50:43.533Z katsdpcal.reduction      INFO     [Pipeline] Flagging calibrated target Peanut
+2026-03-08 12:51:21.007Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 12:51:21.008Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.736%
+2026-03-08 12:51:21.008Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 38.974%
+2026-03-08 12:51:21.190Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 12:51:21.191Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.575%
+2026-03-08 12:51:21.192Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 38.928%
+2026-03-08 12:51:21.193Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 37.66023135185242 s
+2026-03-08 12:51:21.194Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for Peanut:
+2026-03-08 12:51:31.681Z katsdpcal.control        INFO     [Sender] starting transmission of 94 slots
+2026-03-08 12:51:31.668Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots released by Pipeline for transmission
+2026-03-08 12:51:31.685Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 12:51:31.694Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 12:53:42.285Z katsdpcal.control        INFO     [Sender] finished transmission of 94 slots
+2026-03-08 13:02:27.995Z katsdpcal.control        WARNING  [MainProcess] Accumulate break - buffer size limit 94
+2026-03-08 13:02:27.996Z katsdpcal.control        INFO     [MainProcess] Accumulated 94 timestamps
+2026-03-08 13:02:27.996Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 13:02:27.996Z katsdpcal.control        INFO     [MainProcess]  - Peanut (track)
+2026-03-08 13:02:27.996Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots acquired by Pipeline
+2026-03-08 13:02:27.999Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 13:02:27.999Z katsdpcal.reduction      INFO     [Pipeline] Target: Peanut
+2026-03-08 13:02:27.999Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 94
+2026-03-08 13:02:27.999Z katsdpcal.reduction      INFO     [Pipeline]   Time:       12:49:42 - 13:02:06
+2026-03-08 13:02:27.999Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['target']
+2026-03-08 13:02:28.026Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to Peanut:
+2026-03-08 13:02:28.027Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 13:02:28.027Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 13:02:28.032Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G (8, 2, 56) 11:47:27' from solution store
+2026-03-08 13:02:28.032Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to Peanut (inplace)
+2026-03-08 13:02:28.048Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to Peanut (inplace)
+2026-03-08 13:02:28.060Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to Peanut (inplace)
+2026-03-08 13:03:15.287Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 47.254481077194214 s
+2026-03-08 13:03:15.290Z katsdpcal.reduction      INFO     [Pipeline] Flagging calibrated target Peanut
+2026-03-08 13:03:50.110Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 13:03:50.111Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 31.984%
+2026-03-08 13:03:50.111Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 60.110%
+2026-03-08 13:03:50.285Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 13:03:50.286Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 31.881%
+2026-03-08 13:03:50.286Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 60.092%
+2026-03-08 13:03:50.287Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 34.996665477752686 s
+2026-03-08 13:03:50.287Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for Peanut:
+2026-03-08 13:04:00.821Z katsdpcal.control        INFO     [Sender] starting transmission of 94 slots
+2026-03-08 13:04:00.804Z katsdpcal.control        INFO     [Pipeline] buffer with 94 slots released by Pipeline for transmission
+2026-03-08 13:04:00.821Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 13:04:00.831Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 13:06:11.531Z katsdpcal.control        INFO     [Sender] finished transmission of 94 slots
+2026-03-08 13:07:39.864Z katsdpcal.control        INFO     [MainProcess]  - J0238+1636 | 0235+164 (slew)
+2026-03-08 13:07:47.860Z katsdpcal.control        INFO     [MainProcess]  - J0238+1636 | 0235+164 (track)
+2026-03-08 13:09:47.809Z katsdpcal.control        INFO     [MainProcess]  - J0408-6545 | 0408-658 (track)
+2026-03-08 13:09:55.807Z katsdpcal.control        INFO     [MainProcess] Accumulation break - transition track -> slew
+2026-03-08 13:09:55.807Z katsdpcal.control        INFO     [MainProcess] Accumulated 56 timestamps
+2026-03-08 13:09:55.807Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 13:09:55.807Z katsdpcal.control        INFO     [MainProcess]  - J0408-6545 | 0408-658 (slew)
+2026-03-08 13:09:55.807Z katsdpcal.control        INFO     [Pipeline] buffer with 56 slots acquired by Pipeline
+2026-03-08 13:09:55.813Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 13:09:55.813Z katsdpcal.reduction      INFO     [Pipeline] Target: J0238+1636
+2026-03-08 13:09:55.814Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 14
+2026-03-08 13:09:55.814Z katsdpcal.reduction      INFO     [Pipeline]   Time:       13:07:42 - 13:09:25
+2026-03-08 13:09:55.814Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['gaincal']
+2026-03-08 13:09:55.850Z katsdpcal.reduction      INFO     [Pipeline] Calibrator flagging
+2026-03-08 13:10:04.700Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 13:10:04.701Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.392%
+2026-03-08 13:10:04.701Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 44.795%
+2026-03-08 13:10:04.787Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 13:10:04.788Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.676%
+2026-03-08 13:10:04.788Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 44.819%
+2026-03-08 13:10:04.790Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 8.939179182052612 s
+2026-03-08 13:10:04.790Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 13:10:04.790Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 13:10:04.790Z katsdpcal.reduction      INFO     [Pipeline] Solving for G on gain calibrator J0238+1636
+2026-03-08 13:10:04.790Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J0238+1636
+2026-03-08 13:10:04.798Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply B solution to J0238+1636
+2026-03-08 13:10:04.805Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 55.976318803738316 s (7 dumps)
+2026-03-08 13:10:17.985Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 13.194422483444214 s
+2026-03-08 13:10:17.985Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'G J0238+1636 (2, 2, 56) 13:08:34' to Telescope State
+2026-03-08 13:10:17.987Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to J0238+1636:
+2026-03-08 13:10:17.987Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 13:10:17.987Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 13:10:17.992Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G J0238+1636 (8, 2, 56) 12:19:54' from solution store
+2026-03-08 13:10:17.993Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to J0238+1636 (inplace)
+2026-03-08 13:10:18.007Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to J0238+1636 (inplace)
+2026-03-08 13:10:18.019Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to J0238+1636 (inplace)
+2026-03-08 13:10:30.088Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 12.094846725463867 s
+2026-03-08 13:10:30.088Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for J0238+1636:
+2026-03-08 13:10:38.077Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 13:10:38.077Z katsdpcal.reduction      INFO     [Pipeline] Target: Peanut
+2026-03-08 13:10:38.078Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 39
+2026-03-08 13:10:38.078Z katsdpcal.reduction      INFO     [Pipeline]   Time:       13:02:14 - 13:07:18
+2026-03-08 13:10:38.078Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['target']
+2026-03-08 13:10:38.104Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to Peanut:
+2026-03-08 13:10:38.104Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 10:21:50' from solution store
+2026-03-08 13:10:38.105Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 10:21:50' from solution store
+2026-03-08 13:10:38.109Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G (8, 2, 56) 12:19:54' from solution store
+2026-03-08 13:10:38.110Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to Peanut (inplace)
+2026-03-08 13:10:38.124Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to Peanut (inplace)
+2026-03-08 13:10:38.136Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to Peanut (inplace)
+2026-03-08 13:11:01.806Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 23.696356534957886 s
+2026-03-08 13:11:01.808Z katsdpcal.reduction      INFO     [Pipeline] Flagging calibrated target Peanut
+2026-03-08 13:11:07.773Z katsdpcal.control        INFO     [MainProcess]  - J0408-6545 | 0408-658 (track)
+2026-03-08 13:11:18.418Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 13:11:18.419Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 33.108%
+2026-03-08 13:11:18.419Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 43.230%
+2026-03-08 13:11:18.539Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 13:11:18.540Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 32.963%
+2026-03-08 13:11:18.540Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 43.211%
+2026-03-08 13:11:18.541Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 16.732953548431396 s
+2026-03-08 13:11:18.542Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for Peanut:
+2026-03-08 13:11:26.000Z katsdpcal.control        INFO     [Sender] starting transmission of 56 slots
+2026-03-08 13:11:25.998Z katsdpcal.control        INFO     [Pipeline] buffer with 56 slots released by Pipeline for transmission
+2026-03-08 13:11:26.032Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 13:11:26.053Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 13:12:43.857Z katsdpcal.control        INFO     [Sender] finished transmission of 56 slots
+2026-03-08 13:16:11.647Z katsdpcal.control        INFO     [MainProcess] Accumulation break - transition track -> slew
+2026-03-08 13:16:11.648Z katsdpcal.control        INFO     [MainProcess] Accumulated 47 timestamps
+2026-03-08 13:16:11.648Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 13:16:11.648Z katsdpcal.control        INFO     [MainProcess]  - J0521+1638 | 3C138 (slew)
+2026-03-08 13:16:11.648Z katsdpcal.control        INFO     [Pipeline] buffer with 47 slots acquired by Pipeline
+2026-03-08 13:16:11.651Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 13:16:11.651Z katsdpcal.reduction      INFO     [Pipeline] Target: J0408-6545
+2026-03-08 13:16:11.651Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 37
+2026-03-08 13:16:11.651Z katsdpcal.reduction      INFO     [Pipeline]   Time:       13:11:01 - 13:15:49
+2026-03-08 13:16:11.652Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['fluxcal', 'bpcal', 'delaycal']
+2026-03-08 13:16:11.679Z katsdpcal.reduction      INFO     [Pipeline] Calibrator flagging
+2026-03-08 13:16:27.706Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 13:16:27.707Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.408%
+2026-03-08 13:16:27.707Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 39.969%
+2026-03-08 13:16:28.088Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 13:16:28.089Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.631%
+2026-03-08 13:16:28.089Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 39.986%
+2026-03-08 13:16:28.090Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 16.410596132278442 s
+2026-03-08 13:16:28.090Z katsdpcal.reduction      INFO     [Pipeline] Solving for preliminary G on delay calibrator J0408-6545
+2026-03-08 13:16:28.090Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 7.996616971962617 s (1 dumps)
+2026-03-08 13:16:28.094Z katsdpcal.reduction      INFO     [Pipeline]      Model: 50 point sources
+2026-03-08 13:16:34.359Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (_create_model): 6.268261671066284 s
+2026-03-08 13:16:35.367Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 7.2765703201293945 s
+2026-03-08 13:16:35.373Z katsdpcal.reduction      INFO     [Pipeline] Solving for K on delay calibrator J0408-6545
+2026-03-08 13:16:35.373Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply G solution to J0408-6545
+2026-03-08 13:16:36.218Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (k_sol): 0.8452861309051514 s
+2026-03-08 13:16:36.219Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'K J0408-6545 (2, 56) 13:13:25' to Telescope State
+2026-03-08 13:16:36.220Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 13:13:25' from solution store
+2026-03-08 13:16:36.220Z katsdpcal.reduction      INFO     [Pipeline] Solving for preliminary G on bandpass calibrator J0408-6545
+2026-03-08 13:16:36.220Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J0408-6545
+2026-03-08 13:16:36.228Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 7.996616971962617 s (1 dumps)
+2026-03-08 13:16:44.935Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 8.7149658203125 s
+2026-03-08 13:16:44.941Z katsdpcal.reduction      INFO     [Pipeline] Solving for B on bandpass calibrator J0408-6545
+2026-03-08 13:16:44.941Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J0408-6545
+2026-03-08 13:16:44.949Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply G solution to J0408-6545
+2026-03-08 13:16:58.710Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/dask/core.py:121: RuntimeWarning: invalid value encountered in reciprocal
+  return func(*(_execute_task(a, cache) for a in args))
+
+2026-03-08 13:17:00.894Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (b_sol): 15.95223093032837 s
+2026-03-08 13:17:00.895Z py.warnings              WARNING  [Pipeline] /home/kat/ve3/lib/python3.8/site-packages/katsdpcalproc/calprocs.py:638: RuntimeWarning: invalid value encountered in fmod
+  rel_angle = np.fmod(angle - base_angle, 2 * np.pi)
+
+2026-03-08 13:17:00.895Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (b_norm): 0.0010528564453125 s
+2026-03-08 13:17:00.896Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'B J0408-6545 (4096, 2, 56) 13:13:25' to Telescope State
+2026-03-08 13:17:00.939Z katsdpcal.reduction      INFO     [Pipeline] Solving for G on bandpass calibrator J0408-6545
+2026-03-08 13:17:00.940Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 13:13:25' from solution store
+2026-03-08 13:17:00.940Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 13:13:25' from solution store
+2026-03-08 13:17:00.940Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J0408-6545
+2026-03-08 13:17:00.948Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply B solution to J0408-6545
+2026-03-08 13:17:00.954Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 295.8748279626168 s (37 dumps)
+2026-03-08 13:17:15.619Z katsdpcal.control        INFO     [MainProcess]  - J0521+1638 | 3C138 (track)
+2026-03-08 13:17:33.381Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 32.441078901290894 s
+2026-03-08 13:17:33.382Z katsdpcal.reduction      INFO     [Pipeline] Applying calibration solutions to J0408-6545:
+2026-03-08 13:17:33.383Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 13:13:25' from solution store
+2026-03-08 13:17:33.383Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 13:13:25' from solution store
+2026-03-08 13:17:33.383Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'G J0408-6545 (1, 2, 56) 13:13:25' from solution store
+2026-03-08 13:17:33.383Z katsdpcal.reduction      INFO     [Pipeline]   - Apply K solution to J0408-6545 (inplace)
+2026-03-08 13:17:33.399Z katsdpcal.reduction      INFO     [Pipeline]   - Apply B solution to J0408-6545 (inplace)
+2026-03-08 13:17:33.411Z katsdpcal.reduction      INFO     [Pipeline]   - Apply G solution to J0408-6545 (inplace)
+2026-03-08 13:17:57.062Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (apply_inplace): 23.679102182388306 s
+2026-03-08 13:17:57.176Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected data for J0408-6545:
+2026-03-08 13:18:02.252Z katsdpcal.control        INFO     [Sender] starting transmission of 47 slots
+2026-03-08 13:18:02.252Z katsdpcal.control        INFO     [Pipeline] buffer with 47 slots released by Pipeline for transmission
+2026-03-08 13:18:02.259Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 13:18:02.265Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 13:19:07.532Z katsdpcal.control        INFO     [Sender] finished transmission of 47 slots
+2026-03-08 13:27:25.194Z spead2                   WARNING  [MainProcess] worker thread blocked by full ringbuffer on heap 5949440
+2026-03-08 13:27:25.259Z spead2                   WARNING  [MainProcess] worker thread blocked by full ringbuffer on heap 5948416
+2026-03-08 13:27:25.259Z spead2                   WARNING  [MainProcess] worker thread blocked by full ringbuffer on heap 5952512
+2026-03-08 13:27:25.426Z katsdpcal.control        INFO     [MainProcess] Waiting for capture to finish (5s timeout)...
+2026-03-08 13:27:25.511Z katsdpcal.control        INFO     [MainProcess] Accumulated 83 timestamps
+2026-03-08 13:27:25.511Z katsdpcal.control        INFO     [MainProcess] accum_pipeline_queue updated by Accumulator
+2026-03-08 13:27:25.511Z katsdpcal.control        INFO     [MainProcess] Accumulation ended
+2026-03-08 13:27:25.511Z katsdpcal.control        INFO     [Pipeline] buffer with 83 slots acquired by Pipeline
+2026-03-08 13:27:25.512Z katsdpcal.control        INFO     [MainProcess] Observation ended
+2026-03-08 13:27:25.512Z katsdpcal.control        INFO     [MainProcess] Capture stopped
+2026-03-08 13:27:25.514Z katsdpcal.reduction      INFO     [Pipeline] -----------------------------------
+2026-03-08 13:27:25.514Z katsdpcal.reduction      INFO     [Pipeline] Target: J0521+1638
+2026-03-08 13:27:25.514Z katsdpcal.reduction      INFO     [Pipeline]   Timestamps: 75
+2026-03-08 13:27:25.514Z katsdpcal.reduction      INFO     [Pipeline]   Time:       13:17:01 - 13:26:53
+2026-03-08 13:27:25.514Z katsdpcal.reduction      INFO     [Pipeline]   Tags:       ['polcal']
+2026-03-08 13:27:25.539Z katsdpcal.reduction      INFO     [Pipeline] Calibrator flagging
+2026-03-08 13:27:55.720Z katsdpcal.reduction      INFO     [Pipeline]   - Flag auto-pols
+2026-03-08 13:27:55.722Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.392%
+2026-03-08 13:27:55.722Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 40.382%
+2026-03-08 13:27:55.876Z katsdpcal.reduction      INFO     [Pipeline]   - Flag cross-pols
+2026-03-08 13:27:55.877Z katsdpcal.reduction      INFO     [Pipeline]   - Start flags : 30.851%
+2026-03-08 13:27:55.877Z katsdpcal.reduction      INFO     [Pipeline]   - New flags: 40.399%
+2026-03-08 13:27:55.878Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (rfi): 30.338605880737305 s
+2026-03-08 13:27:55.879Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'K J0408-6545 (2, 56) 13:13:25' from solution store
+2026-03-08 13:27:55.879Z katsdpcal.reduction      INFO     [Pipeline] Loaded solution 'B J0408-6545 (4096, 2, 56) 13:13:25' from solution store
+2026-03-08 13:27:55.879Z katsdpcal.reduction      INFO     [Pipeline] Solving for preliminary G on KCROSS calibrator J0521+1638
+2026-03-08 13:27:55.879Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J0521+1638
+2026-03-08 13:27:55.887Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply B solution to J0521+1638
+2026-03-08 13:27:55.895Z katsdpcal.reduction      INFO     [Pipeline]   - G solution interval: 7.996616971962617 s (1 dumps)
+2026-03-08 13:28:28.099Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (g_sol): 32.21991300582886 s
+2026-03-08 13:28:28.122Z katsdpcal.reduction      INFO     [Pipeline] Solving for KCROSS on cross-hand delay calibrator J0521+1638
+2026-03-08 13:28:28.122Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply K solution to J0521+1638
+2026-03-08 13:28:28.130Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply B solution to J0521+1638
+2026-03-08 13:28:28.137Z katsdpcal.reduction      INFO     [Pipeline]   - Pre-apply G solution to J0521+1638
+2026-03-08 13:29:00.100Z katsdpcal.reduction      INFO     [Pipeline]   - Solution time (kcross_sol): 31.978103637695312 s
+2026-03-08 13:29:00.100Z katsdpcal.reduction      INFO     [Pipeline]   - Saving solution 'KCROSS J0521+1638 (2, 1) 13:21:57' to Telescope State
+2026-03-08 13:29:00.118Z katsdpcal.reduction      INFO     [Pipeline] Averaging corrected cross-pol data for J0521+1638:
+2026-03-08 13:29:27.439Z katsdpcal.control        INFO     [Sender] starting transmission of 83 slots
+2026-03-08 13:29:27.434Z katsdpcal.control        INFO     [Pipeline] buffer with 83 slots released by Pipeline for transmission
+2026-03-08 13:29:27.439Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 13:29:27.440Z katsdpcal.control        INFO     [ReportWriter] Corrected Data is in the queue
+2026-03-08 13:29:27.441Z katsdpcalproc.calprocs   INFO     [Pipeline] Measured flux density of J0238+1636: 1.319 +/- 0.004 Janskys
+2026-03-08 13:29:27.441Z katsdpcal.control        INFO     [Pipeline] Saved flux densities of gain calibrators to telstate.
+2026-03-08 13:29:27.441Z katsdpcal.control        INFO     [Pipeline] waiting for next event (Pipeline)
+2026-03-08 13:29:27.442Z katsdpcal.control        INFO     [ReportWriter] Starting report on 1772964974
+2026-03-08 13:29:27.443Z katsdpcal.report         INFO     [ReportWriter] Report compiling in directory /var/kat/data/1772964974_sdp_l0_calreport_cal.1-current
+2026-03-08 13:29:28.852Z katsdpcal.report         INFO     [ReportWriter] Calibration solution SNR summary
+2026-03-08 13:29:28.854Z katsdpcal.report         INFO     [ReportWriter] Calibration product: SNR_K
+2026-03-08 13:29:28.854Z katsdpcal.report         INFO     [ReportWriter]   shape: (3, 2, 56)
+2026-03-08 13:29:28.855Z katsdpcal.report         INFO     [ReportWriter] Calibration product: SNR_B
+2026-03-08 13:29:28.855Z katsdpcal.report         INFO     [ReportWriter]   shape: (3, 2, 56)
+2026-03-08 13:29:28.857Z katsdpcal.report         INFO     [ReportWriter] Calibration product: SNR_G
+2026-03-08 13:29:28.857Z katsdpcal.report         INFO     [ReportWriter]   shape: (12, 2, 56)
+2026-03-08 13:29:29.030Z katsdpcal.report         INFO     [ReportWriter] Calibration solution summary
+2026-03-08 13:29:29.033Z katsdpcal.report         INFO     [ReportWriter] Calibration product: K
+2026-03-08 13:29:29.033Z katsdpcal.report         INFO     [ReportWriter]   shape: (3, 2, 56)
+2026-03-08 13:29:29.033Z katsdpcal.report         INFO     [ReportWriter]   pol V shape: (3, 56)
+2026-03-08 13:29:29.033Z katsdpcal.report         INFO     [ReportWriter]   pol H shape: (3, 56)
+2026-03-08 13:29:30.448Z katsdpcal.report         INFO     [ReportWriter] Calibration product: KCROSS
+2026-03-08 13:29:30.449Z katsdpcal.report         INFO     [ReportWriter]   shape: (1, 2, 1)
+2026-03-08 13:29:30.459Z katsdpcal.report         INFO     [ReportWriter] Calibration product: B
+2026-03-08 13:29:30.460Z katsdpcal.report         INFO     [ReportWriter]   shape: (3, 4096, 2, 56)
+2026-03-08 13:29:39.227Z katsdpcal.report         INFO     [ReportWriter] Calibration product: G
+2026-03-08 13:29:39.227Z katsdpcal.report         INFO     [ReportWriter]   shape: (12, 2, 56)
+2026-03-08 13:29:41.299Z katsdpcal.report         INFO     [ReportWriter]  Corrected data for J0408-6545 shape: (3, 1024, 2, 55)
+2026-03-08 13:29:48.836Z katsdpcal.report         INFO     [ReportWriter]  Corrected data for J0238+1636 shape: (1024, 2, 56)
+2026-03-08 13:29:54.403Z katsdpcal.report         INFO     [ReportWriter]  Corrected data for J0238+1636 shape: (6, 8, 2, 1540)
+2026-03-08 13:29:55.076Z katsdpcal.report         INFO     [ReportWriter]  Corrected data for Peanut shape: (1024, 2, 56)
+2026-03-08 13:29:57.770Z katsdpcal.report         INFO     [ReportWriter]  Corrected data for Peanut shape: (15, 8, 2, 1540)
+2026-03-08 13:29:59.056Z katsdpcal.control        INFO     [ReportWriter]    Observation ended
+2026-03-08 13:29:59.057Z katsdpcal.control        INFO     [ReportWriter] ===========================

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QA Warnings — SKAO Pipeline QA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Mono:wght@400;500&display=swap" />
+  <style>
+    :root { --ink:#0D1224; --muted:#6B7385; --line:#E0E4EE; --paper:#fff; --canvas:#F7F8FB; --navy:#0A1E46; --navy-2:#132B5E; --cyan:#E50D7F; --magenta:#B00C63; --amber:#B8690B; --amber-bg:#FBF0DC; --shadow:0 10px 28px rgba(10,30,70,.08); }
+    * { box-sizing: border-box; }
+    body { margin:0; min-width:320px; color:var(--ink); background:radial-gradient(circle at 85% -15%,rgba(229,13,127,.11),transparent 30rem),var(--canvas); font:14px/1.45 'Noto Sans',Verdana,'Segoe UI',system-ui,sans-serif; }
+    .topbar { min-height:88px; padding:14px 32px; display:flex; align-items:center; justify-content:space-between; gap:28px; color:#fff; background:linear-gradient(100deg,var(--navy),var(--navy-2)); border-bottom:3px solid transparent; border-image:linear-gradient(90deg,var(--cyan),var(--navy)) 1; }
+    .brand { display:flex; align-items:center; gap:18px; min-width:0; }
+    .brand-mark { width:108px; height:auto; display:block; flex:none; }
+    .brand-title { font-size:clamp(20px,2.4vw,28px); font-weight:700; line-height:1.15; letter-spacing:-.025em; }
+    .guide-link { width:40px; height:40px; display:grid; place-items:center; flex:none; border:1px solid rgba(255,255,255,.45); border-radius:50%; color:#fff; background:rgba(255,255,255,.08); font-size:19px; font-weight:750; text-decoration:none; transition:background .15s ease,border-color .15s ease; }
+    .guide-link:hover, .guide-link:focus-visible { border-color:var(--cyan); background:rgba(229,13,127,.18); outline:none; }
+    main { max-width:1120px; margin:0 auto; padding:28px 32px 48px; }
+    .back { display:inline-block; margin-bottom:18px; color:#B00C63; font-weight:700; text-decoration:none; }
+    .back:hover { text-decoration:underline; }
+    .heading { display:flex; justify-content:space-between; gap:24px; align-items:flex-end; margin-bottom:22px; }
+    h1 { margin:0 0 4px; color:var(--navy); font-size:clamp(24px,3vw,34px); line-height:1.15; letter-spacing:-.035em; }
+    .lede { margin:0; color:var(--muted); }
+    .pill { display:inline-flex; align-items:center; gap:7px; padding:7px 11px; border-radius:999px; color:var(--amber); background:var(--amber-bg); font-size:11px; font-weight:750; white-space:nowrap; }
+    .pill::before { content:""; width:6px; height:6px; border-radius:50%; background:currentColor; }
+    .card { overflow:hidden; background:var(--paper); border:1px solid #E0E4EE; border-radius:14px; box-shadow:var(--shadow); }
+    .card-head { padding:16px 20px; border-bottom:1px solid var(--line); }
+    .card-head h2 { margin:0; color:var(--navy); font-size:17px; }
+    .warning { padding:22px 20px; display:grid; grid-template-columns:42px 1fr auto; gap:16px; align-items:start; }
+    .warning + .warning { border-top:1px solid var(--line); }
+    .icon { width:36px; height:36px; display:grid; place-items:center; border-radius:50%; color:var(--amber); background:var(--amber-bg); font-weight:850; }
+    .warning h3 { margin:0 0 5px; color:var(--navy); font-size:15px; }
+    .warning p { margin:0 0 13px; color:var(--muted); }
+    dl { margin:0; display:grid; grid-template-columns:max-content 1fr; gap:5px 16px; font-size:12px; }
+    dt { color:var(--muted); }
+    dd { margin:0; font-weight:650; }
+    .metric { text-align:right; }
+    .metric b { display:block; color:var(--amber); font-size:22px; }
+    .metric span { color:var(--muted); font-size:11px; }
+    .note { margin-top:16px; color:var(--muted); font-size:11px; }
+    @media (max-width:640px) { .topbar{min-height:0;padding:14px 18px;gap:14px}.brand{gap:12px}.brand-mark{width:82px}.brand-title{font-size:18px} main{padding:21px 15px 35px}.heading{align-items:flex-start;flex-direction:column}.warning{grid-template-columns:36px 1fr}.metric{grid-column:2;text-align:left} }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img class="brand-mark" src="skao-logo.svg" alt="SKAO" width="108" height="30" />
+      <div class="brand-title">QA Warnings</div>
+    </div>
+    <a class="guide-link" href="user-guide.html" aria-label="Open the Quality Assessment Report user guide" title="User guide">?</a>
+  </header>
+  <main>
+    <a class="back" href="skao_qa_dashboard_mockup.html">← Back to Quality Assessment Report</a>
+    <div class="heading">
+      <div><h1>QA Warnings</h1><p class="lede">Warnings requiring review for scheduling block SB-2028-0412-0017.</p></div>
+      <span class="pill">2 warnings</span>
+    </div>
+    <section class="card" aria-labelledby="warnings-title">
+      <div class="card-head"><h2 id="warnings-title">All warnings</h2></div>
+      <article class="warning">
+        <div class="icon" aria-hidden="true">!</div>
+        <div>
+          <h3>Elevated calibration phase RMS</h3>
+          <p>The phase RMS exceeded the advisory threshold on scan 07. The variance is non-blocking, but the calibration solution should be reviewed before downstream scientific analysis.</p>
+          <dl>
+            <dt>Pipeline stage</dt><dd>Calibration</dd>
+            <dt>Data product</dt><dd>CAL-LOW-0284-01</dd>
+            <dt>Affected scan</dt><dd>Scan 07</dd>
+            <dt>Advisory threshold</dt><dd>10.0°</dd>
+          </dl>
+        </div>
+        <div class="metric"><b>11.4°</b><span>Measured phase RMS</span></div>
+      </article>
+      <article class="warning">
+        <div class="icon" aria-hidden="true">!</div>
+        <div>
+          <h3>Elevated delay solution scatter</h3>
+          <p>Per-station delay solutions show elevated scatter on several remote stations, consistent with the calibration phase RMS excursion on scan 07. The variance is non-blocking, but the delay corrections should be reviewed before use in high-precision astrometric or spectral-line workflows.</p>
+          <dl>
+            <dt>Pipeline stage</dt><dd>Calibration</dd>
+            <dt>Data product</dt><dd>delay.gaintable.h5parm</dd>
+            <dt>Affected stations</dt><dd>S041, S103, S188</dd>
+            <dt>Advisory threshold</dt><dd>2.5 ns</dd>
+          </dl>
+        </div>
+        <div class="metric"><b>3.1 ns</b><span>Measured delay RMS</span></div>
+      </article>
+    </section>
+    <p class="note">Static interface mock-up · representative data only</p>
+  </main>
+</body>
+</html>

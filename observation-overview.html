@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Observation Overview — SKAO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Mono:wght@400;500&display=swap" />
+  <style>
+    :root { --ink:#0D1224; --muted:#6B7385; --line:#E0E4EE; --paper:#fff; --canvas:#F7F8FB; --navy:#0A1E46; --navy-2:#132B5E; --cyan:#E50D7F; --magenta:#B00C63; --green:#2E7D32; --green-bg:#E7F3E8; --amber:#B8690B; --amber-bg:#FBF0DC; --shadow:0 10px 28px rgba(10,30,70,.08); }
+    * { box-sizing:border-box; }
+    body { margin:0; min-width:320px; color:var(--ink); background:radial-gradient(circle at 85% -15%,rgba(229,13,127,.11),transparent 30rem),var(--canvas); font:14px/1.45 'Noto Sans',Verdana,'Segoe UI',system-ui,sans-serif; }
+    .topbar { min-height:88px; padding:14px 32px; display:flex; align-items:center; justify-content:space-between; gap:28px; color:#fff; background:linear-gradient(100deg,var(--navy),var(--navy-2)); border-bottom:3px solid transparent; border-image:linear-gradient(90deg,var(--cyan),var(--navy)) 1; }
+    .brand { display:flex; align-items:center; gap:18px; min-width:0; }
+    .brand-mark { width:108px; height:auto; display:block; flex:none; }
+    .brand-title { font-size:clamp(20px,2.4vw,28px); font-weight:700; line-height:1.15; letter-spacing:-.025em; }
+    .guide-link { width:40px; height:40px; display:grid; place-items:center; flex:none; border:1px solid rgba(255,255,255,.45); border-radius:50%; color:#fff; background:rgba(255,255,255,.08); font-size:19px; font-weight:750; text-decoration:none; }
+    .guide-link:hover, .guide-link:focus-visible { border-color:var(--cyan); background:rgba(229,13,127,.18); outline:none; }
+    main { max-width:1240px; margin:0 auto; padding:28px 32px 48px; }
+    .back { display:inline-block; margin-bottom:18px; color:#B00C63; font-weight:700; text-decoration:none; }
+    .back:hover { text-decoration:underline; }
+    .page-head { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:22px; }
+    h1 { margin:0 0 4px; color:var(--navy); font-size:clamp(25px,3vw,34px); line-height:1.15; letter-spacing:-.035em; }
+    .lede { margin:0; color:var(--muted); }
+    .id-pill { padding:7px 11px; border-radius:999px; color:#B00C63; background:#FDEBF3; font:700 11px 'Noto Sans Mono',Menlo,Consolas,monospace; white-space:nowrap; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .card { overflow:hidden; background:var(--paper); border:1px solid #E0E4EE; border-radius:14px; box-shadow:var(--shadow); }
+    .wide { grid-column:1/-1; }
+    .card-head { min-height:63px; padding:15px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; border-bottom:1px solid var(--line); }
+    .card-head h2 { margin:0; color:var(--navy); font-size:17px; letter-spacing:-.015em; }
+    .card-head p { margin:2px 0 0; color:var(--muted); font-size:11px; }
+    .count { color:var(--muted); font-size:11px; font-weight:700; }
+    .scan-details summary { list-style:none; cursor:pointer; user-select:none; }
+    .scan-details summary::-webkit-details-marker { display:none; }
+    .scan-summary-actions { display:flex; align-items:center; gap:12px; }
+    .scan-disclosure { width:26px; height:26px; display:grid; place-items:center; border:1px solid var(--line); border-radius:7px; color:#B00C63; background:#fff; font-size:18px; font-weight:650; line-height:1; }
+    .scan-disclosure::before { content:"+"; }
+    .scan-details[open] .scan-disclosure::before { content:"−"; }
+    .scan-details summary:hover .scan-disclosure, .scan-details summary:focus-visible .scan-disclosure { border-color:#F285BA; background:#FDEBF3; }
+    .scan-details summary:focus-visible { outline:3px solid rgba(229,13,127,.22); outline-offset:-3px; }
+    .table-wrap { overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; }
+    th, td { padding:12px 16px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    tbody tr:last-child td { border-bottom:0; }
+    th { color:var(--muted); background:#F7F8FB; font-size:10px; letter-spacing:.06em; text-transform:uppercase; }
+    td { font-size:12px; }
+    .source { color:var(--navy); font-weight:750; }
+    .type { display:inline-flex; padding:4px 8px; border-radius:999px; font-size:10px; font-weight:750; white-space:nowrap; }
+    .science { color:#B00C63; background:#FDEBF3; }
+    .calibrator { color:#B8690B; background:var(--amber-bg); }
+    .intent { font:11px 'Noto Sans Mono',Menlo,Consolas,monospace; color:#3A4259; }
+
+    .sources-table { table-layout:auto; }
+    .sources-table th, .sources-table td { padding:5px 8px; border-bottom:0; white-space:nowrap; }
+    .sources-table th:first-child, .sources-table td:first-child { padding-left:16px; }
+    .sources-table th:last-child, .sources-table td:last-child { padding-right:22px; }
+    .sources-table td:last-child { position:relative; }
+    .sources-table tbody tr:first-child td { padding-top:10px; }
+    .sources-table tbody tr:last-child td { padding-bottom:14px; }
+    .sources-table td.coord { font:10.5px 'Noto Sans Mono',Menlo,Consolas,monospace; color:#3A4259; }
+    .sources-table td.intent, .sources-table th { font-size:10px; }
+    .sources-table td.num { text-align:right; font-variant-numeric:tabular-nums; }
+    .sources-table td.dash { color:var(--muted); }
+    .sources-table .flux-flag { position:absolute; top:50%; right:4px; transform:translateY(-50%); display:inline-flex; align-items:center; justify-content:center; width:11px; height:11px; border-radius:50%; background:var(--amber); color:#fff; font-size:8px; font-weight:700; font-style:normal; line-height:1; cursor:default; }
+    .sources-table .flux-flag .flux-bubble { position:absolute; bottom:135%; right:0; background:var(--ink); color:#fff; font-size:10px; font-weight:400; padding:6px 9px; border-radius:6px; white-space:nowrap; opacity:0; visibility:hidden; transition:opacity .15s ease; box-shadow:0 4px 14px rgba(0,0,0,.28); pointer-events:none; z-index:5; }
+    .sources-table .flux-flag .flux-bubble::after { content:''; position:absolute; top:100%; right:1px; border:5px solid transparent; border-top-color:var(--ink); }
+    .sources-table .flux-flag:hover .flux-bubble, .sources-table .flux-flag:focus .flux-bubble { opacity:1; visibility:visible; }
+    .station-groups { padding:18px 20px 20px; }
+    .station-group + .station-group { margin-top:18px; }
+    .station-group h3 { margin:0 0 9px; color:var(--navy); font-size:13px; }
+    .station-list { display:flex; flex-wrap:wrap; gap:5px; }
+    .station { min-width:44px; padding:4px 6px; border:1px solid var(--line); border-radius:5px; font:700 10px 'Noto Sans Mono',Menlo,Consolas,monospace; text-align:center; }
+    .station.healthy { color:#2E7D32; border-color:#B7D8B9; background:#E7F3E8; }
+    .station.degraded { color:#B8690B; border-color:#E2C58D; background:#FBF0DC; }
+    .station.offline { color:#C2362D; border-color:#E8B5B0; background:#FBE6E4; }
+    .station-legend { padding:0 20px 18px; display:flex; flex-wrap:wrap; gap:14px; color:var(--muted); font-size:11px; }
+    .legend-item { display:inline-flex; align-items:center; gap:6px; }
+    .legend-dot { width:8px; height:8px; border-radius:50%; }
+    .legend-dot.healthy { background:var(--green); }
+    .legend-dot.degraded { background:#B8690B; }
+    .legend-dot.offline { background:#C2362D; }
+    .issue-list { padding:4px 20px 10px; }
+    .issue { padding:14px 0; display:grid; grid-template-columns:92px minmax(160px,.7fr) 1.5fr auto; gap:16px; align-items:start; border-bottom:1px solid var(--line); }
+    .issue:last-child { border-bottom:0; }
+    .severity { display:inline-flex; justify-content:center; padding:4px 8px; border-radius:999px; font-size:10px; font-weight:800; }
+    .severity.warning { color:#B8690B; background:var(--amber-bg); }
+    .severity.critical { color:#C2362D; background:#FBE6E4; }
+    .severity.resolved { color:#2E7D32; background:var(--green-bg); }
+    .issue-name { color:var(--navy); font-size:12px; font-weight:750; }
+    .issue-detail { color:var(--muted); font-size:11px; }
+    .issue-time { color:var(--muted); font:10px 'Noto Sans Mono',Menlo,Consolas,monospace; white-space:nowrap; }
+    .setup-list { padding:5px 20px 12px; }
+    .setup { padding:14px 0; display:grid; grid-template-columns:minmax(130px,.75fr) 1.5fr auto; gap:16px; align-items:center; border-bottom:1px solid var(--line); }
+    .setup:last-child { border-bottom:0; }
+    .setup-name { color:var(--navy); font-weight:750; }
+    .setup-name small { display:block; margin-top:2px; color:var(--muted); font-weight:500; }
+    .setup-detail { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+    .datum { color:var(--muted); font-size:10px; }
+    .datum strong { display:block; margin-top:2px; color:var(--ink); font-size:11px; }
+    .setup-tag { padding:4px 8px; border-radius:999px; color:var(--green); background:var(--green-bg); font-size:10px; font-weight:750; }
+    .conditions { padding:18px 20px 20px; display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+    .condition { padding:12px; border:1px solid var(--line); border-radius:9px; background:#F7F8FB; }
+    .condition span { display:block; color:var(--muted); font-size:10px; }
+    .condition strong { display:block; margin-top:4px; color:var(--navy); font-size:16px; }
+    .condition small { color:var(--muted); font-size:10px; }
+    .good { color:var(--green)!important; }
+    .note { margin:16px 0 0; color:var(--muted); font-size:10px; }
+    .image-wrap { padding:18px 20px 22px; }
+    .image-wrap img { display:block; width:100%; max-width:920px; margin:0 auto; border-radius:8px; border:1px solid var(--line); }
+    @media (max-width:760px) { .grid{grid-template-columns:1fr}.wide{grid-column:auto}.page-head{align-items:flex-start;flex-direction:column}.setup{grid-template-columns:1fr}.setup-detail{grid-template-columns:repeat(3,1fr)}.conditions{grid-template-columns:1fr 1fr}.issue{grid-template-columns:90px 1fr}.issue-detail,.issue-time{grid-column:2} }
+    @media (max-width:520px) { .topbar{min-height:0;padding:14px 18px;gap:14px}.brand{gap:12px}.brand-mark{width:82px}.brand-title{font-size:18px}main{padding:21px 15px 35px}.conditions{grid-template-columns:1fr}.setup-detail{grid-template-columns:1fr 1fr}th,td{padding:10px 12px} }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><img class="brand-mark" src="skao-logo.svg" alt="SKAO" width="108" height="30" /><div class="brand-title">Observation Overview</div></div>
+    <a class="guide-link" href="user-guide.html" aria-label="Open the Quality Assessment Report user guide" title="User guide">?</a>
+  </header>
+  <main>
+    <a class="back" href="skao_qa_dashboard_mockup.html">← Back to Quality Assessment Report</a>
+    <div class="page-head"><div><h1>Observation Overview</h1><p class="lede">Sources, array participation, spectral configuration, and observing conditions.</p></div></div>
+    <div class="grid">
+      <section class="card wide" aria-labelledby="sources-title">
+        <div class="card-head"><div><h2 id="sources-title">Sources and scan intents</h2><p>Science targets and calibration sources used in the observation</p></div><span class="count">8 sources</span></div>
+        <div class="table-wrap"><table class="sources-table"><thead><tr><th>ID</th><th>Source</th><th>RA</th><th>Dec</th><th>Scan intent</th><th>Dumps</th><th>Model (Jy)</th><th>Derived (Jy)</th></tr></thead><tbody>
+          <tr><td>0</td><td class="source">J1939−6342</td><td class="coord">19:39:25.03</td><td class="coord">−63:42:45.6</td><td class="intent">CALIBRATE_FLUX</td><td class="num">450</td><td class="num">14.9</td><td class="num dash">—</td></tr>
+          <tr><td>1</td><td class="source">J0408−6545</td><td class="coord">04:08:20.38</td><td class="coord">−65:45:09.1</td><td class="intent">CALIBRATE_BANDPASS</td><td class="num">525</td><td class="num">23.4</td><td class="num">24.60</td></tr>
+          <tr><td>2</td><td class="source">J0522−3627</td><td class="coord">05:22:57.98</td><td class="coord">−36:27:30.8</td><td class="intent">CALIBRATE_PHASE</td><td class="num">700</td><td class="num">8.3</td><td class="num">5.80<span class="flux-flag" tabindex="0">!<span class="flux-bubble" role="tooltip">Model / derived flux &gt; 0.1</span></span></td></tr>
+          <tr><td>3</td><td class="source">ELAIS-S1</td><td class="coord">00:37:48.00</td><td class="coord">−44:00:00.0</td><td class="intent">TARGET</td><td class="num">1,225</td><td class="num dash">—</td><td class="num">0.85</td></tr>
+          <tr><td>4</td><td class="source">PKS 0349−27</td><td class="coord">03:51:07.93</td><td class="coord">−27:44:35.7</td><td class="intent">TARGET</td><td class="num">700</td><td class="num dash">—</td><td class="num">3.20</td></tr>
+          <tr><td>5</td><td class="source">NGC 1566</td><td class="coord">04:20:00.40</td><td class="coord">−54:56:16.0</td><td class="intent">TARGET</td><td class="num">700</td><td class="num dash">—</td><td class="num">0.42</td></tr>
+          <tr><td>6</td><td class="source">RXC J0528.9−3927</td><td class="coord">05:28:53.80</td><td class="coord">−39:27:00.0</td><td class="intent">TARGET</td><td class="num">1,400</td><td class="num dash">—</td><td class="num">0.15</td></tr>
+          <tr><td>7</td><td class="source">J0252−7104</td><td class="coord">02:52:46.20</td><td class="coord">−71:04:36.5</td><td class="intent">CALIBRATE_POLARIZATION</td><td class="num">600</td><td class="num">1.3</td><td class="num">1.40</td></tr>
+        </tbody></table></div>
+      </section>
+
+      <section class="card wide" aria-labelledby="scans-title">
+        <details class="scan-details">
+          <summary class="card-head"><div><h2 id="scans-title">Scan list</h2><p>CASA listobs-style observation sequence</p></div><span class="scan-summary-actions"><span class="count">42 scans</span><span class="scan-disclosure" aria-hidden="true"></span></span></summary>
+          <div class="table-wrap"><table><thead><tr><th>Scan</th><th>Start time (UTC)</th><th>End time (UTC)</th><th>Field</th><th>SpW</th><th>Intent</th></tr></thead><tbody id="scanRows"></tbody></table></div>
+        </details>
+      </section>
+
+      <section class="card wide" aria-labelledby="stations-title">
+        <div class="card-head"><div><h2 id="stations-title">Stations used</h2><p>SKA-Low station health during the observation</p></div><span class="count">196 healthy · 8 degraded · 3 offline</span></div>
+        <div class="station-groups"><div class="station-group"><h3>Core stations · 136</h3><div id="coreStations" class="station-list" aria-label="Core stations S001 through S136"></div></div><div class="station-group"><h3>Remote stations · 71</h3><div id="remoteStations" class="station-list" aria-label="Remote stations S137 through S207"></div></div></div>
+        <div class="station-legend" aria-label="Station health legend"><span class="legend-item"><span class="legend-dot healthy"></span>Healthy (196)</span><span class="legend-item"><span class="legend-dot degraded"></span>Degraded (8)</span><span class="legend-item"><span class="legend-dot offline"></span>Offline (3)</span></div>
+      </section>
+
+      <section class="card wide" aria-labelledby="issues-title">
+        <div class="card-head"><div><h2 id="issues-title">Telescope and hardware issues</h2><p>Station, correlator, timing, and transport events recorded during the observation</p></div><span class="count">2 open · 2 resolved</span></div>
+        <div class="issue-list">
+          <div class="issue"><span class="severity critical">Critical</span><div class="issue-name">Stations S024, S089 and S174 offline</div><div class="issue-detail">No station beam data received. The stations were excluded from correlation for the full observation; uv-coverage impact remained below the blocking threshold.</div><div class="issue-time">Full observation</div></div>
+          <div class="issue"><span class="severity warning">Warning</span><div class="issue-name">Correlator node CBF-07 degraded</div><div class="issue-detail">Intermittent packet loss affected 0.18% of visibilities on spectral window 2. Missing integrations were flagged automatically.</div><div class="issue-time">22:14–22:31 UTC</div></div>
+          <div class="issue"><span class="severity resolved">Resolved</span><div class="issue-name">Station timing offsets</div><div class="issue-detail">S041, S103 and S188 exceeded the 2 ns advisory tolerance. Clock models were refreshed and offsets returned to nominal.</div><div class="issue-time">Resolved 21:46 UTC</div></div>
+          <div class="issue"><span class="severity resolved">Resolved</span><div class="issue-name">Data transport congestion</div><div class="issue-detail">Brief congestion on the remote-station ingest path increased buffer occupancy to 82%. No science data were lost.</div><div class="issue-time">Resolved 23:07 UTC</div></div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="spectral-title">
+        <div class="card-head"><div><h2 id="spectral-title">Spectral setup</h2><p>Continuum and zoom configurations</p></div><span class="count">3 setups</span></div>
+        <div class="setup-list">
+          <div class="setup"><div class="setup-name">LOW_CONT_110_350<small>Continuum</small></div><div class="setup-detail"><div class="datum">Frequency<strong>110–350 MHz</strong></div><div class="datum">Channels<strong>4,096</strong></div><div class="datum">Resolution<strong>58.6 kHz</strong></div></div><span class="setup-tag">Primary</span></div>
+          <div class="setup"><div class="setup-name">LOW_ZOOM_150<small>Zoom 1</small></div><div class="setup-detail"><div class="datum">Centre<strong>150.000 MHz</strong></div><div class="datum">Channels<strong>16,384</strong></div><div class="datum">Resolution<strong>0.76 kHz</strong></div></div><span class="setup-tag">Line</span></div>
+          <div class="setup"><div class="setup-name">LOW_ZOOM_325<small>Zoom 2</small></div><div class="setup-detail"><div class="datum">Centre<strong>325.000 MHz</strong></div><div class="datum">Channels<strong>8,192</strong></div><div class="datum">Resolution<strong>1.53 kHz</strong></div></div><span class="setup-tag">Line</span></div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="conditions-title">
+        <div class="card-head"><div><h2 id="conditions-title">Observing conditions</h2><p>Median values over the observation</p></div><span class="count">2028-04-12</span></div>
+        <div class="conditions">
+          <div class="condition"><span>Air temperature</span><strong>18.4 °C</strong><small>16.9–20.1 °C</small></div>
+          <div class="condition"><span>Relative humidity</span><strong>31%</strong><small>Stable</small></div>
+          <div class="condition"><span>Wind speed</span><strong>4.8 m/s</strong><small>Gusts 7.2 m/s</small></div>
+          <div class="condition"><span>Precipitation</span><strong>0.0 mm</strong><small class="good">Clear</small></div>
+          <div class="condition"><span>Ionospheric TEC</span><strong>6.3 TECU</strong><small>Variation 0.8 TECU</small></div>
+          <div class="condition"><span>Scintillation index</span><strong>0.12</strong><small class="good">Quiet</small></div>
+          <div class="condition"><span>Geomagnetic Kp</span><strong>2</strong><small class="good">Unsettled to quiet</small></div>
+          <div class="condition"><span>Cloud cover</span><strong>8%</strong><small>Mostly clear</small></div>
+          <div class="condition"><span>Solar elevation</span><strong>−24.6°</strong><small>Astronomical night</small></div>
+        </div>
+      </section>
+
+      <section class="card wide" aria-labelledby="elevation-title">
+        <div class="card-head"><div><h2 id="elevation-title">Target elevation</h2><p>Elevation vs time for science targets and calibrators</p></div></div>
+        <div class="image-wrap">
+          <img src="Plots_and_images/elevation_plot.png" alt="Elevation versus time plot for the observation" />
+        </div>
+      </section>
+    </div>
+    <p class="note">Static interface mock-up · representative observation data only</p>
+  </main>
+  <script>
+    const scanFields = [
+      ...Array(3).fill(['J1939−6342', 'CALIBRATE_FLUX', '00:06:00']),
+      ...Array(3).fill(['J0408−6545', 'CALIBRATE_BANDPASS', '00:07:00']),
+      ['J0522−3627', 'CALIBRATE_PHASE', '00:04:00'],
+      ...Array(3).fill(['ELAIS-S1', 'TARGET', '00:07:00']),
+      ['J0522−3627', 'CALIBRATE_PHASE', '00:04:00'],
+      ...Array(4).fill(['ELAIS-S1', 'TARGET', '00:07:00']),
+      ['J0522−3627', 'CALIBRATE_PHASE', '00:04:00'],
+      ...Array(4).fill(['PKS 0349−27', 'TARGET', '00:07:00']),
+      ['J0522−3627', 'CALIBRATE_PHASE', '00:04:00'],
+      ...Array(4).fill(['NGC 1566', 'TARGET', '00:07:00']),
+      ['J0522−3627', 'CALIBRATE_PHASE', '00:04:00'],
+      ...Array(4).fill(['RXC J0528.9−3927', 'TARGET', '00:07:00']),
+      ['J0522−3627', 'CALIBRATE_PHASE', '00:04:00'],
+      ...Array(4).fill(['RXC J0528.9−3927', 'TARGET', '00:07:00']),
+      ['J0522−3627', 'CALIBRATE_PHASE', '00:04:00'],
+      ...Array(6).fill(['J0252−7104', 'CALIBRATE_POLARIZATION', '00:04:00'])
+    ];
+    const scanRows = document.getElementById('scanRows');
+    let scanStart = Date.UTC(2028, 3, 12, 21, 8, 0);
+    const formatTime = ms => new Date(ms).toISOString().replace('T', ' ').slice(0, 19);
+    scanFields.forEach(([field, intent, duration], index) => {
+      const row = document.createElement('tr');
+      const durationSeconds = duration === '00:07:00' ? 420 : duration === '00:06:00' ? 360 : 240;
+      const begin = formatTime(scanStart);
+      const end = formatTime(scanStart + durationSeconds * 1000);
+      row.innerHTML = `<td>${String(index + 1).padStart(2, '0')}</td><td class="intent">${begin}</td><td class="intent">${end}</td><td class="source">${field}</td><td>0, 1, 2, 3</td><td class="intent">${intent}</td>`;
+      scanRows.appendChild(row);
+      scanStart += (durationSeconds + 60) * 1000;
+    });
+
+    const degradedStations = new Set(['S011', 'S041', 'S063', 'S103', 'S128', 'S155', 'S188', 'S201']);
+    const offlineStations = new Set(['S024', 'S089', 'S174']);
+    const populateStations = (id, start, end) => {
+      const container = document.getElementById(id);
+      const fragment = document.createDocumentFragment();
+      for (let number = start; number <= end; number += 1) {
+        const station = document.createElement('span');
+        const stationId = `S${String(number).padStart(3, '0')}`;
+        const health = offlineStations.has(stationId) ? 'offline' : degradedStations.has(stationId) ? 'degraded' : 'healthy';
+        station.className = `station ${health}`;
+        station.textContent = stationId;
+        station.title = `${stationId}: ${health}`;
+        fragment.appendChild(station);
+      }
+      container.appendChild(fragment);
+    };
+    populateStations('coreStations', 1, 136);
+    populateStations('remoteStations', 137, 207);
+  </script>
+</body>
+</html>

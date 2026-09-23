@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calibration Report — SKAO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Mono:wght@400;500&display=swap" />
+  <style>
+    :root { --ink:#0D1224; --muted:#6B7385; --line:#E0E4EE; --paper:#fff; --canvas:#F7F8FB; --navy:#0A1E46; --navy-2:#132B5E; --cyan:#E50D7F; --magenta:#B00C63; --green:#2E7D32; --green-bg:#E7F3E8; --amber:#B8690B; --amber-bg:#FBF0DC; --red:#C2362D; --red-bg:#FBE6E4; --shadow:0 10px 28px rgba(10,30,70,.08); }
+    * { box-sizing:border-box; }
+    body { margin:0; min-width:320px; color:var(--ink); background:radial-gradient(circle at 85% -15%,rgba(229,13,127,.11),transparent 30rem),var(--canvas); font:14px/1.45 'Noto Sans',Verdana,'Segoe UI',system-ui,sans-serif; }
+    .topbar { min-height:88px; padding:14px 32px; display:flex; align-items:center; justify-content:space-between; gap:28px; color:#fff; background:linear-gradient(100deg,var(--navy),var(--navy-2)); border-bottom:3px solid transparent; border-image:linear-gradient(90deg,var(--cyan),var(--navy)) 1; }
+    .brand { display:flex; align-items:center; gap:18px; min-width:0; }
+    .brand-mark { width:108px; height:auto; display:block; flex:none; }
+    .brand-title { font-size:clamp(20px,2.4vw,28px); font-weight:700; line-height:1.15; letter-spacing:-.025em; }
+    .guide-link { width:40px; height:40px; display:grid; place-items:center; flex:none; border:1px solid rgba(255,255,255,.45); border-radius:50%; color:#fff; background:rgba(255,255,255,.08); font-size:19px; font-weight:750; text-decoration:none; }
+    .guide-link:hover, .guide-link:focus-visible { border-color:var(--cyan); background:rgba(229,13,127,.18); outline:none; }
+    main { max-width:1160px; margin:0 auto; padding:28px 32px 48px; }
+    .back { display:inline-block; margin-bottom:18px; color:#B00C63; font-weight:700; text-decoration:none; }
+    .back:hover { text-decoration:underline; }
+    .page-head { margin-bottom:22px; }
+    h1 { margin:0 0 4px; color:var(--navy); font-size:clamp(24px,3vw,34px); line-height:1.15; letter-spacing:-.035em; }
+    .lede { margin:0; color:var(--muted); }
+    .card { overflow:hidden; background:var(--paper); border:1px solid #E0E4EE; border-radius:14px; box-shadow:var(--shadow); }
+    .card + .card { margin-top:20px; }
+    .card-head { min-height:63px; padding:15px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; border-bottom:1px solid var(--line); }
+    .card-head h2 { margin:0; color:var(--navy); font-size:17px; letter-spacing:-.015em; }
+    .card-head p { margin:2px 0 0; color:var(--muted); font-size:11px; }
+
+    .toc-links { padding:16px 20px 20px; display:flex; flex-wrap:wrap; gap:10px; }
+    .toc-links a { display:inline-flex; align-items:center; gap:6px; padding:7px 12px; border:1px solid #C7D2EA; border-radius:999px; color:var(--navy); background:#EAEEF8; font-size:12px; font-weight:700; text-decoration:none; white-space:nowrap; }
+    .toc-links a:hover, .toc-links a:focus-visible { border-color:var(--navy); background:#D9E1F5; outline:none; }
+    .toc-links a.pass { color:var(--green); background:var(--green-bg); border-color:#B7D8B9; }
+    .toc-links a.pass:hover, .toc-links a.pass:focus-visible { background:#d7f0e5; border-color:var(--green); }
+    .toc-links a.warn { color:var(--amber); background:var(--amber-bg); border-color:#E2C58D; }
+    .toc-links a.warn:hover, .toc-links a.warn:focus-visible { background:#ffe9b8; border-color:var(--amber); }
+    .toc-links a.fail { color:var(--red); background:var(--red-bg); border-color:#E8B5B0; }
+    .toc-links a.fail:hover, .toc-links a.fail:focus-visible { background:#fbd9dd; border-color:var(--red); }
+    .toc-links a span { font-weight:800; opacity:.85; }
+
+    .report-layout { display:grid; grid-template-columns:216px 1fr; gap:24px; align-items:start; }
+    .report-sidebar { position:sticky; top:20px; }
+    .report-sidebar .toc-links { flex-direction:column; flex-wrap:nowrap; align-items:stretch; gap:6px; padding:14px; }
+    .report-sidebar .toc-links a { justify-content:space-between; align-items:flex-start; gap:8px; padding:8px 10px; border-radius:10px; font-size:11px; line-height:1.3; white-space:normal; }
+    .report-sidebar .toc-links a span { flex:none; }
+    .report-content { min-width:0; }
+    @media (max-width:900px) { .report-layout { grid-template-columns:1fr; } .report-sidebar { position:static; } }
+
+    .section-score { padding:6px 10px; border-radius:999px; font-size:12px; font-weight:800; white-space:nowrap; }
+    .section-score.pass { color:var(--green); background:var(--green-bg); }
+    .section-score.warn { color:var(--amber); background:var(--amber-bg); }
+    .section-score.fail { color:var(--red); background:var(--red-bg); }
+
+    .section-reason { margin:0 20px 18px; padding:10px 14px; border-left:3px solid var(--amber); border-radius:0 8px 8px 0; background:var(--amber-bg); color:var(--ink); font-size:12px; }
+
+    .detail-list { padding:6px 20px 16px; }
+    .detail-row { min-height:40px; padding:10px 0; display:grid; grid-template-columns:minmax(150px,.85fr) 1fr; gap:14px; align-items:center; border-bottom:1px solid var(--line); }
+    .detail-row:last-child { border-bottom:0; }
+    .detail-label { color:var(--muted); font-size:12px; font-weight:650; }
+    .detail-value { color:var(--navy); font-size:13px; font-weight:700; text-align:right; }
+
+    .plot-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; padding:20px 20px 24px; }
+    .plot { display:flex; flex-direction:column; }
+    .plot-box { aspect-ratio:4/3; border:1px dashed #b7c6d0; border-radius:8px; background:repeating-linear-gradient(45deg,#F7F8FB,#F7F8FB 10px,#e9eef1 10px,#e9eef1 20px); display:grid; place-items:center; }
+    .plot-box span { color:#8a9aa8; font-size:10px; font-weight:750; letter-spacing:.09em; text-transform:uppercase; }
+    .plot-caption { margin:10px 2px 0; color:var(--navy); font-size:12px; font-weight:650; text-align:center; }
+
+    .pipeline-log-link { display:inline-block; margin-top:8px; color:#B00C63; font-size:12px; font-weight:700; text-decoration:none; border-bottom:1px solid rgba(176,12,99,.35); }
+    .pipeline-log-link:hover, .pipeline-log-link:focus-visible { color:#0A1E46; border-bottom-color:currentColor; outline:none; }
+    .config-details summary { list-style:none; cursor:pointer; user-select:none; }
+    .config-details summary::-webkit-details-marker { display:none; }
+    .disclosure { width:24px; height:24px; display:grid; place-items:center; color:#B00C63; transition:transform .16s ease; flex:none; }
+    .disclosure::before { content:"\203a"; font-size:24px; line-height:1; }
+    .config-details[open] .disclosure { transform:rotate(90deg); }
+
+    .note { margin:16px 0 0; color:var(--muted); font-size:10px; }
+
+    @media (max-width:820px) { .plot-grid { grid-template-columns:1fr; } }
+    @media (max-width:640px) { .topbar{min-height:0;padding:14px 18px;gap:14px} .brand{gap:12px} .brand-mark{width:82px} .brand-title{font-size:18px} main{padding:21px 15px 35px} .detail-row{grid-template-columns:1fr;gap:2px} .detail-value{text-align:left} }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><img class="brand-mark" src="skao-logo.svg" alt="SKAO" width="108" height="30" /><div class="brand-title">Calibration Report</div></div>
+    <a class="guide-link" href="user-guide.html" aria-label="Open the Quality Assessment Report user guide" title="User guide">?</a>
+  </header>
+  <main>
+    <a class="back" href="skao_qa_dashboard_mockup.html">← Back to Quality Assessment Report</a>
+    <div class="page-head">
+      <h1>Calibration Report</h1><p class="lede">Bandpass and gain solutions · scheduling block SB-2028-0412-0017 · SKA Low · 110–350 MHz</p>
+      <a class="pipeline-log-link" href="pipeline.log" target="_blank" rel="noopener">View pipeline log</a>
+      <br />
+      <a class="pipeline-log-link" href="#config-parameters">View config parameters</a>
+    </div>
+
+    <div class="report-layout">
+      <nav class="report-sidebar card" aria-label="Report sections">
+        <div class="toc-links">
+          <a href="#summary">Summary</a>
+          <a class="pass" href="#flux">Flux calibration<span>97%</span></a>
+          <a class="warn" href="#delay">Delay calibration<span>84%</span></a>
+          <a class="pass" href="#bandpass">Bandpass calibration<span>97%</span></a>
+          <a class="warn" href="#gain">Gain calibration<span>89%</span></a>
+          <a class="pass" href="#polarisation">Polarisation calibration<span>98%</span></a>
+          <a class="pass" href="#applied">Applied calibration<span>95%</span></a>
+          <a href="#config-parameters">Configuration parameters</a>
+        </div>
+      </nav>
+
+      <div class="report-content">
+
+    <section class="card" id="summary" aria-labelledby="summary-title">
+      <div class="card-head"><div><h2 id="summary-title">Summary</h2><p>Calibration run overview</p></div></div>
+      <div class="detail-list">
+        <div class="detail-row"><span class="detail-label">Scheduling block</span><span class="detail-value">SB-2028-0412-0017</span></div>
+        <div class="detail-row"><span class="detail-label">Pipeline version</span><span class="detail-value">3.5.5</span></div>
+        <div class="detail-row"><span class="detail-label">Flux calibrator</span><span class="detail-value">J1939−6342</span></div>
+        <div class="detail-row"><span class="detail-label">Bandpass calibrator</span><span class="detail-value">J0408−6545</span></div>
+        <div class="detail-row"><span class="detail-label">Phase / gain calibrator</span><span class="detail-value">J0522−3627</span></div>
+        <div class="detail-row"><span class="detail-label">Polarisation calibrator</span><span class="detail-value">J0252−7104</span></div>
+        <div class="detail-row"><span class="detail-label">Report generated</span><span class="detail-value">2028-04-13 02:58:00 UTC</span></div>
+      </div>
+    </section>
+
+    <section class="card" id="flux" aria-labelledby="flux-title">
+      <div class="card-head"><div><h2 id="flux-title">Flux calibration</h2><p>Absolute flux density scale · J1939−6342</p></div><span class="section-score pass">97%</span></div>
+      <div class="plot-grid">
+        <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">Model vs measured flux density — J1939−6342</p></div>
+        <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">J1939−6342 amplitude vs frequency, all antennas</p></div>
+      </div>
+    </section>
+
+    <section class="card" id="delay" aria-labelledby="delay-title">
+      <div class="card-head"><div><h2 id="delay-title">Delay calibration</h2><p>Per-antenna delay solutions · derived from J0408−6545</p></div><span class="section-score warn">84%</span></div>
+      <p class="section-reason">Score reduced by elevated delay solution scatter on stations S041, S103 and S188 — measured delay RMS 3.1 ns against a 2.5 ns advisory threshold.</p>
+      <div class="plot-grid">
+        <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">Per-antenna delay solutions (ns)</p></div>
+        <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">Delay residual scatter vs time, all antennas</p></div>
+      </div>
+    </section>
+
+    <section class="card" id="bandpass" aria-labelledby="bandpass-title">
+      <div class="card-head"><div><h2 id="bandpass-title">Bandpass calibration</h2><p>Bandpass calibrator · J0408−6545</p></div><span class="section-score pass">97%</span></div>
+      <div class="plot-grid">
+        <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">Bandpass amplitude vs frequency, per antenna</p></div>
+        <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">Bandpass phase vs frequency, per antenna</p></div>
+      </div>
+    </section>
+
+    <section class="card" id="gain" aria-labelledby="gain-title">
+      <div class="card-head"><div><h2 id="gain-title">Gain calibration</h2><p>Phase / gain calibrator · J0522−3627</p></div><span class="section-score warn">89%</span></div>
+      <p class="section-reason">Score reduced by elevated calibration phase RMS on scan 07 — measured 11.4° against a 10.0° advisory threshold.</p>
+      <div class="plot-grid">
+        <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">Gain amplitude vs time, per antenna</p></div>
+        <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">Gain phase vs time, per antenna</p></div>
+      </div>
+    </section>
+
+    <section class="card" id="polarisation" aria-labelledby="polarisation-title">
+      <div class="card-head"><div><h2 id="polarisation-title">Polarisation calibration</h2><p>Leakage and cross-hand phase · J0252−7104</p></div><span class="section-score pass">98%</span></div>
+      <div class="plot-grid">
+        <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">Leakage (D-term) amplitude vs frequency</p></div>
+        <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">Cross-hand phase vs frequency</p></div>
+      </div>
+    </section>
+
+    <section class="card" id="applied" aria-labelledby="applied-title">
+      <div class="card-head"><div><h2 id="applied-title">Applied calibration</h2><p>Corrected data diagnostics</p></div><span class="section-score pass">95%</span></div>
+      <div class="plot-grid">
+        <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">Corrected amplitude vs uv-distance, target field</p></div>
+        <div class="plot"><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">Corrected phase vs time, calibrator sources</p></div>
+      </div>
+    </section>
+
+    <section class="card" id="config-parameters">
+      <details class="config-details">
+        <summary class="card-head"><div><h2>Configuration parameters</h2><p>Parameters used for this step</p></div><span class="disclosure" aria-hidden="true"></span></summary>
+        <div class="detail-list">
+          <div class="detail-row"><span class="detail-label">Reference antenna</span><span class="detail-value">S014</span></div>
+          <div class="detail-row"><span class="detail-label">Bandpass solint</span><span class="detail-value">inf (full scan)</span></div>
+          <div class="detail-row"><span class="detail-label">Gain solint</span><span class="detail-value">60s</span></div>
+          <div class="detail-row"><span class="detail-label">Delay solint</span><span class="detail-value">inf (per scan)</span></div>
+          <div class="detail-row"><span class="detail-label">Minimum SNR</span><span class="detail-value">3.0</span></div>
+          <div class="detail-row"><span class="detail-label">Bandpass normalisation</span><span class="detail-value">Enabled</span></div>
+          <div class="detail-row"><span class="detail-label">Polarisation leakage solint</span><span class="detail-value">inf</span></div>
+        </div>
+      </details>
+    </section>
+
+    <p class="note">Static interface mock-up · representative data only</p>
+
+      </div>
+    </div>
+  </main>
+</body>
+</html>

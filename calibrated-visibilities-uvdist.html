@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amplitude vs UV-distance — SKAO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Mono:wght@400;500&display=swap" />
+  <style>
+    :root { --ink:#0D1224; --muted:#6B7385; --line:#E0E4EE; --paper:#fff; --canvas:#F7F8FB; --navy:#0A1E46; --navy-2:#132B5E; --cyan:#E50D7F; --magenta:#B00C63; --green:#2E7D32; --green-bg:#E7F3E8; --amber:#B8690B; --amber-bg:#FBF0DC; --red:#C2362D; --red-bg:#FBE6E4; --shadow:0 10px 28px rgba(10,30,70,.08); }
+    * { box-sizing:border-box; }
+    body { margin:0; min-width:320px; color:var(--ink); background:radial-gradient(circle at 85% -15%,rgba(229,13,127,.11),transparent 30rem),var(--canvas); font:14px/1.45 'Noto Sans',Verdana,'Segoe UI',system-ui,sans-serif; }
+    .topbar { min-height:88px; padding:14px 32px; display:flex; align-items:center; justify-content:space-between; gap:28px; color:#fff; background:linear-gradient(100deg,var(--navy),var(--navy-2)); border-bottom:3px solid transparent; border-image:linear-gradient(90deg,var(--cyan),var(--navy)) 1; }
+    .brand { display:flex; align-items:center; gap:18px; min-width:0; }
+    .brand-mark { width:108px; height:auto; display:block; flex:none; }
+    .brand-title { font-size:clamp(20px,2.4vw,28px); font-weight:700; line-height:1.15; letter-spacing:-.025em; }
+    .guide-link { width:40px; height:40px; display:grid; place-items:center; flex:none; border:1px solid rgba(255,255,255,.45); border-radius:50%; color:#fff; background:rgba(255,255,255,.08); font-size:19px; font-weight:750; text-decoration:none; }
+    .guide-link:hover, .guide-link:focus-visible { border-color:var(--cyan); background:rgba(229,13,127,.18); outline:none; }
+    main { max-width:1160px; margin:0 auto; padding:28px 32px 48px; }
+    .back { display:inline-block; margin-bottom:18px; color:#B00C63; font-weight:700; text-decoration:none; }
+    .back:hover { text-decoration:underline; }
+    .page-head { margin-bottom:22px; }
+    h1 { margin:0 0 4px; color:var(--navy); font-size:clamp(22px,2.8vw,30px); line-height:1.2; letter-spacing:-.03em; }
+    .lede { margin:0; color:var(--muted); }
+    .card { overflow:hidden; background:var(--paper); border:1px solid #E0E4EE; border-radius:14px; box-shadow:var(--shadow); }
+    .card-head { min-height:63px; padding:15px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; border-bottom:1px solid var(--line); }
+    .card-head h2 { margin:0; color:var(--navy); font-size:17px; letter-spacing:-.015em; }
+    .card-head p { margin:2px 0 0; color:var(--muted); font-size:11px; }
+
+    .type { display:inline-flex; padding:3px 8px; border-radius:999px; font-size:9.5px; font-weight:750; white-space:nowrap; }
+    .type.calibrator { color:#B8690B; background:var(--amber-bg); }
+    .type.target { color:#B00C63; background:#FDEBF3; }
+
+    .multi-plot-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:22px; padding:20px; }
+    .multi-plot { display:flex; flex-direction:column; }
+    .multi-plot-label { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:8px; }
+    .multi-plot-label .src { color:var(--navy); font-size:12.5px; font-weight:750; font-family:'Noto Sans Mono',Menlo,Consolas,monospace; }
+    .plot-box { aspect-ratio:4/3; border:1px dashed #b7c6d0; border-radius:8px; background:repeating-linear-gradient(45deg,#F7F8FB,#F7F8FB 10px,#e9eef1 10px,#e9eef1 20px); display:grid; place-items:center; }
+    .plot-box span { color:#8a9aa8; font-size:10px; font-weight:750; letter-spacing:.09em; text-transform:uppercase; }
+    .plot-caption { margin:10px 2px 0; color:var(--muted); font-size:11px; text-align:center; }
+
+    .note { margin:16px 0 0; color:var(--muted); font-size:10px; }
+
+    @media (max-width:640px) { .topbar{min-height:0;padding:14px 18px;gap:14px} .brand{gap:12px} .brand-mark{width:82px} .brand-title{font-size:18px} main{padding:21px 15px 35px} }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><img class="brand-mark" src="skao-logo.svg" alt="SKAO" width="108" height="30" /><div class="brand-title">Calibrated Visibilities QA</div></div>
+    <a class="guide-link" href="user-guide.html" aria-label="Open the Quality Assessment Report user guide" title="User guide">?</a>
+  </header>
+  <main>
+    <a class="back" href="calibrated-visibilities-qa.html">← Back to Calibrated Visibilities QA</a>
+    <div class="page-head">
+      <h1>Calibrated amplitude vs UV-distance</h1><p class="lede">All sources · calibrated_visibilities.ms · scheduling block SB-2028-0412-0017</p>
+    </div>
+
+    <section class="card" aria-labelledby="uvdist-all-title">
+      <div class="card-head"><div><h2 id="uvdist-all-title">Amplitude vs uv-distance</h2><p>Per-source diagnostic · baseline range 38 m – 65.1 km</p></div></div>
+      <div class="multi-plot-grid">
+        <div class="multi-plot"><div class="multi-plot-label"><span class="src">J1939−6342</span><span class="type calibrator">Cal</span></div><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">CALIBRATE_FLUX</p></div>
+        <div class="multi-plot"><div class="multi-plot-label"><span class="src">J0408−6545</span><span class="type calibrator">Cal</span></div><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">CALIBRATE_BANDPASS</p></div>
+        <div class="multi-plot"><div class="multi-plot-label"><span class="src">J0522−3627</span><span class="type calibrator">Cal</span></div><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">CALIBRATE_PHASE</p></div>
+        <div class="multi-plot"><div class="multi-plot-label"><span class="src">ELAIS-S1</span><span class="type target">Target</span></div><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">TARGET</p></div>
+        <div class="multi-plot"><div class="multi-plot-label"><span class="src">PKS 0349−27</span><span class="type target">Target</span></div><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">TARGET</p></div>
+        <div class="multi-plot"><div class="multi-plot-label"><span class="src">NGC 1566</span><span class="type target">Target</span></div><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">TARGET</p></div>
+        <div class="multi-plot"><div class="multi-plot-label"><span class="src">RXC J0528.9−3927</span><span class="type target">Target</span></div><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">TARGET</p></div>
+        <div class="multi-plot"><div class="multi-plot-label"><span class="src">J0252−7104</span><span class="type calibrator">Cal</span></div><div class="plot-box"><span>Placeholder</span></div><p class="plot-caption">CALIBRATE_POLARIZATION</p></div>
+      </div>
+    </section>
+
+    <p class="note">Static interface mock-up · representative data only</p>
+  </main>
+</body>
+</html>

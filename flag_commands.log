@@ -1,0 +1,24 @@
+# RFI flagging commands — AOFlagger LOW_v4
+# Scheduling block SB-2028-0412-0017 · SKA-Low · 110–350 MHz
+# Input: raw_visibilities.ms · Output: calibrated_visibilities.ms (post-calibration flags carried forward)
+# Run started 2028-04-12 21:36:14 UTC · aoflagger 3.4.0
+
+# --- Full-band automated pass ---------------------------------------------
+aoflagger -strategy strategies/LOW_v4.lua -j 32 -column DATA raw_visibilities.ms
+
+# --- Manual follow-up flags applied after automated-pass review -----------
+aoflagger -baseline S014,S097 -column DATA -time 21:42:10,21:44:55 -channel-range 307,319 -comment "persistent narrowband RFI" raw_visibilities.ms
+aoflagger -baseline S008,S231 -column DATA -time 21:38:02,21:39:18 -channel-range 1133,1142 -comment "FM broadcast harmonic" raw_visibilities.ms
+aoflagger -baseline S056,S164 -column DATA -time 21:55:30,21:56:12 -channel-range 572,582  -comment "satellite downlink RFI" raw_visibilities.ms
+aoflagger -antenna  S119      -column DATA -time 22:14:47,22:17:02 -channel-range 2599,2609 -comment "aircraft transponder RFI" raw_visibilities.ms
+aoflagger -antenna  S203      -column DATA -time 22:01:05,22:03:40 -channel-range 2314,2324 -comment "intermittent broadband RFI" raw_visibilities.ms
+
+# --- Static band edges and known persistent RFI channels -------------------
+aoflagger -channel-range 0,64       -comment "band-edge roll-off, low" raw_visibilities.ms
+aoflagger -channel-range 4032,4095  -comment "band-edge roll-off, high" raw_visibilities.ms
+aoflagger -frequency-range 137.0,138.0 -comment "GPS L2 downlink" raw_visibilities.ms
+aoflagger -frequency-range 175.0,177.0 -comment "FM broadcast band" raw_visibilities.ms
+
+# --- Summary -----------------------------------------------------------
+# Total visibility samples flagged: 4.2%
+# Run finished 2028-04-12 22:17:30 UTC

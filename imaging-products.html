@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Other Imaging Products — SKAO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Mono:wght@400;500&display=swap" />
+  <style>
+    :root { --ink:#0D1224; --muted:#6B7385; --line:#E0E4EE; --paper:#fff; --canvas:#F7F8FB; --navy:#0A1E46; --navy-2:#132B5E; --cyan:#E50D7F; --magenta:#B00C63; --green:#2E7D32; --green-bg:#E7F3E8; --amber:#B8690B; --amber-bg:#FBF0DC; --red:#C2362D; --red-bg:#FBE6E4; --shadow:0 10px 28px rgba(10,30,70,.08); }
+    * { box-sizing:border-box; }
+    body { margin:0; min-width:320px; color:var(--ink); background:radial-gradient(circle at 85% -15%,rgba(229,13,127,.11),transparent 30rem),var(--canvas); font:14px/1.45 'Noto Sans',Verdana,'Segoe UI',system-ui,sans-serif; }
+    .topbar { min-height:88px; padding:14px 32px; display:flex; align-items:center; justify-content:space-between; gap:28px; color:#fff; background:linear-gradient(100deg,var(--navy),var(--navy-2)); border-bottom:3px solid transparent; border-image:linear-gradient(90deg,var(--cyan),var(--navy)) 1; }
+    .brand { display:flex; align-items:center; gap:18px; min-width:0; }
+    .brand-mark { width:108px; height:auto; display:block; flex:none; }
+    .brand-title { font-size:clamp(20px,2.4vw,28px); font-weight:700; line-height:1.15; letter-spacing:-.025em; }
+    .guide-link { width:40px; height:40px; display:grid; place-items:center; flex:none; border:1px solid rgba(255,255,255,.45); border-radius:50%; color:#fff; background:rgba(255,255,255,.08); font-size:19px; font-weight:750; text-decoration:none; }
+    .guide-link:hover, .guide-link:focus-visible { border-color:var(--cyan); background:rgba(229,13,127,.18); outline:none; }
+    main { max-width:1120px; margin:0 auto; padding:28px 32px 48px; }
+    .back { display:inline-block; margin-bottom:18px; color:#B00C63; font-weight:700; text-decoration:none; }
+    .back:hover { text-decoration:underline; }
+    .page-head { margin-bottom:22px; }
+    h1 { margin:0 0 4px; color:var(--navy); font-size:clamp(22px,2.8vw,30px); line-height:1.2; letter-spacing:-.03em; }
+    .lede { margin:0; color:var(--muted); }
+    .card { overflow:hidden; background:var(--paper); border:1px solid #E0E4EE; border-radius:14px; box-shadow:var(--shadow); }
+    .card-head { min-height:63px; padding:15px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; border-bottom:1px solid var(--line); }
+    .card-head h2 { margin:0; color:var(--navy); font-size:17px; letter-spacing:-.015em; }
+    .card-head p { margin:2px 0 0; color:var(--muted); font-size:11px; }
+
+    .image-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:26px; padding:22px 20px; }
+    .image-tile { display:flex; flex-direction:column; align-items:center; }
+    .thumb-frame { width:100%; display:block; border-radius:8px; overflow:hidden; box-shadow:0 6px 18px rgba(7,29,45,.25); cursor:zoom-in; transition:box-shadow .15s ease; }
+    .thumb-frame:hover, .thumb-frame:focus-visible { box-shadow:0 8px 22px rgba(7,29,45,.35); outline:none; }
+    .thumb-frame img { display:block; width:100%; height:auto; }
+    .image-tile h3 { margin:14px 0 2px; color:var(--navy); font-size:14px; text-align:center; }
+    .image-tile p { margin:0; color:var(--muted); font-size:11px; text-align:center; }
+
+    .note { margin:16px 0 0; color:var(--muted); font-size:10px; }
+
+    @media (max-width:640px) { .topbar{min-height:0;padding:14px 18px;gap:14px} .brand{gap:12px} .brand-mark{width:82px} .brand-title{font-size:18px} main{padding:21px 15px 35px} }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><img class="brand-mark" src="skao-logo.svg" alt="SKAO" width="108" height="30" /><div class="brand-title">Imaging &amp; Deconvolution</div></div>
+    <a class="guide-link" href="user-guide.html" aria-label="Open the Quality Assessment Report user guide" title="User guide">?</a>
+  </header>
+  <main>
+    <a class="back" href="imaging-deconvolution.html">← Back to Imaging &amp; Deconvolution</a>
+    <div class="page-head">
+      <h1>Other imaging products</h1><p class="lede">Residual map, clean component mask, PSF and model image · continuum and spectral cube imaging runs</p>
+    </div>
+
+    <section class="card" aria-labelledby="products-title">
+      <div class="card-head"><div><h2 id="products-title">CLEAN deconvolution outputs</h2><p>Representative-channel previews · scheduling block SB-2028-0412-0017</p></div></div>
+      <div class="image-grid">
+        <div class="image-tile">
+          <a class="thumb-frame" href="Plots_and_images/residual.png" target="_blank" rel="noopener" title="Open full-size image"><img src="Plots_and_images/residual.png" alt="Residual map preview" /></a>
+          <h3>Residual map</h3>
+          <p>Post-CLEAN residual flux</p>
+        </div>
+        <div class="image-tile">
+          <a class="thumb-frame" href="Plots_and_images/cleanmask.png" target="_blank" rel="noopener" title="Open full-size image"><img src="Plots_and_images/cleanmask.png" alt="Clean component mask preview" /></a>
+          <h3>Clean component mask</h3>
+          <p>Deconvolution mask used during CLEAN</p>
+        </div>
+        <div class="image-tile">
+          <a class="thumb-frame" href="Plots_and_images/psf.png" target="_blank" rel="noopener" title="Open full-size image"><img src="Plots_and_images/psf.png" alt="Point spread function preview" /></a>
+          <h3>Point spread function</h3>
+          <p>Synthesised beam / dirty beam</p>
+        </div>
+        <div class="image-tile">
+          <a class="thumb-frame" href="Plots_and_images/model.png" target="_blank" rel="noopener" title="Open full-size image"><img src="Plots_and_images/model.png" alt="Model image preview" /></a>
+          <h3>Model image</h3>
+          <p>CLEAN component model</p>
+        </div>
+      </div>
+    </section>
+
+    <p class="note">Static interface mock-up · representative data only</p>
+  </main>
+</body>
+</html>

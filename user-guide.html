@@ -72,6 +72,7 @@
       <h3>Observatory data products</h3>
       <p>Products are organised into expandable categories for calibrated visibilities, continuum images, spectral cubes, and ancillary data. Calibration-table files, the pipeline log, and the RFI flag command log are included under Ancillary data.</p>
       <ul>
+        <li>The icon beside each category name (<strong>MS</strong>, <strong>CONT</strong>, <strong>CUBE</strong>, <strong>ANC</strong>) is coloured by the worst QA outcome in that category: green if every product passed, amber if any product has a warning, and red if any product failed. Log files do not affect the colour.</li>
         <li>Select a category row to expand or collapse its product table.</li>
         <li>Use <strong>Expand All</strong> or <strong>Collapse All</strong> in the section header to change every category at once.</li>
         <li>Review each product’s file size, and its QA outcome and QA score, in the table.</li>
@@ -88,7 +89,7 @@
         <li>Select the <strong>RFI flagging</strong> stage name to open the RFI Summary, including the flagging strategy, percentage of samples flagged, and an RFI occupancy plot.</li>
         <li>Select the <strong>Calibration</strong> stage name to open the Calibration Report, with sections for flux, delay, bandpass, gain, polarisation, and applied calibration.</li>
         <li>Select the <strong>Imaging &amp; deconvolution</strong> stage name to open the Imaging &amp; Deconvolution page, covering UV-coverage plots and per-image diagnostics for the continuum image and each spectral cube.</li>
-        <li>Use the key pipeline metrics to review visibility retention, gain solution quality, image fidelity, and catalogue reliability.</li>
+        <li>Use the key pipeline metrics to review visibility retention, gain solution quality, image fidelity, and catalogue reliability. Hover over or focus a metric to see a short explanation of what it measures.</li>
         <li>Select <strong>View pipeline log</strong> in this section to open the full pipeline log in a new browser tab, and <strong>View flag commands</strong> below it to open the RFI flagging command log. The RFI Summary, Calibration Report, and Imaging &amp; Deconvolution pages each include their own <strong>View pipeline log</strong> link for that stage.</li>
       </ul>
 

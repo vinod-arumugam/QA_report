@@ -187,11 +187,15 @@
     .product-info:focus-visible { border-radius: 3px; outline: 3px solid rgba(229,13,127,.22); outline-offset: 3px; }
     .product-tooltip { width: 255px; position: fixed; z-index: 100; padding: 13px 14px; border: 1px solid #F285BA; border-radius: 9px; color: var(--ink); background: white; box-shadow: 0 10px 28px rgba(10,30,70,.2); font-size: 11px; pointer-events: none; }
     .product-tooltip[hidden] { display: none; }
+    .product-tooltip p { margin: 0; color: var(--muted); line-height: 1.45; }
     .product-tooltip strong { display: block; margin-bottom: 8px; color: var(--navy); font-size: 12px; }
     .tooltip-row { display: flex; justify-content: space-between; gap: 16px; padding: 3px 0; }
     .tooltip-row span:first-child { color: var(--muted); }
     .tooltip-row span:last-child { font-weight: 650; text-align: right; }
-    .file-icon { width: 31px; height: 35px; display: grid; place-items: center; flex: none; border: 1px solid #F285BA; border-radius: 6px; color: #B00C63; background: #FDEBF3; font-size: 9px; font-weight: 800; }
+    .file-icon { width: 31px; height: 35px; display: grid; place-items: center; flex: none; border: 1px solid var(--line); border-radius: 6px; color: var(--muted); background: #EEF1F6; font-size: 9px; font-weight: 800; }
+    .file-icon.pass { border-color: var(--green); color: var(--green); background: var(--green-bg); }
+    .file-icon.warn { border-color: var(--amber); color: var(--amber); background: var(--amber-bg); }
+    .file-icon.fail { border-color: var(--red); color: var(--red); background: var(--red-bg); }
     .mono { font-family: 'Noto Sans Mono', Menlo, Consolas, monospace; font-size: 12px; }
     .view-qa-badge { display: inline-flex; padding: 6px 10px; border: 1px solid #F285BA; border-radius: 999px; color: #B00C63; background: #FDEBF3; font-size: 11px; font-weight: 750; text-decoration: none; white-space: nowrap; }
     .view-qa-badge:hover, .view-qa-badge:focus-visible { border-color: #B00C63; background: #FCD4E6; outline: none; }
@@ -211,6 +215,8 @@
     .insight h3 { margin: 0 0 15px; font-size: 14px; }
     .quality-row { margin-bottom: 15px; }
     .quality-row:last-child { margin-bottom: 0; }
+    .metric-info { border-radius: 6px; }
+    .metric-info:focus-visible { outline: 2px solid var(--line); outline-offset: 4px; }
     .quality-label { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 11px; }
     .track { height: 7px; overflow: hidden; border-radius: 99px; background: #DFE3EE; }
     .fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg, #007f9b, var(--cyan)); }
@@ -313,13 +319,13 @@
         </div>
       </div>
       <div class="product-groups">
-        <details class="product-group"><summary><span class="disclosure" aria-hidden="true"></span><span class="category-title"><span class="file-icon">MS</span>Calibrated visibilities</span><span class="file-count">1 file</span></summary><div class="product-list-wrap"><table class="product-list"><thead><tr><th>Data product</th><th>Size</th><th>QA outcome</th><th></th></tr></thead><tbody><tr><td class="product-file mono"><span class="product-info" tabindex="0" aria-describedby="productTooltip" data-name="calibrated_visibilities.ms" data-frequency="110–350 MHz" data-channels="4,096" data-freq-resolution="58.6 kHz" data-time-resolution="0.9 s">calibrated_visibilities.ms</span></td><td>14.8 TB</td><td><span class="qa-outcome-cell"><span class="status-pill pass">Passed</span><span class="qa-score-mini">98%</span></span></td><td><a class="view-qa-badge" href="calibrated-visibilities-qa.html">View QA</a></td></tr></tbody></table></div></details>
-        <details class="product-group"><summary><span class="disclosure" aria-hidden="true"></span><span class="category-title"><span class="file-icon">CONT</span>Continuum images</span><span class="file-count">1 file</span></summary><div class="product-list-wrap"><table class="product-list"><thead><tr><th>Data product</th><th>Size</th><th>QA outcome</th><th></th></tr></thead><tbody><tr><td class="product-file mono"><span class="product-info" tabindex="0" aria-describedby="productTooltip" data-name="continuum_stokes_i.fits" data-channels="1" data-frequency="110–350 MHz" data-image-size="16,384 × 16,384 px" data-pixel-size="1.05 arcsec">continuum_stokes_i.fits</span></td><td>820 GB</td><td><span class="qa-outcome-cell"><span class="status-pill pass">Passed</span><span class="qa-score-mini">96%</span></span></td><td><a class="view-qa-badge" href="continuum-stokes-i-qa.html">View QA</a></td></tr></tbody></table></div></details>
-        <details class="product-group"><summary><span class="disclosure" aria-hidden="true"></span><span class="category-title"><span class="file-icon">CUBE</span>Spectral cubes</span><span class="file-count">2 files</span></summary><div class="product-list-wrap"><table class="product-list"><thead><tr><th>Data product</th><th>Size</th><th>QA outcome</th><th></th></tr></thead><tbody>
+        <details class="product-group"><summary><span class="disclosure" aria-hidden="true"></span><span class="category-title"><span class="file-icon pass">MS</span>Calibrated visibilities</span><span class="file-count">1 file</span></summary><div class="product-list-wrap"><table class="product-list"><thead><tr><th>Data product</th><th>Size</th><th>QA outcome</th><th></th></tr></thead><tbody><tr><td class="product-file mono"><span class="product-info" tabindex="0" aria-describedby="productTooltip" data-name="calibrated_visibilities.ms" data-frequency="110–350 MHz" data-channels="4,096" data-freq-resolution="58.6 kHz" data-time-resolution="0.9 s">calibrated_visibilities.ms</span></td><td>14.8 TB</td><td><span class="qa-outcome-cell"><span class="status-pill pass">Passed</span><span class="qa-score-mini">98%</span></span></td><td><a class="view-qa-badge" href="calibrated-visibilities-qa.html">View QA</a></td></tr></tbody></table></div></details>
+        <details class="product-group"><summary><span class="disclosure" aria-hidden="true"></span><span class="category-title"><span class="file-icon pass">CONT</span>Continuum images</span><span class="file-count">1 file</span></summary><div class="product-list-wrap"><table class="product-list"><thead><tr><th>Data product</th><th>Size</th><th>QA outcome</th><th></th></tr></thead><tbody><tr><td class="product-file mono"><span class="product-info" tabindex="0" aria-describedby="productTooltip" data-name="continuum_stokes_i.fits" data-channels="1" data-frequency="110–350 MHz" data-image-size="16,384 × 16,384 px" data-pixel-size="1.05 arcsec">continuum_stokes_i.fits</span></td><td>820 GB</td><td><span class="qa-outcome-cell"><span class="status-pill pass">Passed</span><span class="qa-score-mini">96%</span></span></td><td><a class="view-qa-badge" href="continuum-stokes-i-qa.html">View QA</a></td></tr></tbody></table></div></details>
+        <details class="product-group"><summary><span class="disclosure" aria-hidden="true"></span><span class="category-title"><span class="file-icon pass">CUBE</span>Spectral cubes</span><span class="file-count">2 files</span></summary><div class="product-list-wrap"><table class="product-list"><thead><tr><th>Data product</th><th>Size</th><th>QA outcome</th><th></th></tr></thead><tbody>
           <tr><td class="product-file mono"><span class="product-info" tabindex="0" aria-describedby="productTooltip" data-name="cube_1.fits" data-channels="1,024" data-frequency="110–230 MHz" data-image-size="8,192 × 8,192 px" data-pixel-size="1.50 arcsec">cube_1.fits</span></td><td>700 GB</td><td><span class="qa-outcome-cell"><span class="status-pill pass">Passed</span><span class="qa-score-mini">95%</span></span></td><td><a class="view-qa-badge" href="cube-1-qa.html">View QA</a></td></tr>
           <tr><td class="product-file mono"><span class="product-info" tabindex="0" aria-describedby="productTooltip" data-name="cube_2.fits" data-channels="1,024" data-frequency="230–350 MHz" data-image-size="8,192 × 8,192 px" data-pixel-size="1.50 arcsec">cube_2.fits</span></td><td>700 GB</td><td><span class="qa-outcome-cell"><span class="status-pill pass">Passed</span><span class="qa-score-mini">95%</span></span></td><td><a class="view-qa-badge" href="cube-2-qa.html">View QA</a></td></tr>
         </tbody></table></div></details>
-        <details class="product-group"><summary><span class="disclosure" aria-hidden="true"></span><span class="category-title"><span class="file-icon">ANC</span>Ancillary data</span><span class="file-count">5 files</span></summary><div class="product-list-wrap"><table class="product-list"><thead><tr><th>Data product</th><th>Size</th><th>QA outcome</th><th></th></tr></thead><tbody>
+        <details class="product-group"><summary><span class="disclosure" aria-hidden="true"></span><span class="category-title"><span class="file-icon warn">ANC</span>Ancillary data</span><span class="file-count">5 files</span></summary><div class="product-list-wrap"><table class="product-list"><thead><tr><th>Data product</th><th>Size</th><th>QA outcome</th><th></th></tr></thead><tbody>
           <tr><td class="product-file mono">bandpass.gaintable.h5parm</td><td>112 GB</td><td><span class="qa-outcome-cell"><span class="status-pill pass">Passed</span><span class="qa-score-mini">97%</span></span></td><td><a class="view-qa-badge" href="#">View QA</a></td></tr>
           <tr><td class="product-file mono">delay.gaintable.h5parm</td><td>94 GB</td><td><span class="qa-outcome-cell"><span class="status-pill warn">Warning</span><span class="qa-score-mini">84%</span></span></td><td><a class="view-qa-badge" href="#">View QA</a></td></tr>
           <tr><td class="product-file mono">channel_rm.gaintable.h5parm</td><td>78 GB</td><td><span class="qa-outcome-cell"><span class="status-pill pass">Passed</span><span class="qa-score-mini">96%</span></span></td><td><a class="view-qa-badge" href="#">View QA</a></td></tr>
@@ -352,10 +358,10 @@
         </div>
         <aside class="insight" aria-label="Key pipeline quality metrics">
           <h3>Key pipeline metrics</h3>
-          <div class="quality-row"><div class="quality-label"><span>Visibility retention</span><b>95.8%</b></div><div class="track"><div class="fill" style="width:95.8%"></div></div></div>
-          <div class="quality-row"><div class="quality-label"><span>Gain solution quality</span><b>88.6%</b></div><div class="track"><div class="fill amber" style="width:88.6%"></div></div></div>
-          <div class="quality-row"><div class="quality-label"><span>Image fidelity</span><b>96.2%</b></div><div class="track"><div class="fill" style="width:96.2%"></div></div></div>
-          <div class="quality-row"><div class="quality-label"><span>Catalogue reliability</span><b>99.3%</b></div><div class="track"><div class="fill" style="width:99.3%"></div></div></div>
+          <div class="quality-row metric-info" tabindex="0" aria-describedby="productTooltip" data-name="Visibility retention" data-description="Fraction of visibilities kept after RFI and quality flagging. Higher means less data lost."><div class="quality-label"><span>Visibility retention</span><b>95.8%</b></div><div class="track"><div class="fill" style="width:95.8%"></div></div></div>
+          <div class="quality-row metric-info" tabindex="0" aria-describedby="productTooltip" data-name="Gain solution quality" data-description="Share of antenna gain solutions that converged within phase and amplitude tolerances. Reduced by elevated phase RMS on scan 07."><div class="quality-label"><span>Gain solution quality</span><b>88.6%</b></div><div class="track"><div class="fill amber" style="width:88.6%"></div></div></div>
+          <div class="quality-row metric-info" tabindex="0" aria-describedby="productTooltip" data-name="Image fidelity" data-description="How closely the restored image matches the sky model, based on residual noise and artefact levels."><div class="quality-label"><span>Image fidelity</span><b>96.2%</b></div><div class="track"><div class="fill" style="width:96.2%"></div></div></div>
+          <div class="quality-row metric-info" tabindex="0" aria-describedby="productTooltip" data-name="Catalogue reliability" data-description="Fraction of extracted sources confirmed as real rather than noise peaks or artefacts."><div class="quality-label"><span>Catalogue reliability</span><b>99.3%</b></div><div class="track"><div class="fill" style="width:99.3%"></div></div></div>
         </aside>
       </div>
     </section>
@@ -395,6 +401,13 @@
       productTooltip.innerHTML = `<strong>${target.dataset.name}</strong>
         <div class="tooltip-row"><span>Name</span><span>${target.dataset.name}</span></div>
         ${rows}`;
+      positionTooltip(target);
+    };
+    const showMetricTooltip = target => {
+      productTooltip.innerHTML = `<strong>${target.dataset.name}</strong><p>${target.dataset.description}</p>`;
+      positionTooltip(target);
+    };
+    const positionTooltip = target => {
       productTooltip.hidden = false;
       const rect = target.getBoundingClientRect();
       const left = Math.min(rect.left, window.innerWidth - productTooltip.offsetWidth - 12);
@@ -410,6 +423,12 @@
       product.addEventListener('mouseleave', hideProductTooltip);
       product.addEventListener('focus', () => showProductTooltip(product));
       product.addEventListener('blur', hideProductTooltip);
+    });
+    document.querySelectorAll('.metric-info').forEach(metric => {
+      metric.addEventListener('mouseenter', () => showMetricTooltip(metric));
+      metric.addEventListener('mouseleave', hideProductTooltip);
+      metric.addEventListener('focus', () => showMetricTooltip(metric));
+      metric.addEventListener('blur', hideProductTooltip);
     });
     window.addEventListener('scroll', hideProductTooltip, true);
   </script>

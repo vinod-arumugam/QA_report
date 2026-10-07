@@ -78,7 +78,7 @@
         <li>Review each product’s file size, and its QA outcome and QA score, in the table.</li>
         <li>Hover over or focus a linked product name for more detail: image and cube products show channel count, frequency range, image dimensions, and pixel size; the calibrated visibilities product shows frequency range, channel count, frequency resolution, and time resolution. Keyboard users can move focus with <kbd>Tab</kbd>.</li>
         <li><strong>View QA</strong> opens a detailed QA page for a product where one exists. The calibrated visibilities, the continuum image, and each spectral cube each have their own QA page. The image and cube pages show a QA score, RMS noise, photometric and astrometric QA scores, image metadata, and a preview. The calibrated visibilities QA page shows Measurement Set metadata, a spectral window breakdown, and diagnostic plots — baseline distribution, flagging statistics, phase and amplitude vs time, amplitude vs uv-distance, amplitude vs frequency, and continuum uv-coverage; the phase/amplitude-vs-time and amplitude-vs-uv-distance plots link through to a page showing that diagnostic for every source in the observation. For products without a dedicated page, <strong>View QA</strong> is a placeholder control.</li>
-        <li>On the continuum image and spectral cube QA pages, <strong>View other imaging products</strong> below the preview opens the other imaging products page, showing the residual map, clean component mask, PSF, and model image.</li>
+        <li>On the continuum image and spectral cube QA pages, <strong>View other imaging products</strong> below the preview opens that product's own imaging products page, showing its residual map, clean component mask, PSF, and model image. Its back link returns to the product's QA page.</li>
         <li><strong>View</strong> on the pipeline log and flag command log rows under Ancillary data opens that file directly in a new browser tab for reading, rather than a QA page.</li>
       </ul>
 
@@ -114,7 +114,7 @@
         <li>Open the pipeline log, from the Pipeline QA section or a stage page, or the flag command log from the Pipeline QA section, when deeper troubleshooting is required.</li>
       </ol>
 
-      <p class="note">This interface is a static mock-up with representative data. The warnings page, user guide, pipeline log, flag command log, Raw Data Validation, RFI Summary, Calibration Report, Imaging &amp; Deconvolution, the other imaging products page, and the <strong>View QA</strong> pages for the calibrated visibilities, the continuum image, and both spectral cubes are all available; <strong>View QA</strong> controls on the ancillary calibration-table products are placeholders and do not yet navigate to another page.</p>
+      <p class="note">This interface is a static mock-up with representative data. The warnings page, user guide, pipeline log, flag command log, Raw Data Validation, RFI Summary, Calibration Report, Imaging &amp; Deconvolution, the other imaging products pages (one for Imaging &amp; Deconvolution and one each for the continuum image and both spectral cubes), and the <strong>View QA</strong> pages for the calibrated visibilities, the continuum image, and both spectral cubes are all available; <strong>View QA</strong> controls on the ancillary calibration-table products are placeholders and do not yet navigate to another page.</p>
     </article>
   </main>
 </body>
